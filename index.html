@@ -242,6 +242,8 @@ const links = GRAPH.links.map(([source,target]) => ({source, target}));
 const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
 const degree = {}; links.forEach(l => { degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
 nodes.forEach(n => n.deg = degree[n.id] || 1);
+let activeClusters = new Set(), selected = null, readFilter = null;
+const nodeThreads = {};
 const neighbors = {}; links.forEach(l => {
   (neighbors[l.source] ||= []).push(l.target);
   (neighbors[l.target] ||= []).push(l.source);
@@ -313,8 +315,6 @@ sim.on("tick",()=>{
 
 /* chips */
 const controls = document.getElementById("controls");
-let activeClusters = new Set(), selected = null, readFilter = null;
-const nodeThreads = {};
 const nodeHasRead = n => (WORKS[n.id]||[]).some(w => U.read[w.id] || U.ratings[w.id]?.r);
 function chip(label,key,on,color){
   const b=document.createElement("button"); b.className="chip"+(on?" on":"")+(key?" cl":"");
