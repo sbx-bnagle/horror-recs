@@ -12,22 +12,97 @@ npx serve .
 
 ## Deploy
 
-**Site:** push to GitHub, enable Pages (or any static host). The static `data/*.json` files serve as fallback when the worker isn't configured.
+These steps assume the repo is already pushed to GitHub (as `sbx-bnagle/horror-recs` or similar) and you have Node 18+ installed locally.
 
-**Worker (Cloudflare):**
+### 1. Site (GitHub Pages)
 
-```
-cd worker
-npx wrangler d1 create recommendotron        # copy the id into wrangler.toml
-npx wrangler d1 execute recommendotron --remote --file=schema.sql
-node ../scripts/make-seed-sql.mjs            # regenerates seed.sql from data/*.json
-npx wrangler d1 execute recommendotron --remote --file=seed.sql
-npx wrangler secret put ANTHROPIC_API_KEY    # for in-app Claude suggestions
-npx wrangler secret put APP_TOKEN            # any string; enter the same in the app
-npx wrangler deploy
-```
+1. On github.com, open the repo → **Settings → Pages**.
+2. Under "Build and deployment", set **Source: Deploy from a branch**.
+3. Branch: `main`, folder: `/ (root)`. Save.
+4. GitHub builds and publishes in a minute or two; the URL appears at the top of that same Pages settings screen (`https://sbx-bnagle.github.io/horror-recs/`).
+5. Open it. With no worker configured yet, the app reads the static files in `data/` — you should see the full map, but ratings/settings will only persist to this browser (localStorage) until the worker is connected.
 
-Then in the app's Settings: enter the worker URL and app token. The app loads catalog/releases/ratings from D1 and saves changes back automatically. The worker runs the release + award scan every Monday (cron) and on the "Check for new releases" button. Note: the scan makes ~45 outbound fetches; on Cloudflare's free tier (50 subrequests) this is near the limit, so a source or two may be skipped per run.
+### 2. Worker + database (Cloudflare)
+
+**One-time setup**
+
+1. If you don't have a Cloudflare account, create one (free tier) at cloudflare.com.
+2. Install Wrangler (Cloudflare's CLI) as a one-off, no global install needed — the commands below use `npx` so this happens automatically. If you'd rather install it once: `npm install -g wrangler`.
+3. Authenticate:
+   ```
+   cd worker
+   npx wrangler login
+   ```
+   This opens a browser tab to authorize; approve it, return to the terminal.
+
+**Create the database**
+
+4. ```
+   npx wrangler d1 create recommendotron
+   ```
+   This prints a block like:
+   ```
+   [[d1_databases]]
+   binding = "DB"
+   database_name = "recommendotron"
+   database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+   ```
+5. Open `worker/wrangler.toml` and replace `REPLACE_WITH_YOUR_D1_ID` with the `database_id` value from step 4. Save.
+
+**Load the schema and your existing data**
+
+6. ```
+   npx wrangler d1 execute recommendotron --remote --file=schema.sql
+   ```
+   Creates the tables. You should see "Executed X commands" with no errors.
+7. Regenerate the seed file from your current local data (skip this only if you haven't changed `data/*.json` since the zip was built):
+   ```
+   node ../scripts/make-seed-sql.mjs
+   ```
+8. ```
+   npx wrangler d1 execute recommendotron --remote --file=seed.sql
+   ```
+   This loads your ~296 authors and ~383 works into the live database. It's a big file, so this can take a minute; occasional "already exists" notices are expected and harmless (the script uses `INSERT OR IGNORE`/`INSERT OR REPLACE`).
+
+**Set secrets**
+
+9. ```
+   npx wrangler secret put ANTHROPIC_API_KEY
+   ```
+   Paste your Anthropic API key when prompted (from console.anthropic.com → API Keys). This powers the in-app "Ask Claude for author suggestions" button; skip this step if you don't want that feature yet, but leaving it unset means that one button will fail while everything else works.
+10. ```
+    npx wrangler secret put APP_TOKEN
+    ```
+    Make up any password-like string (e.g. generate one with `openssl rand -hex 16`). This is shared between the worker and the app to keep your database private — anyone with the worker URL but not this token gets a 401. Write it down; you'll enter it in the app in a moment.
+
+**Deploy**
+
+11. ```
+    npx wrangler deploy
+    ```
+    Prints a URL like `https://recommendotron.YOUR-SUBDOMAIN.workers.dev`. That's your worker URL — copy it.
+
+### 3. Connect the app to the worker
+
+1. Open the Pages site from step 1.
+2. Click the gear (⚙) icon in the sidebar to open Settings.
+3. Under "Worker connection", paste the worker URL from step 11 into **Worker URL**, and the string you made up in step 10 into **App token**. The page reloads automatically after each field.
+4. Status should change to "connected" (or "synced" after the first save). If it says "unavailable" or shows an error, see Troubleshooting below.
+
+### 4. Verify
+
+- Rate a work, close the tab, reopen the site (even in a different browser) — the rating should still be there. That confirms D1 is the source of truth, not just localStorage.
+- In the **New** tab, click "Check for new releases" — should say "Scan complete" within ~10-20 seconds.
+- Click "Ask Claude for author suggestions" — takes up to ~30 seconds; returns a short list with "Add to map" buttons (requires the `ANTHROPIC_API_KEY` secret from step 9).
+
+### Troubleshooting
+
+- **Settings shows "unavailable (401)"** — the App token in the app doesn't match the worker's `APP_TOKEN` secret. Re-run `npx wrangler secret put APP_TOKEN`, re-enter the same value in the app.
+- **"unavailable (500)" on /catalog** — usually means schema or seed didn't load. Re-run steps 6 and 8; check for error output.
+- **CORS error in the browser console** — confirm the worker URL in Settings has no trailing slash and starts with `https://`.
+- **Claude suggestions fail with a 500** — `ANTHROPIC_API_KEY` secret missing or invalid; re-run step 9.
+- **Scan finds nothing / "skip <source>" in `npx wrangler tail`** — a publisher changed its site structure and feed autodiscovery failed for that one source; this is expected occasionally and doesn't block the rest of the scan. Run `npx wrangler tail` in the worker folder while triggering a scan to see live logs.
+- **Changes to `data/*.json` don't show up on the live site** — once the worker is connected, the app reads from D1, not the static files. Re-run the seed steps (6-8) to push local edits into D1, or use the in-app "Add to catalog" / "Add to map" actions instead.
 
 ## Data files
 
@@ -46,6 +121,34 @@ node scripts/fetch-bibliographies.mjs barron tuttle # specific authors
 ```
 
 Both are zero-dependency (Node 18+). The release scan is best-effort: sources without a discoverable feed are logged and skipped; correct or add feed URLs in `data/publishers.json`.
+
+### Running the bibliography script
+
+From the repo root:
+
+```
+node scripts/fetch-bibliographies.mjs --all
+```
+
+Pulls full bibliographies from Open Library for every author. At a polite 600ms per request, ~300 authors takes 3-4 minutes, printing progress per author (`Laird Barron: +42 (44 total)`). To test first, or target specific authors:
+
+```
+node scripts/fetch-bibliographies.mjs barron tuttle mcdowell
+```
+
+It merges into `data/works.json` without touching existing descriptions, dims, or tasteMatch values.
+
+**Then push the results into D1** — the live app reads from the database, not the JSON files:
+
+```
+node scripts/make-seed-sql.mjs
+cd worker
+npx wrangler d1 execute recommendotron --remote --file=seed.sql
+```
+
+The seed uses `INSERT OR IGNORE`, so new works are added without clobbering anything already in D1. Reload the app to see the expanded works lists.
+
+Expectation to set: Open Library data is messy for prolific authors — duplicate-ish entries under variant titles, omnibus editions, occasional wrong attributions. Fine as raw material; prune oddities from the All tab as you notice them, or ask Claude for a cleanup pass on `works.json`.
 
 ## Scoring model
 
