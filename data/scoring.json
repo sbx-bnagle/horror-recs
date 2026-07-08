@@ -1,0 +1,84 @@
+{
+ "comment": "Transparent scoring model. Edit here or in the app's Settings tab (app overrides are stored in your user data JSON). score = base + clusterWeight*clusterAffinity + authorWeight*authorAffinity + sum(dimWeights[d] * workDims[d]) * dimScale + signalWeight * min(signals, signalCap). Plus tasteWeight * tasteMatch (0-1, from taste research / co-occurrence / CF baseline). Clamped 0-100.",
+ "base": 30,
+ "clusterWeight": 20,
+ "authorWeight": 15,
+ "dimScale": 10,
+ "signalWeight": 2,
+ "signalCap": 8,
+ "learningRates": {
+  "weights": 0.15,
+  "authorAffinity": 0.08
+ },
+ "dimensions": {
+  "dread": {
+   "label": "Constant atmospheric dread",
+   "weight": 0.9
+  },
+  "threat": {
+   "label": "Concrete, inescapable antagonist",
+   "weight": 0.8
+  },
+  "cosmic": {
+   "label": "Cosmic / supernatural taken seriously",
+   "weight": 0.7
+  },
+  "bleak": {
+   "label": "Bleak worldview",
+   "weight": 0.8
+  },
+  "visceral": {
+   "label": "Visceral content (not the point)",
+   "weight": 0.4
+  },
+  "literary": {
+   "label": "Literary prose ambition",
+   "weight": 0.6
+  },
+  "conspiracy": {
+   "label": "Plot assembling outside the frame",
+   "weight": 0.6
+  },
+  "noir": {
+   "label": "Noir register",
+   "weight": 0.6
+  },
+  "survival": {
+   "label": "Survival stakes",
+   "weight": 0.5
+  },
+  "dream": {
+   "label": "Dreamlike / tonal shift",
+   "weight": 0.5
+  },
+  "camp": {
+   "label": "Camp (penalty)",
+   "weight": -1.0
+  },
+  "irony": {
+   "label": "Ironic distance (penalty)",
+   "weight": -0.9
+  }
+ },
+ "clusterAffinity": {
+  "weird": 0.95,
+  "core": 1.0,
+  "noir": 0.85,
+  "consp": 0.85,
+  "slash": 0.75,
+  "dream": 0.75,
+  "spare": 0.7,
+  "latam": 0.8,
+  "asian": 0.7,
+  "african": 0.6,
+  "fantasy": 0.65,
+  "meta": 0.5
+ },
+ "typeAffinity": {
+  "influence": 1.0,
+  "rec": 0.7,
+  "director": 0.5,
+  "publisher": 0.3
+ },
+ "tasteWeight": 10
+}

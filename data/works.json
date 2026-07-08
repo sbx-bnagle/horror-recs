@@ -1,0 +1,4435 @@
+{
+ "blackwood": [
+  {
+   "id": "blackwood::the-willows",
+   "title": "The Willows",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "blackwood::the-wendigo",
+   "title": "The Wendigo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "machen": [
+  {
+   "id": "machen::the-great-god-pan",
+   "title": "The Great God Pan",
+   "year": null,
+   "kind": "novel",
+   "desc": "Willows-similar lists; the uncanny materializing into something concrete.",
+   "dims": {},
+   "signals": 1,
+   "source": "seed",
+   "tasteMatch": 0.7
+  }
+ ],
+ "aickman": [
+  {
+   "id": "aickman::cold-hand-in-mine",
+   "title": "Cold Hand in Mine",
+   "year": null,
+   "kind": "novel",
+   "desc": "Aickman is Goodreads' top similar author for Ligotti; strange stories, unresolved.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.75
+  }
+ ],
+ "ligotti": [
+  {
+   "id": "ligotti::songs-of-a-dead-dreamer",
+   "title": "Songs of a Dead Dreamer",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "grabinski": [
+  {
+   "id": "grabinski::the-dark-domain",
+   "title": "The Dark Domain",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ewers": [
+  {
+   "id": "ewers::alraune",
+   "title": "Alraune",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ewers::the-spider",
+   "title": "The Spider",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jackson": [
+  {
+   "id": "jackson::the-summer-people",
+   "title": "The Summer People",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "jackson::we-have-always-lived-in-the-castle",
+   "title": "We Have Always Lived in the Castle",
+   "year": null,
+   "kind": "novel",
+   "desc": "Jackson orbit around your Elementals/Summer People reads.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.7
+  }
+ ],
+ "leiber": [
+  {
+   "id": "leiber::smoke-ghost",
+   "title": "Smoke Ghost",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mcdowell": [
+  {
+   "id": "mcdowell::the-elementals",
+   "title": "The Elementals",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tuttle": [
+  {
+   "id": "tuttle::a-nest-of-nightmares",
+   "title": "A Nest of Nightmares",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "tuttle::my-death",
+   "title": "My Death",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wagner": [
+  {
+   "id": "wagner::why-not-you-and-i",
+   "title": "Why Not You and I?",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "scerbanenco": [
+  {
+   "id": "scerbanenco::a-private-venus",
+   "title": "A Private Venus",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hughes": [
+  {
+   "id": "hughes::in-a-lonely-place",
+   "title": "In a Lonely Place",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "thompson": [
+  {
+   "id": "thompson::the-killer-inside-me",
+   "title": "The Killer Inside Me",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mccarthy": [
+  {
+   "id": "mccarthy::no-country-for-old-men",
+   "title": "No Country for Old Men",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "mccarthy::blood-meridian",
+   "title": "Blood Meridian",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "christie": [
+  {
+   "id": "christie::and-then-there-were-none",
+   "title": "And Then There Were None",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "demaria": [
+  {
+   "id": "demaria::the-twenty-days-of-turin",
+   "title": "The Twenty Days of Turin",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sebald": [
+  {
+   "id": "sebald::the-rings-of-saturn",
+   "title": "The Rings of Saturn",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "sebald::austerlitz",
+   "title": "Austerlitz",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bolano": [
+  {
+   "id": "bolano::2666",
+   "title": "2666",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "knausgard": [
+  {
+   "id": "knausgard::the-morning-star",
+   "title": "The Morning Star",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bernhard": [
+  {
+   "id": "bernhard::the-loser",
+   "title": "The Loser",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "bernhard::correction",
+   "title": "Correction",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "labatut": [
+  {
+   "id": "labatut::when-we-cease-to-understand-the-world",
+   "title": "When We Cease to Understand the World",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "cole": [
+  {
+   "id": "cole::open-city",
+   "title": "Open City",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ketchum": [
+  {
+   "id": "ketchum::off-season",
+   "title": "Off Season",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ketchum::the-girl-next-door",
+   "title": "The Girl Next Door",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lansdale": [
+  {
+   "id": "lansdale::the-nightrunners",
+   "title": "The Nightrunners",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sgj": [
+  {
+   "id": "sgj::the-only-good-indians",
+   "title": "The Only Good Indians",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "sgj::the-killer-on-the-road",
+   "title": "The Killer on the Road",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "king": [
+  {
+   "id": "king::cujo",
+   "title": "Cujo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "partridge": [
+  {
+   "id": "partridge::dark-harvest",
+   "title": "Dark Harvest",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "duras": [
+  {
+   "id": "duras::the-ravishing-of-lol-stein",
+   "title": "The Ravishing of Lol Stein",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rulfo": [
+  {
+   "id": "rulfo::pedro-p-ramo",
+   "title": "Pedro Páramo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "dumaurier": [
+  {
+   "id": "dumaurier::don-t-look-now",
+   "title": "Don't Look Now",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "dumaurier::the-birds",
+   "title": "The Birds",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "queneau": [
+  {
+   "id": "queneau::pierrot-mon-ami",
+   "title": "Pierrot Mon Ami",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "evenson": [
+  {
+   "id": "evenson::a-collapse-of-horses",
+   "title": "A Collapse of Horses",
+   "year": null,
+   "kind": "novel",
+   "desc": "Appears directly on reader lists of books like Songs of a Dead Dreamer.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.85
+  },
+  {
+   "id": "evenson::last-days",
+   "title": "Last Days",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hamsun": [
+  {
+   "id": "hamsun::hunger",
+   "title": "Hunger",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "hamsun::pan",
+   "title": "Pan",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bass": [
+  {
+   "id": "bass::the-watch",
+   "title": "The Watch",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "enriquez": [
+  {
+   "id": "enriquez::our-share-of-night",
+   "title": "Our Share of Night",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "enriquez::things-we-lost-in-the-fire",
+   "title": "Things We Lost in the Fire",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "moshfegh": [
+  {
+   "id": "moshfegh::eileen",
+   "title": "Eileen",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "moshfegh::lapvona",
+   "title": "Lapvona",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jeanray": [
+  {
+   "id": "jeanray::malpertuis",
+   "title": "Malpertuis",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "jeanray::whiskey-tales",
+   "title": "Whiskey Tales",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "meyrink": [
+  {
+   "id": "meyrink::the-golem",
+   "title": "The Golem",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "meyrink::the-green-face",
+   "title": "The Green Face",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kubin": [
+  {
+   "id": "kubin::the-other-side",
+   "title": "The Other Side",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "perutz": [
+  {
+   "id": "perutz::by-night-under-the-stone-bridge",
+   "title": "By Night Under the Stone Bridge",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hodgson": [
+  {
+   "id": "hodgson::the-house-on-the-borderland",
+   "title": "The House on the Borderland",
+   "year": null,
+   "kind": "novel",
+   "desc": "On readers' Willows-similar lists; cosmic dread, strange structure.",
+   "dims": {},
+   "signals": 1,
+   "source": "seed",
+   "tasteMatch": 0.7
+  }
+ ],
+ "mrjames": [
+  {
+   "id": "mrjames::oh-whistle-and-i-ll-come-to-you",
+   "title": "Oh, Whistle, and I'll Come to You",
+   "year": null,
+   "kind": "novel",
+   "desc": "Grouped with Blackwood/Machen as the masters of suggestion-then-presence.",
+   "dims": {},
+   "signals": 1,
+   "source": "seed",
+   "tasteMatch": 0.5
+  }
+ ],
+ "hoffmann": [
+  {
+   "id": "hoffmann::the-sandman",
+   "title": "The Sandman",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hedayat": [
+  {
+   "id": "hedayat::the-blind-owl",
+   "title": "The Blind Owl",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "schulz": [
+  {
+   "id": "schulz::the-street-of-crocodiles",
+   "title": "The Street of Crocodiles",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "davila": [
+  {
+   "id": "davila::the-houseguest",
+   "title": "The Houseguest",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kavan": [
+  {
+   "id": "kavan::ice",
+   "title": "Ice",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "barron": [
+  {
+   "id": "barron::the-imago-sequence",
+   "title": "The Imago Sequence",
+   "year": null,
+   "kind": "novel",
+   "desc": "Barron's collections are the most-cited follow-on for Ligotti readers.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.8
+  },
+  {
+   "id": "barron::occultation",
+   "title": "Occultation",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "klein": [
+  {
+   "id": "klein::the-ceremonies",
+   "title": "The Ceremonies",
+   "year": null,
+   "kind": "novel",
+   "desc": "Cited alongside Harvest Home for the same slow ritual dread; Machen-derived.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.8
+  },
+  {
+   "id": "klein::dark-gods",
+   "title": "Dark Gods",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lamsley": [
+  {
+   "id": "lamsley::conference-with-the-dead",
+   "title": "Conference With the Dead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "straub": [
+  {
+   "id": "straub::ghost-story",
+   "title": "Ghost Story",
+   "year": null,
+   "kind": "novel",
+   "desc": "Standard co-recommendation for The Elementals; atmospheric presence gaining weight.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.7
+  },
+  {
+   "id": "straub::julia",
+   "title": "Julia",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tryon": [
+  {
+   "id": "tryon::harvest-home",
+   "title": "Harvest Home",
+   "year": null,
+   "kind": "novel",
+   "desc": "Rural village folk horror; repeatedly co-recommended with Dark Harvest and The Elementals.",
+   "dims": {},
+   "signals": 3,
+   "source": "seed",
+   "tasteMatch": 0.9
+  },
+  {
+   "id": "tryon::the-other",
+   "title": "The Other",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "grant": [
+  {
+   "id": "grant::the-nestling",
+   "title": "The Nestling",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "grant::the-pet",
+   "title": "The Pet",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rcampbell": [
+  {
+   "id": "rcampbell::the-face-that-must-die",
+   "title": "The Face That Must Die",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "rcampbell::alone-with-the-horrors",
+   "title": "Alone With the Horrors",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kiernan": [
+  {
+   "id": "kiernan::the-red-tree",
+   "title": "The Red Tree",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "kiernan::the-drowning-girl",
+   "title": "The Drowning Girl",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "simmons": [
+  {
+   "id": "simmons::song-of-kali",
+   "title": "Song of Kali",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "farris": [
+  {
+   "id": "farris::all-heads-turn-when-the-hunt-goes-by",
+   "title": "All Heads Turn When the Hunt Goes By",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "farris::the-fury",
+   "title": "The Fury",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ballingrud": [
+  {
+   "id": "ballingrud::wounds",
+   "title": "Wounds",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ballingrud::north-american-lake-monsters",
+   "title": "North American Lake Monsters",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tremblay": [
+  {
+   "id": "tremblay::a-head-full-of-ghosts",
+   "title": "A Head Full of Ghosts",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "draymond": [
+  {
+   "id": "draymond::he-died-with-his-eyes-open",
+   "title": "He Died With His Eyes Open",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "goodis": [
+  {
+   "id": "goodis::down-there",
+   "title": "Down There",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "woolrich": [
+  {
+   "id": "woolrich::night-has-a-thousand-eyes",
+   "title": "Night Has a Thousand Eyes",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "woolrich::the-bride-wore-black",
+   "title": "The Bride Wore Black",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "highsmith": [
+  {
+   "id": "highsmith::deep-water",
+   "title": "Deep Water",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "highsmith::edith-s-diary",
+   "title": "Edith's Diary",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gresham": [
+  {
+   "id": "gresham::nightmare-alley",
+   "title": "Nightmare Alley",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "manchette": [
+  {
+   "id": "manchette::the-prone-gunman",
+   "title": "The Prone Gunman",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "malet": [
+  {
+   "id": "malet::nestor-burma-series",
+   "title": "Nestor Burma series",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lucarelli": [
+  {
+   "id": "lucarelli::almost-blue",
+   "title": "Almost Blue",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ellroy": [
+  {
+   "id": "ellroy::the-black-dahlia",
+   "title": "The Black Dahlia",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "harris": [
+  {
+   "id": "harris::red-dragon",
+   "title": "Red Dragon",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mcgrath": [
+  {
+   "id": "mcgrath::spider",
+   "title": "Spider",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "mcgrath::asylum",
+   "title": "Asylum",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vachss": [
+  {
+   "id": "vachss::flood",
+   "title": "Flood",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lecarre": [
+  {
+   "id": "lecarre::the-spy-who-came-in-from-the-cold",
+   "title": "The Spy Who Came in From the Cold",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lecarre::tinker-tailor-soldier-spy",
+   "title": "Tinker Tailor Soldier Spy",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "furst": [
+  {
+   "id": "furst::night-soldiers",
+   "title": "Night Soldiers",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "fitzek": [
+  {
+   "id": "fitzek::therapy",
+   "title": "Therapy",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "grange": [
+  {
+   "id": "grange::the-crimson-rivers",
+   "title": "The Crimson Rivers",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "theorin": [
+  {
+   "id": "theorin::echoes-from-the-dead",
+   "title": "Echoes From the Dead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "urban": [
+  {
+   "id": "urban::plan-d",
+   "title": "Plan D",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "schirach": [
+  {
+   "id": "schirach::crime",
+   "title": "Crime",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "schirach::guilt",
+   "title": "Guilt",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sciascia": [
+  {
+   "id": "sciascia::equal-danger",
+   "title": "Equal Danger",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "sciascia::the-day-of-the-owl",
+   "title": "The Day of the Owl",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lem": [
+  {
+   "id": "lem::the-investigation",
+   "title": "The Investigation",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "delillo": [
+  {
+   "id": "delillo::libra",
+   "title": "Libra",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "delillo::running-dog",
+   "title": "Running Dog",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kis": [
+  {
+   "id": "kis::a-tomb-for-boris-davidovich",
+   "title": "A Tomb for Boris Davidovich",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "marias": [
+  {
+   "id": "marias::your-face-tomorrow",
+   "title": "Your Face Tomorrow",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "krasznahorkai": [
+  {
+   "id": "krasznahorkai::satantango",
+   "title": "Satantango",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "krasznahorkai::the-melancholy-of-resistance",
+   "title": "The Melancholy of Resistance",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "spark": [
+  {
+   "id": "spark::the-driver-s-seat",
+   "title": "The Driver's Seat",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kristof": [
+  {
+   "id": "kristof::the-notebook",
+   "title": "The Notebook",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "auster": [
+  {
+   "id": "auster::city-of-glass",
+   "title": "City of Glass",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gombrowicz": [
+  {
+   "id": "gombrowicz::cosmos",
+   "title": "Cosmos",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kadare": [
+  {
+   "id": "kadare::the-palace-of-dreams",
+   "title": "The Palace of Dreams",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kafka": [
+  {
+   "id": "kafka::the-trial",
+   "title": "The Trial",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "durrenmatt": [
+  {
+   "id": "durrenmatt::the-pledge",
+   "title": "The Pledge",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tabucchi": [
+  {
+   "id": "tabucchi::indian-nocturne",
+   "title": "Indian Nocturne",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "buzzati": [
+  {
+   "id": "buzzati::the-tartar-steppe",
+   "title": "The Tartar Steppe",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "carrere": [
+  {
+   "id": "carrere::the-adversary",
+   "title": "The Adversary",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "modiano": [
+  {
+   "id": "modiano::missing-person",
+   "title": "Missing Person",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "houellebecq": [
+  {
+   "id": "houellebecq::the-elementary-particles",
+   "title": "The Elementary Particles",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "macfarlane": [
+  {
+   "id": "macfarlane::underland",
+   "title": "Underland",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "laymon": [
+  {
+   "id": "laymon::the-cellar",
+   "title": "The Cellar",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "laymon::the-woods-are-dark",
+   "title": "The Woods Are Dark",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "morrell": [
+  {
+   "id": "morrell::first-blood",
+   "title": "First Blood",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "koontz": [
+  {
+   "id": "koontz::intensity",
+   "title": "Intensity",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rexmiller": [
+  {
+   "id": "rexmiller::slob",
+   "title": "Slob",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "saul": [
+  {
+   "id": "saul::suffer-the-children",
+   "title": "Suffer the Children",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "herbert": [
+  {
+   "id": "herbert::the-rats",
+   "title": "The Rats",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "herbert::the-fog",
+   "title": "The Fog",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hutson": [
+  {
+   "id": "hutson::slugs",
+   "title": "Slugs",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "hutson::erebus",
+   "title": "Erebus",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "guysmith": [
+  {
+   "id": "guysmith::night-of-the-crabs",
+   "title": "Night of the Crabs",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bloch": [
+  {
+   "id": "bloch::psycho",
+   "title": "Psycho",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "connell": [
+  {
+   "id": "connell::the-most-dangerous-game",
+   "title": "The Most Dangerous Game",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jonquet": [
+  {
+   "id": "jonquet::tarantula",
+   "title": "Tarantula",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "boileau": [
+  {
+   "id": "boileau::vertigo",
+   "title": "Vertigo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "boileau::she-who-was-no-more",
+   "title": "She Who Was No More",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "leroux": [
+  {
+   "id": "leroux::the-phantom-of-the-opera",
+   "title": "The Phantom of the Opera",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "donoso": [
+  {
+   "id": "donoso::the-obscene-bird-of-night",
+   "title": "The Obscene Bird of Night",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hawkes": [
+  {
+   "id": "hawkes::the-lime-twig",
+   "title": "The Lime Twig",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ballard": [
+  {
+   "id": "ballard::crash",
+   "title": "Crash",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ballard::high-rise",
+   "title": "High-Rise",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "djohnson": [
+  {
+   "id": "djohnson::jesus-son",
+   "title": "Jesus' Son",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "djohnson::already-dead",
+   "title": "Already Dead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "fuentes": [
+  {
+   "id": "fuentes::aura",
+   "title": "Aura",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bioy": [
+  {
+   "id": "bioy::the-invention-of-morel",
+   "title": "The Invention of Morel",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "obrien": [
+  {
+   "id": "obrien::the-third-policeman",
+   "title": "The Third Policeman",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kosinski": [
+  {
+   "id": "kosinski::steps",
+   "title": "Steps",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "kosinski::the-painted-bird",
+   "title": "The Painted Bird",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vian": [
+  {
+   "id": "vian::froth-on-the-daydream",
+   "title": "Froth on the Daydream",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "perec": [
+  {
+   "id": "perec::w-or-the-memory-of-childhood",
+   "title": "W, or the Memory of Childhood",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "link": [
+  {
+   "id": "link::get-in-trouble",
+   "title": "Get in Trouble",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "link::the-specialist-s-hat",
+   "title": "The Specialist's Hat",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lockwood": [
+  {
+   "id": "lockwood::no-one-is-talking-about-this",
+   "title": "No One Is Talking About This",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kbarry": [
+  {
+   "id": "kbarry::night-boat-to-tangier",
+   "title": "Night Boat to Tangier",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sarraute": [
+  {
+   "id": "sarraute::tropisms",
+   "title": "Tropisms",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "robbegrillet": [
+  {
+   "id": "robbegrillet::jealousy",
+   "title": "Jealousy",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ernaux": [
+  {
+   "id": "ernaux::the-years",
+   "title": "The Years",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vann": [
+  {
+   "id": "vann::legend-of-a-suicide",
+   "title": "Legend of a Suicide",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "vann::caribou-island",
+   "title": "Caribou Island",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vesaas": [
+  {
+   "id": "vesaas::the-ice-palace",
+   "title": "The Ice Palace",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "vesaas::the-birds",
+   "title": "The Birds",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bjorneboe": [
+  {
+   "id": "bjorneboe::moment-of-freedom",
+   "title": "Moment of Freedom",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "larrybrown": [
+  {
+   "id": "larrybrown::joe",
+   "title": "Joe",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "crews": [
+  {
+   "id": "crews::a-feast-of-snakes",
+   "title": "A Feast of Snakes",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "quiroga": [
+  {
+   "id": "quiroga::stories",
+   "title": "Stories",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "woodrell": [
+  {
+   "id": "woodrell::winter-s-bone",
+   "title": "Winter's Bone",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "woodrell::the-outlaw-album",
+   "title": "The Outlaw Album",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "pollock": [
+  {
+   "id": "pollock::the-devil-all-the-time",
+   "title": "The Devil All the Time",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rash": [
+  {
+   "id": "rash::serena",
+   "title": "Serena",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "rash::the-cove",
+   "title": "The Cove",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "matthiessen": [
+  {
+   "id": "matthiessen::shadow-country",
+   "title": "Shadow Country",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "schweblin": [
+  {
+   "id": "schweblin::fever-dream",
+   "title": "Fever Dream",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "schweblin::mouthful-of-birds",
+   "title": "Mouthful of Birds",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ojeda": [
+  {
+   "id": "ojeda::jawbone",
+   "title": "Jawbone",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bazterrica": [
+  {
+   "id": "bazterrica::tender-is-the-flesh",
+   "title": "Tender Is the Flesh",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "morenogarcia": [
+  {
+   "id": "morenogarcia::mexican-gothic",
+   "title": "Mexican Gothic",
+   "year": null,
+   "kind": "novel",
+   "desc": "Orbits the same recommendations as The Elementals and Harvest Home.",
+   "dims": {},
+   "signals": 2,
+   "source": "seed",
+   "tasteMatch": 0.6
+  }
+ ],
+ "quintana": [
+  {
+   "id": "quintana::the-bitch",
+   "title": "The Bitch",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lispector": [
+  {
+   "id": "lispector::the-passion-according-to-g-h",
+   "title": "The Passion According to G.H.",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "villalobos": [
+  {
+   "id": "villalobos::down-the-rabbit-hole",
+   "title": "Down the Rabbit Hole",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "otsuichi": [
+  {
+   "id": "otsuichi::goth",
+   "title": "Goth",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "otsuichi::zoo",
+   "title": "Zoo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kirino": [
+  {
+   "id": "kirino::out",
+   "title": "Out",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "kirino::grotesque",
+   "title": "Grotesque",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "yokomizo": [
+  {
+   "id": "yokomizo::the-honjin-murders",
+   "title": "The Honjin Murders",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "yokomizo::the-inugami-curse",
+   "title": "The Inugami Curse",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "borachung": [
+  {
+   "id": "borachung::cursed-bunny",
+   "title": "Cursed Bunny",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jungyujin": [
+  {
+   "id": "jungyujin::the-good-son",
+   "title": "The Good Son",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ryumurakami": [
+  {
+   "id": "ryumurakami::in-the-miso-soup",
+   "title": "In the Miso Soup",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "nakamura": [
+  {
+   "id": "nakamura::the-thief",
+   "title": "The Thief",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "nakamura::evil-and-the-mask",
+   "title": "Evil and the Mask",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "abe": [
+  {
+   "id": "abe::the-woman-in-the-dunes",
+   "title": "The Woman in the Dunes",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ranpo": [
+  {
+   "id": "ranpo::the-human-chair",
+   "title": "The Human Chair",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ranpo::the-caterpillar",
+   "title": "The Caterpillar",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ito": [
+  {
+   "id": "ito::tomie",
+   "title": "Tomie",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ito::uzumaki",
+   "title": "Uzumaki",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tutuola": [
+  {
+   "id": "tutuola::the-palm-wine-drinkard",
+   "title": "The Palm-Wine Drinkard",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "okri": [
+  {
+   "id": "okri::the-famished-road",
+   "title": "The Famished Road",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "beukes": [
+  {
+   "id": "beukes::the-shining-girls",
+   "title": "The Shining Girls",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lotz": [
+  {
+   "id": "lotz::the-three",
+   "title": "The Three",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "onoh": [
+  {
+   "id": "onoh::unhallowed-graves",
+   "title": "Unhallowed Graves",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "meyer": [
+  {
+   "id": "meyer::devil-s-peak",
+   "title": "Devil's Peak",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lagerkvist": [
+  {
+   "id": "lagerkvist::the-dwarf",
+   "title": "The Dwarf",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lagerkvist::barabbas",
+   "title": "Barabbas",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "golding": [
+  {
+   "id": "golding::the-inheritors",
+   "title": "The Inheritors",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "golding::pincher-martin",
+   "title": "Pincher Martin",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "oconnor": [
+  {
+   "id": "oconnor::a-good-man-is-hard-to-find",
+   "title": "A Good Man Is Hard to Find",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "comyns": [
+  {
+   "id": "comyns::the-vet-s-daughter",
+   "title": "The Vet's Daughter",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "eco": [
+  {
+   "id": "eco::the-name-of-the-rose",
+   "title": "The Name of the Rose",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mantel": [
+  {
+   "id": "mantel::fludd",
+   "title": "Fludd",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "peake": [
+  {
+   "id": "peake::gormenghast-trilogy",
+   "title": "Gormenghast trilogy",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "garner": [
+  {
+   "id": "garner::the-owl-service",
+   "title": "The Owl Service",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "garner::red-shift",
+   "title": "Red Shift",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mirrlees": [
+  {
+   "id": "mirrlees::lud-in-the-mist",
+   "title": "Lud-in-the-Mist",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lindsay": [
+  {
+   "id": "lindsay::a-voyage-to-arcturus",
+   "title": "A Voyage to Arcturus",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wolfe": [
+  {
+   "id": "wolfe::the-book-of-the-new-sun",
+   "title": "The Book of the New Sun",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mjharrison": [
+  {
+   "id": "mjharrison::viriconium",
+   "title": "Viriconium",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "erikson": [
+  {
+   "id": "erikson::malazan-book-of-the-fallen",
+   "title": "Malazan Book of the Fallen",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vandermeer": [
+  {
+   "id": "vandermeer::annihilation",
+   "title": "Annihilation",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bakker": [
+  {
+   "id": "bakker::the-second-apocalypse",
+   "title": "The Second Apocalypse",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "bakker::neuropath",
+   "title": "Neuropath",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sapkowski": [
+  {
+   "id": "sapkowski::the-witcher-stories",
+   "title": "The Witcher stories",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "despentes": [
+  {
+   "id": "despentes::vernon-subutex",
+   "title": "Vernon Subutex",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bierce": [
+  {
+   "id": "bierce::the-death-of-halpin-frayser",
+   "title": "The Death of Halpin Frayser",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "bierce::tales-of-soldiers-and-civilians",
+   "title": "Tales of Soldiers and Civilians",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "stoker": [
+  {
+   "id": "stoker::dracula",
+   "title": "Dracula",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "poe": [
+  {
+   "id": "poe::tales-of-mystery-and-imagination",
+   "title": "Tales of Mystery and Imagination",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hawthorne": [
+  {
+   "id": "hawthorne::young-goodman-brown",
+   "title": "Young Goodman Brown",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "hawthorne::the-house-of-the-seven-gables",
+   "title": "The House of the Seven Gables",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "akinari": [
+  {
+   "id": "akinari::ugetsu-monogatari",
+   "title": "Ugetsu Monogatari",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hearn": [
+  {
+   "id": "hearn::kwaidan",
+   "title": "Kwaidan",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "maupassant": [
+  {
+   "id": "maupassant::the-horla",
+   "title": "The Horla",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "aktolstoy": [
+  {
+   "id": "aktolstoy::the-family-of-the-vourdalak",
+   "title": "The Family of the Vourdalak",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gotthelf": [
+  {
+   "id": "gotthelf::the-black-spider",
+   "title": "The Black Spider",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "buehlman": [
+  {
+   "id": "buehlman::between-two-fires",
+   "title": "Between Two Fires",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "buehlman::the-lesser-dead",
+   "title": "The Lesser Dead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "koike": [
+  {
+   "id": "koike::the-graveyard-apartment",
+   "title": "The Graveyard Apartment",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "barker": [
+  {
+   "id": "barker::books-of-blood",
+   "title": "Books of Blood",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "barker::the-hellbound-heart",
+   "title": "The Hellbound Heart",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "iglesias": [
+  {
+   "id": "iglesias::the-devil-takes-you-home",
+   "title": "The Devil Takes You Home",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "saramago": [
+  {
+   "id": "saramago::the-double",
+   "title": "The Double",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "saramago::blindness",
+   "title": "Blindness",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ogawa": [
+  {
+   "id": "ogawa::the-memory-police",
+   "title": "The Memory Police",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ogawa::revenge",
+   "title": "Revenge",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bulgakov": [
+  {
+   "id": "bulgakov::the-master-and-margarita",
+   "title": "The Master and Margarita",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "andreyev": [
+  {
+   "id": "andreyev::the-red-laugh",
+   "title": "The Red Laugh",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "villiers": [
+  {
+   "id": "villiers::cruel-tales",
+   "title": "Cruel Tales",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lorrain": [
+  {
+   "id": "lorrain::monsieur-de-phocas",
+   "title": "Monsieur de Phocas",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "masterton": [
+  {
+   "id": "masterton::the-manitou",
+   "title": "The Manitou",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "slade": [
+  {
+   "id": "slade::headhunter",
+   "title": "Headhunter",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "coyne": [
+  {
+   "id": "coyne::the-piercing",
+   "title": "The Piercing",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jensen": [
+  {
+   "id": "jensen::wait-and-see",
+   "title": "Wait and See",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "johnstone": [
+  {
+   "id": "johnstone::the-devil-s-cat",
+   "title": "The Devil's Cat",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "simenon": [
+  {
+   "id": "simenon::the-strangers-in-the-house",
+   "title": "The Strangers in the House",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "vargas": [
+  {
+   "id": "vargas::the-chalk-circle-man",
+   "title": "The Chalk Circle Man",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sjowall": [
+  {
+   "id": "sjowall::the-laughing-policeman",
+   "title": "The Laughing Policeman",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "fossum": [
+  {
+   "id": "fossum::don-t-look-back",
+   "title": "Don't Look Back",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "shimada": [
+  {
+   "id": "shimada::the-tokyo-zodiac-murders",
+   "title": "The Tokyo Zodiac Murders",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "japrisot": [
+  {
+   "id": "japrisot::trap-for-cinderella",
+   "title": "Trap for Cinderella",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "suzuki": [
+  {
+   "id": "suzuki::ring",
+   "title": "Ring",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "suzuki::dark-water",
+   "title": "Dark Water",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "leguin": [
+  {
+   "id": "leguin::the-tombs-of-atuan",
+   "title": "The Tombs of Atuan",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "leguin::the-word-for-world-is-forest",
+   "title": "The Word for World Is Forest",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "blicher": [
+  {
+   "id": "blicher::the-hosier-and-his-daughter",
+   "title": "The Hosier and His Daughter",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hankang": [
+  {
+   "id": "hankang::the-vegetarian",
+   "title": "The Vegetarian",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "hankang::human-acts",
+   "title": "Human Acts",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "chaze": [
+  {
+   "id": "chaze::black-wings-has-my-angel",
+   "title": "Black Wings Has My Angel",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wehunt": [
+  {
+   "id": "wehunt::greener-pastures",
+   "title": "Greener Pastures",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mrshelley": [
+  {
+   "id": "mrshelley::frankenstein",
+   "title": "Frankenstein",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lefanu": [
+  {
+   "id": "lefanu::carmilla",
+   "title": "Carmilla",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lefanu::green-tea",
+   "title": "Green Tea",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "hjames": [
+  {
+   "id": "hjames::the-turn-of-the-screw",
+   "title": "The Turn of the Screw",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wharton": [
+  {
+   "id": "wharton::the-ghost-stories-of-edith-wharton",
+   "title": "The Ghost Stories of Edith Wharton",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "chambers": [
+  {
+   "id": "chambers::the-king-in-yellow",
+   "title": "The King in Yellow",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "dunsany": [
+  {
+   "id": "dunsany::the-gods-of-peg-na",
+   "title": "The Gods of Pegāna",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lovecraft": [
+  {
+   "id": "lovecraft::the-shadow-over-innsmouth",
+   "title": "The Shadow Over Innsmouth",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lovecraft::at-the-mountains-of-madness",
+   "title": "At the Mountains of Madness",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "cas": [
+  {
+   "id": "cas::the-dark-eidolon",
+   "title": "The Dark Eidolon",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rehoward": [
+  {
+   "id": "rehoward::pigeons-from-hell",
+   "title": "Pigeons From Hell",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gilman": [
+  {
+   "id": "gilman::the-yellow-wallpaper",
+   "title": "The Yellow Wallpaper",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "onions": [
+  {
+   "id": "onions::widdershins",
+   "title": "Widdershins",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "delamare": [
+  {
+   "id": "delamare::seaton-s-aunt",
+   "title": "Seaton's Aunt",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "delamare::the-return",
+   "title": "The Return",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "benson": [
+  {
+   "id": "benson::the-room-in-the-tower",
+   "title": "The Room in the Tower",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wakefield": [
+  {
+   "id": "wakefield::they-return-at-evening",
+   "title": "They Return at Evening",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "oliphant": [
+  {
+   "id": "oliphant::the-open-door",
+   "title": "The Open Door",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "riddell": [
+  {
+   "id": "riddell::weird-stories",
+   "title": "Weird Stories",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "saki": [
+  {
+   "id": "saki::the-chronicles-of-clovis",
+   "title": "The Chronicles of Clovis",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "wfharvey": [
+  {
+   "id": "wfharvey::the-beast-with-five-fingers",
+   "title": "The Beast with Five Fingers",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gautier": [
+  {
+   "id": "gautier::la-morte-amoureuse",
+   "title": "La Morte Amoureuse",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "strobl": [
+  {
+   "id": "strobl::lemuria",
+   "title": "Lemuria",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "gogol": [
+  {
+   "id": "gogol::viy",
+   "title": "Viy",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "gogol::the-nose",
+   "title": "The Nose",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "potocki": [
+  {
+   "id": "potocki::the-manuscript-found-in-saragossa",
+   "title": "The Manuscript Found in Saragossa",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "pusongling": [
+  {
+   "id": "pusongling::strange-tales-from-a-chinese-studio",
+   "title": "Strange Tales from a Chinese Studio",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kyoka": [
+  {
+   "id": "kyoka::the-holy-man-of-mount-koya",
+   "title": "The Holy Man of Mount Koya",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sologub": [
+  {
+   "id": "sologub::the-petty-demon",
+   "title": "The Petty Demon",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "panizza": [
+  {
+   "id": "panizza::the-pig",
+   "title": "The Pig",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "schwob": [
+  {
+   "id": "schwob::the-king-in-the-golden-mask",
+   "title": "The King in the Golden Mask",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "dinesen": [
+  {
+   "id": "dinesen::seven-gothic-tales",
+   "title": "Seven Gothic Tales",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "matheson": [
+  {
+   "id": "matheson::i-am-legend",
+   "title": "I Am Legend",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "matheson::hell-house",
+   "title": "Hell House",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "beaumont": [
+  {
+   "id": "beaumont::perchance-to-dream",
+   "title": "Perchance to Dream",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "bradbury": [
+  {
+   "id": "bradbury::something-wicked-this-way-comes",
+   "title": "Something Wicked This Way Comes",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "bradbury::the-october-country",
+   "title": "The October Country",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "jfinney": [
+  {
+   "id": "jfinney::the-body-snatchers",
+   "title": "The Body Snatchers",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "levin": [
+  {
+   "id": "levin::rosemary-s-baby",
+   "title": "Rosemary's Baby",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "levin::a-kiss-before-dying",
+   "title": "A Kiss Before Dying",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "blatty": [
+  {
+   "id": "blatty::the-exorcist",
+   "title": "The Exorcist",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "siddons": [
+  {
+   "id": "siddons::the-house-next-door",
+   "title": "The House Next Door",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "marasco": [
+  {
+   "id": "marasco::burnt-offerings",
+   "title": "Burnt Offerings",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "etchison": [
+  {
+   "id": "etchison::the-dark-country",
+   "title": "The Dark Country",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tem": [
+  {
+   "id": "tem::ubo",
+   "title": "Ubo",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "tem::city-fishing",
+   "title": "City Fishing",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "brite": [
+  {
+   "id": "brite::exquisite-corpse",
+   "title": "Exquisite Corpse",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mccammon": [
+  {
+   "id": "mccammon::swan-song",
+   "title": "Swan Song",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "mccammon::boy-s-life",
+   "title": "Boy's Life",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ellison": [
+  {
+   "id": "ellison::the-deathbird",
+   "title": "The Deathbird",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "ellison::i-have-no-mouth-and-i-must-scream",
+   "title": "I Have No Mouth and I Must Scream",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "oates": [
+  {
+   "id": "oates::zombie",
+   "title": "Zombie",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "oates::where-are-you-going-where-have-you-been",
+   "title": "Where Are You Going, Where Have You Been?",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "morrison": [
+  {
+   "id": "morrison::beloved",
+   "title": "Beloved",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "topor": [
+  {
+   "id": "topor::the-tenant",
+   "title": "The Tenant",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "cain": [
+  {
+   "id": "cain::the-postman-always-rings-twice",
+   "title": "The Postman Always Rings Twice",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "willeford": [
+  {
+   "id": "willeford::the-woman-chaser",
+   "title": "The Woman Chaser",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "willeford::miami-blues",
+   "title": "Miami Blues",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "himes": [
+  {
+   "id": "himes::a-rage-in-harlem",
+   "title": "A Rage in Harlem",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "millar": [
+  {
+   "id": "millar::beast-in-view",
+   "title": "Beast in View",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "rendell": [
+  {
+   "id": "rendell::a-judgement-in-stone",
+   "title": "A Judgement in Stone",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "izzo": [
+  {
+   "id": "izzo::total-chaos",
+   "title": "Total Chaos",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "dard": [
+  {
+   "id": "dard::the-executioner-weeps",
+   "title": "The Executioner Weeps",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "dard::bird-in-a-cage",
+   "title": "Bird in a Cage",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "suskind": [
+  {
+   "id": "suskind::perfume",
+   "title": "Perfume",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "machado": [
+  {
+   "id": "machado::her-body-and-other-parties",
+   "title": "Her Body and Other Parties",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "nevill": [
+  {
+   "id": "nevill::the-ritual",
+   "title": "The Ritual",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "nevill::last-days",
+   "title": "Last Days",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "langan": [
+  {
+   "id": "langan::the-fisherman",
+   "title": "The Fisherman",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "files": [
+  {
+   "id": "files::experimental-film",
+   "title": "Experimental Film",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "llewellyn": [
+  {
+   "id": "llewellyn::furnace",
+   "title": "Furnace",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "cisco": [
+  {
+   "id": "cisco::the-divinity-student",
+   "title": "The Divinity Student",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "samuels": [
+  {
+   "id": "samuels::the-white-hands",
+   "title": "The White Hands",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "padgett": [
+  {
+   "id": "padgett::the-secret-of-ventriloquism",
+   "title": "The Secret of Ventriloquism",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "malerman": [
+  {
+   "id": "malerman::bird-box",
+   "title": "Bird Box",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lavalle": [
+  {
+   "id": "lavalle::the-ballad-of-black-tom",
+   "title": "The Ballad of Black Tom",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lavalle::the-changeling",
+   "title": "The Changeling",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "due": [
+  {
+   "id": "due::the-reformatory",
+   "title": "The Reformatory",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "due::ghost-summer",
+   "title": "Ghost Summer",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ward": [
+  {
+   "id": "ward::the-last-house-on-needless-street",
+   "title": "The Last House on Needless Street",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "kiste": [
+  {
+   "id": "kiste::the-rust-maidens",
+   "title": "The Rust Maidens",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "katsu": [
+  {
+   "id": "katsu::the-hunger",
+   "title": "The Hunger",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "lindqvist": [
+  {
+   "id": "lindqvist::let-the-right-one-in",
+   "title": "Let the Right One In",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "lindqvist::handling-the-undead",
+   "title": "Handling the Undead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tidbeck": [
+  {
+   "id": "tidbeck::jagannath",
+   "title": "Jagannath",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "tidbeck::amatka",
+   "title": "Amatka",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tokarczuk": [
+  {
+   "id": "tokarczuk::drive-your-plow-over-the-bones-of-the-dead",
+   "title": "Drive Your Plow Over the Bones of the Dead",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "couto": [
+  {
+   "id": "couto::sleepwalking-land",
+   "title": "Sleepwalking Land",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "emezi": [
+  {
+   "id": "emezi::freshwater",
+   "title": "Freshwater",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "mieville": [
+  {
+   "id": "mieville::perdido-street-station",
+   "title": "Perdido Street Station",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "mieville::the-city-the-city",
+   "title": "The City & the City",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "crowley": [
+  {
+   "id": "crowley::little-big",
+   "title": "Little, Big",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "holdstock": [
+  {
+   "id": "holdstock::mythago-wood",
+   "title": "Mythago Wood",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "akutagawa": [
+  {
+   "id": "akutagawa::rash-mon",
+   "title": "Rashōmon",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "akutagawa::hell-screen",
+   "title": "Hell Screen",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "tanizaki": [
+  {
+   "id": "tanizaki::the-key",
+   "title": "The Key",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "tanizaki::quicksand",
+   "title": "Quicksand",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "ono": [
+  {
+   "id": "ono::shiki",
+   "title": "Shiki",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "cortazar": [
+  {
+   "id": "cortazar::blow-up-and-other-stories",
+   "title": "Blow-Up and Other Stories",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "borges": [
+  {
+   "id": "borges::ficciones",
+   "title": "Ficciones",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "felisberto": [
+  {
+   "id": "felisberto::piano-stories",
+   "title": "Piano Stories",
+   "year": null,
+   "kind": "collection",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "sabato": [
+  {
+   "id": "sabato::the-tunnel",
+   "title": "The Tunnel",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "pynchon": [
+  {
+   "id": "pynchon::the-crying-of-lot-49",
+   "title": "The Crying of Lot 49",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ],
+ "dick": [
+  {
+   "id": "dick::ubik",
+   "title": "Ubik",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  },
+  {
+   "id": "dick::a-scanner-darkly",
+   "title": "A Scanner Darkly",
+   "year": null,
+   "kind": "novel",
+   "desc": "",
+   "dims": {},
+   "signals": 0,
+   "source": "seed"
+  }
+ ]
+}

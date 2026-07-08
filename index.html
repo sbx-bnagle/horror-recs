@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recommendotron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#151518;--ink:#EAEAEC;--muted:#A4A4AA;--muted-soft:#7B7B82;--hair:#313136;--panel:#1D1D20;--good:#6FBFB8;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--paper);color:var(--ink);font:14px/1.55 "Work Sans",sans-serif;word-spacing:-0.03em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+#app{display:flex;height:100vh}
+button,input,select{font:inherit;color:inherit}
+/* ---- left sidebar ---- */
+#side{width:300px;flex-shrink:0;border-right:1px solid var(--hair);background:var(--panel);display:flex;flex-direction:column}
+#side header{padding:15px 16px 9px}
+#side h1{font-size:17px;margin:0 0 8px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+#side h1 span{display:block;text-transform:uppercase;font-family:var(--mono);letter-spacing:.16em;color:var(--muted);font-weight:400;font-size:10px;margin-top:6px;white-space:nowrap}
+#io{display:flex;gap:6px;margin-top:6px}
+#io button{font-size:12px;padding:3px 10px;border:1px solid var(--hair);border-radius:14px;background:none;cursor:pointer}
+#io button:hover{border-color:var(--ink)}
+#tabs{display:flex;border-bottom:1px solid var(--hair);padding-left:16px}
+#tabs button{flex:1;padding:9px 0;border:none;background:none;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;text-align:center;transition:color .12s}
+#tabs button:hover{color:var(--ink)}
+#tabs button.on{color:var(--ink);border-bottom-color:var(--ink)}
+#tabs button[data-tab="set"]{font-family:inherit;font-size:20px;line-height:1;padding:5px 0 6px;letter-spacing:0}
+#tabbody{flex:1;overflow-y:auto;padding:10px 12px}
+.recrow{display:flex;align-items:baseline;gap:8px;padding:6px 4px;border-bottom:1px solid var(--hair);cursor:pointer}
+.recrow:hover{background:var(--paper)}
+.recrow .t{flex:1;min-width:0}
+.recrow .st{font-size:11px;color:var(--muted);white-space:nowrap}
+.recrow .st .rd{color:var(--good)}
+.recrow .st .rt{color:#B8912F}
+.recrow .t b{font-weight:600;font-size:13.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recrow .t span{font-size:12px;color:var(--muted)}
+.pill{font-size:11.5px;font-weight:500;font-family:var(--mono);font-variant-numeric:tabular-nums;padding:1px 8px;border-radius:10px;background:var(--paper);border:1px solid var(--hair)}
+.pill.hi{border-color:var(--good);color:var(--good)}
+.relrow{padding:7px 4px;border-bottom:1px solid var(--hair);font-size:12.5px}
+.relrow b{font-weight:600;display:block;font-size:13px}
+.relrow .src{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.01em}
+.relrow a{color:inherit}
+#relbtn{width:100%;margin:0 0 10px;padding:6px;border:1px solid var(--hair);border-radius:8px;background:none;cursor:pointer;font-size:12.5px}
+#relbtn:hover{border-color:var(--ink)}
+/* settings */
+.set label{display:block;font-size:12px;color:var(--muted);margin:10px 0 2px}
+.set .row{display:flex;align-items:center;gap:8px}
+.set input[type=range]{flex:1}
+.set .val{font-size:11.5px;font-family:var(--mono);width:36px;text-align:right}
+.set input[type=text],.set input[type=password]{width:100%;padding:4px 8px;border:1px solid var(--hair);border-radius:6px;background:none;font-size:12.5px}
+.set h3{font-size:10.5px;letter-spacing:.1em;font-family:var(--mono);text-transform:uppercase;color:var(--muted);margin:18px 0 4px}
+.set button{font-size:12px;padding:3px 10px;border:1px solid var(--hair);border-radius:14px;background:none;cursor:pointer;margin-top:8px}
+/* ---- graph ---- */
+#graph{flex:1;position:relative;overflow:hidden}
+#graph svg{display:block;width:100%;height:100%;cursor:grab}
+#graph svg:active{cursor:grabbing}
+#controls{position:absolute;top:10px;left:14px;right:14px;z-index:2;display:flex;flex-wrap:wrap;gap:5px;align-items:center;pointer-events:none}
+#controls>*{pointer-events:auto}
+#search{font-size:12.5px;padding:4px 10px;border:1px solid var(--hair);border-radius:16px;background:var(--panel);width:170px}
+#search:focus{outline:none;border-color:var(--muted)}
+.chip{font-size:11.5px;padding:3px 9px;border:1px solid var(--hair);border-radius:14px;background:var(--panel);color:var(--muted);cursor:pointer}
+.chip.on{color:var(--ink);border-color:var(--ink)}
+.chip .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px}
+#legend{position:absolute;bottom:12px;left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.01em;color:var(--muted);z-index:2;pointer-events:none;background:rgba(21,21,24,.85);padding:5px 9px;border-radius:8px}
+.node{cursor:pointer}
+.node text{font:11px "Work Sans",sans-serif;fill:var(--ink);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.link{stroke:#55534B;stroke-opacity:.55;fill:none}
+.faded{opacity:.08}
+.link.hot{stroke:var(--ink);stroke-opacity:.85}
+.halo{fill:none;stroke:var(--ink);stroke-width:2;opacity:.9}
+/* ---- detail panel ---- */
+#panel{width:0;border-left:1px solid var(--hair);background:var(--panel);overflow-y:auto;transition:width .2s;flex-shrink:0}
+#panel.open{width:360px}
+#pi{padding:18px 20px;min-width:320px}
+#pi h2{font-size:18px;margin:0 0 2px;font-weight:600}
+#pi .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+#pi .close{float:right;border:none;background:none;color:var(--muted);cursor:pointer;font-size:13px}
+#pi p{font-size:13.5px;margin:0 0 12px}
+.work{border-top:1px solid var(--hair);padding:8px 0}
+.work .head{display:flex;align-items:center;gap:8px}
+.work .head input[type=checkbox]{accent-color:var(--good)}
+.work .head .t{flex:1;font-size:13.5px;font-weight:600;cursor:pointer}
+#pi h3{font-family:var(--mono);letter-spacing:.09em}
+.work .head .yr{color:var(--muted);font-weight:400;font-size:11.5px;font-family:var(--mono)}
+.stars{display:flex;gap:1px}
+.stars span{cursor:pointer;color:#44423B;font-size:15px;line-height:1}
+.stars span.on{color:#B8912F}
+.work .body{display:none;padding:8px 0 2px 24px}
+.work.open .body{display:block}
+.work .desc{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.q{margin:0 0 6px}
+.q label{display:block;font-size:11.5px;color:var(--muted)}
+.q select{width:100%;padding:2px 4px;border:1px solid var(--hair);border-radius:5px;background:none;font-size:12px}
+.brk{font-size:11.5px;color:var(--muted);margin-top:8px;cursor:pointer;text-decoration:underline dotted}
+.brkbox{font-size:11.5px;font-family:var(--mono);color:var(--muted);background:var(--paper);border-radius:6px;padding:6px 8px;margin-top:4px;display:none}
+</style>
+</head>
+<body>
+<div id="app">
+<aside id="side">
+  <header>
+    <h1>Recommendotron <span>horror &amp; adjacent</span></h1>
+    <input type="file" id="impfile" accept=".json" hidden>
+  </header>
+  <nav id="tabs">
+    <button class="on" data-tab="recs">Recs</button>
+    <button data-tab="rel">New</button>
+    <button data-tab="all">All</button>
+    <button data-tab="set" aria-label="Settings" title="Settings">&#9881;</button>
+  </nav>
+  <div id="tabbody"></div>
+</aside>
+<div id="graph">
+  <div id="controls"><input id="search" type="search" placeholder="Search…" aria-label="Search"></div>
+  <div id="legend">◉ influence &nbsp; ○ recommendation &nbsp; ■ director/publisher &nbsp; <span style="color:#C79A34">●</span> read · drag/zoom · click for detail</div>
+</div>
+<aside id="panel"><div id="pi"></div></aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(async function(){
+/* ---------- load data ---------- */
+const bust = "?t=" + Date.now();
+const API = { get base(){return (localStorage.getItem("rt-api")||"").replace(/\/$/,"");},
+              get token(){return localStorage.getItem("rt-token")||"";} };
+const A = (p,opt={}) => fetch(API.base+p,{...opt,
+  headers:{"content-type":"application/json","x-app-token":API.token,...(opt.headers||{})}});
+let apiState = API.base ? "connecting" : "off";
+const staticLoad = f => fetch(`data/${f}.json${bust}`).then(r=>r.json());
+const SCORING = await staticLoad("scoring");
+let GRAPH=null, WORKS=null, RELEASES=null;
+if(API.base){
+  try{
+    const cat = await A("/catalog"); if(!cat.ok) throw new Error(cat.status);
+    const c = await cat.json();
+    GRAPH = {clusters:c.clusters, nodes:c.nodes, links:c.links}; WORKS = c.works;
+    RELEASES = await (await A("/releases")).json();
+    apiState = "connected";
+  }catch(e){ apiState = "unavailable ("+e.message+")"; console.warn("worker:",e); }
+}
+if(!GRAPH){ GRAPH = await staticLoad("graph"); WORKS = await staticLoad("works");
+  RELEASES = await staticLoad("releases"); }
+const CLUSTERS = GRAPH.clusters;
+
+/* ---------- user state ---------- */
+const DEFAULTS = () => ({
+  read:{}, ratings:{}, dims:{},           // per-work
+  weights:{}, clusterAff:{}, authorDelta:{}, params:{}   // model overrides
+});
+let U = Object.assign(DEFAULTS(), JSON.parse(localStorage.getItem("imap-user")||"{}"));
+let dataFile = null, writeTimer = null;
+const idb = {
+  open: () => new Promise(res => { const r = indexedDB.open("recommendotron",1);
+    r.onupgradeneeded = () => r.result.createObjectStore("kv");
+    r.onsuccess = () => res(r.result); r.onerror = () => res(null); }),
+  get: async k => { const db = await idb.open(); if(!db) return null;
+    return new Promise(res => { const g = db.transaction("kv").objectStore("kv").get(k);
+      g.onsuccess = () => res(g.result); g.onerror = () => res(null); }); },
+  set: async (k,v) => { const db = await idb.open(); if(!db) return;
+    return new Promise(res => { const t = db.transaction("kv","readwrite");
+      t.objectStore("kv").put(v,k); t.oncomplete = res; }); }
+};
+async function apiLoadUser(){
+  if(!API.base) return;
+  try{
+    const r=await A("/userdata"); if(!r.ok) throw new Error(r.status);
+    const j=await r.json();
+    if(j){ U=Object.assign(DEFAULTS(),j); localStorage.setItem("imap-user",JSON.stringify(U)); }
+    apiState="synced";
+    renderTab(); if(selected&&byId[selected])renderPanel(byId[selected]);
+  }catch(e){ apiState="load failed: "+e.message; }
+}
+async function apiSave(){
+  if(!API.base) return;
+  try{ const r=await A("/userdata",{method:"PUT",body:JSON.stringify(U)});
+    apiState=r.ok ? "synced "+new Date().toLocaleTimeString() : "sync failed ("+r.status+")"; }
+  catch(e){ apiState="sync failed"; }
+}
+let apiTimer=null;
+async function writeDataFile(){
+  if(!dataFile) return;
+  try { const w = await dataFile.createWritable();
+    await w.write(JSON.stringify(U,null,1)); await w.close(); }
+  catch(e){ console.warn("data file write failed", e); }
+}
+const save = () => { localStorage.setItem("imap-user", JSON.stringify(U));
+  clearTimeout(writeTimer); writeTimer = setTimeout(writeDataFile, 800);
+  clearTimeout(apiTimer); apiTimer = setTimeout(apiSave, 1500); };
+(async () => {  // reconnect a previously chosen data file
+  const h = await idb.get("dataFile"); if(!h) return;
+  if(await h.queryPermission({mode:"readwrite"}) !== "granted") return;
+  try { const f = await h.getFile(); const t = await f.text();
+    if(t.trim()) { U = Object.assign(DEFAULTS(), JSON.parse(t)); }
+    dataFile = h; renderTab(); }
+  catch(e){ console.warn(e); }
+  apiLoadUser();
+})();
+if(!("showSaveFilePicker" in window)) apiLoadUser();
+
+/* ---------- scoring model ---------- */
+const P = k => U.params[k] ?? SCORING[k];
+const dimW = d => U.weights[d] ?? SCORING.dimensions[d].weight;
+const clAff = c => U.clusterAff[c] ?? SCORING.clusterAffinity[c] ?? 0.5;
+const auAff = n => (SCORING.typeAffinity[n.type] ?? 0.5) + (U.authorDelta[n.id] || 0);
+function workDims(w){ return Object.assign({}, w.dims, U.dims[w.id] || {}); }
+function score(w, node){
+  const dims = workDims(w);
+  let dsum = 0; for (const d in dims) if (SCORING.dimensions[d]) dsum += dimW(d) * dims[d];
+  const s = P("base") + P("clusterWeight")*clAff(node.cluster) + P("authorWeight")*auAff(node)
+          + P("dimScale")*dsum + P("signalWeight")*Math.min(w.signals||0, P("signalCap"))
+          + P("tasteWeight")*(w.tasteMatch||0);
+  return Math.max(0, Math.min(100, Math.round(s)));
+}
+function breakdown(w, node){
+  const dims = workDims(w);
+  const parts = [
+    ["base", P("base")],
+    [`cluster ${CLUSTERS[node.cluster].label} × ${P("clusterWeight")}`, +(P("clusterWeight")*clAff(node.cluster)).toFixed(1)],
+    [`author affinity × ${P("authorWeight")}`, +(P("authorWeight")*auAff(node)).toFixed(1)]
+  ];
+  for (const d in dims) if (SCORING.dimensions[d] && dims[d])
+    parts.push([`${SCORING.dimensions[d].label}: ${dims[d]} × ${dimW(d)} × ${P("dimScale")}`, +(P("dimScale")*dimW(d)*dims[d]).toFixed(1)]);
+  if (w.signals) parts.push([`external signals (${w.signals})`, +(P("signalWeight")*Math.min(w.signals,P("signalCap"))).toFixed(1)]);
+  if (w.tasteMatch) parts.push([`taste match ${w.tasteMatch} × ${P("tasteWeight")}`, +(P("tasteWeight")*w.tasteMatch).toFixed(1)]);
+  return parts;
+}
+function learn(w, node, rating){
+  const target = (rating - 1) / 4, pred = score(w, node) / 100, err = target - pred;
+  const lr = SCORING.learningRates.weights, dims = workDims(w);
+  for (const d in dims) if (SCORING.dimensions[d] && dims[d] > 0)
+    U.weights[d] = +(dimW(d) + lr * err * dims[d]).toFixed(3);
+  U.authorDelta[node.id] = +(((U.authorDelta[node.id]||0) + SCORING.learningRates.authorAffinity * (rating - 3) / 2)).toFixed(3);
+  save();
+}
+
+/* ---------- graph ---------- */
+const nodes = GRAPH.nodes.map(d => Object.assign({}, d));
+const links = GRAPH.links.map(([source,target]) => ({source, target}));
+const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+const degree = {}; links.forEach(l => { degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
+nodes.forEach(n => n.deg = degree[n.id] || 1);
+const neighbors = {}; links.forEach(l => {
+  (neighbors[l.source] ||= []).push(l.target);
+  (neighbors[l.target] ||= []).push(l.source);
+});
+nodes.forEach(n => {
+  const t = new Set([n.cluster]);
+  (neighbors[n.id]||[]).forEach(id => t.add(byId[id].cluster));
+  t.delete("meta");
+  nodeThreads[n.id] = t;
+});
+const threadMatch = n => activeClusters.size===0 || [...activeClusters].every(c => nodeThreads[n.id].has(c));
+
+const graphEl = document.getElementById("graph");
+const W = () => graphEl.clientWidth, H = () => graphEl.clientHeight;
+const svg = d3.select("#graph").append("svg");
+const root = svg.append("g");
+const linkG = root.append("g"), nodeG = root.append("g"), haloG = root.append("g");
+const zoom = d3.zoom().scaleExtent([0.25,5]).on("zoom", e => root.attr("transform", e.transform));
+svg.call(zoom);
+
+const keys = Object.keys(CLUSTERS), center = {};
+keys.forEach((k,i)=>{const a=(i/keys.length)*2*Math.PI-Math.PI/2; center[k]={x:Math.cos(a),y:Math.sin(a)};});
+const r = d => 4 + Math.min(d.deg,12)*0.9;
+
+const sim = d3.forceSimulation(nodes)
+  .force("link", d3.forceLink(links).id(d=>d.id).distance(46).strength(.35))
+  .force("charge", d3.forceManyBody().strength(-120))
+  .force("collide", d3.forceCollide().radius(d=>r(d)+3))
+  .force("x", d3.forceX(d=>W()/2+center[d.cluster].x*W()*.28).strength(.06))
+  .force("y", d3.forceY(d=>H()/2+center[d.cluster].y*H()*.30).strength(.06))
+  .force("center", d3.forceCenter(W()/2,H()/2));
+
+const linkSel = linkG.selectAll("line").data(links).join("line").attr("class","link");
+const nodeSel = nodeG.selectAll("g").data(nodes).join("g").attr("class","node")
+  .call(d3.drag()
+    .on("start",(e,d)=>{if(!e.active)sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y;})
+    .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
+    .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+
+nodeSel.each(function(d){
+  const g = d3.select(this), c = CLUSTERS[d.cluster].color;
+  if (d.type==="director"||d.type==="publisher")
+    g.append("rect").attr("x",-r(d)).attr("y",-r(d)).attr("width",r(d)*2).attr("height",r(d)*2).attr("rx",2).attr("fill",c);
+  else if (d.type==="influence"){
+    // influence: solid disc with outer ring
+    g.append("circle").attr("r",r(d)).attr("fill",c);
+    g.append("circle").attr("r",r(d)+2.6).attr("fill","none").attr("stroke",c).attr("stroke-width",1.3).attr("stroke-opacity",.7);
+  } else {
+    // recommendation: hollow ring (thick stroke, paper-filled center)
+    g.append("circle").attr("r",r(d)).style("fill","var(--paper)").attr("stroke",c).attr("stroke-width",2.1).attr("stroke-opacity",.95);
+  }
+  // read marker: gold dot at lower-right, shown when any work is read/rated
+  g.append("circle").attr("class","readdot").attr("r",2.8)
+    .attr("cx",r(d)*0.72).attr("cy",r(d)*0.72)
+    .attr("fill","#C79A34").style("stroke","var(--paper)").attr("stroke-width",1.1)
+    .style("display","none");
+  g.append("text").attr("dy",-r(d)-6).attr("text-anchor","middle").text(d.label)
+    .style("display", d.deg>=4?null:"none");
+});
+function updateReadMarkers(){
+  nodeSel.select(".readdot").style("display", d=>nodeHasRead(d)?null:"none");
+}
+
+sim.on("tick",()=>{
+  linkSel.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  nodeSel.attr("transform",d=>`translate(${d.x},${d.y})`);
+  const h = haloG.select("circle"); if(!h.empty()&&h.datum()) h.attr("cx",h.datum().x).attr("cy",h.datum().y);
+});
+
+/* chips */
+const controls = document.getElementById("controls");
+let activeClusters = new Set(), selected = null, readFilter = null;
+const nodeThreads = {};
+const nodeHasRead = n => (WORKS[n.id]||[]).some(w => U.read[w.id] || U.ratings[w.id]?.r);
+function chip(label,key,on,color){
+  const b=document.createElement("button"); b.className="chip"+(on?" on":"")+(key?" cl":"");
+  b.innerHTML=(color?`<span class="dot" style="background:${color}"></span>`:"")+label;
+  b.onclick=()=>{
+    if(!key){activeClusters.clear();}
+    else{activeClusters.has(key)?activeClusters.delete(key):activeClusters.add(key);}
+    controls.querySelectorAll(".chip.cl").forEach(c=>{});
+    [...controls.querySelectorAll(".chip")].forEach(c=>{
+      if(c.classList.contains("rf"))return;
+      const k=c.dataset.key||"";
+      c.classList.toggle("on", k? activeClusters.has(k) : activeClusters.size===0);
+    });
+    selected=null;renderPanel(null);apply();
+  };
+  b.dataset.key=key||"";
+  controls.appendChild(b);
+}
+chip("All",null,true); keys.forEach(k=>chip(CLUSTERS[k].label,k,false,CLUSTERS[k].color));
+["read","unread"].forEach(f=>{
+  const b=document.createElement("button");b.className="chip";b.textContent=f[0].toUpperCase()+f.slice(1);
+  b.onclick=()=>{readFilter=readFilter===f?null:f;
+    controls.querySelectorAll(".chip.rf").forEach(c=>c.classList.toggle("on",c===b&&readFilter===f));
+    apply();};
+  b.classList.add("rf");controls.appendChild(b);
+});
+
+function visible(d,q){
+  if(selected) return d.id===selected||(neighbors[selected]||[]).includes(d.id);
+  if(!threadMatch(d)) return false;
+  if(readFilter==="read"&&!nodeHasRead(d)) return false;
+  if(readFilter==="unread"&&nodeHasRead(d)) return false;
+  if(q){const hay=(d.label+" "+(WORKS[d.id]||[]).map(w=>w.title).join(" ")).toLowerCase(); if(!hay.includes(q))return false;}
+  return true;
+}
+function apply(){
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  nodeSel.classed("faded",d=>!visible(d,q));
+  nodeSel.select("text").style("display",d=>{
+    if(!visible(d,q))return"none";
+    if(selected||q||activeClusters.size)return null;
+    return d.deg>=4?null:"none";
+  });
+  linkSel.classed("faded",l=>!(visible(l.source,q)&&visible(l.target,q)))
+         .classed("hot",l=>selected&&(l.source.id===selected||l.target.id===selected));
+  if(tab==="recs"||tab==="all")renderTab();
+}
+nodeSel.on("click",(e,d)=>{e.stopPropagation();selected=d.id;renderPanel(d);apply();});
+svg.on("click",()=>{selected=null;renderPanel(null);apply();});
+document.getElementById("search").addEventListener("input",()=>{selected=null;renderPanel(null);apply();});
+
+function halo(id){
+  haloG.selectAll("*").remove();
+  if(!id) return;
+  const n=byId[id];
+  haloG.append("circle").datum(n).attr("class","halo").attr("r",r(n)+8).attr("cx",n.x).attr("cy",n.y);
+}
+function focusNode(id){
+  const n=byId[id];
+  svg.transition().duration(400).call(zoom.translateTo,n.x,n.y);
+}
+
+/* ---------- detail panel ---------- */
+const panel=document.getElementById("panel"), pi=document.getElementById("pi");
+const openWorks=new Set();
+const TYPE_LABEL={influence:"Influence",rec:"Recommendation",director:"Director",publisher:"Publisher"};
+const QUESTIONS=[
+  ["dread","Dread level","None|Some|Constant"],
+  ["threat","Antagonist","Atmospheric only|Mixed|Concrete & inescapable"],
+  ["cosmic","Supernatural/cosmic","None|Ambiguous|Committed"],
+  ["visceral","Visceral content","None|Some|Heavy"],
+  ["bleak","Bleakness","Hopeful|Neutral|Bleak"],
+  ["camp","Camp / ironic distance","Straight|Mild|Heavy"]
+];
+function starRow(w,node,cur){
+  const div=document.createElement("div");div.className="stars";
+  for(let i=1;i<=5;i++){
+    const s=document.createElement("span");s.textContent="★";if(cur>=i)s.classList.add("on");
+    s.onclick=e=>{e.stopPropagation();
+      U.ratings[w.id]=Object.assign(U.ratings[w.id]||{},{r:i});
+      learn(w,node,i);save();renderPanel(node);renderTab();};
+    div.appendChild(s);
+  }
+  return div;
+}
+function renderPanel(node){
+  if(!node){panel.classList.remove("open");pi.innerHTML="";halo(null);return;}
+  const ws=WORKS[node.id]||[];
+  pi.innerHTML=`
+    <button class="close">✕</button>
+    <h2>${node.label}</h2>
+    <p class="kicker"><span style="color:${CLUSTERS[node.cluster].color}">●</span> ${TYPE_LABEL[node.type]} · ${CLUSTERS[node.cluster].label}</p>
+    <p>${node.note||""}</p>
+    ${ws.length?`<h3 style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Works (${ws.length})</h3>`:""}
+    <div id="works"></div>
+    ${(neighbors[node.id]||[]).length?`<h3 style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:16px">Connected</h3>
+      <p style="font-size:13px">${(neighbors[node.id]||[]).map(id=>`<span class="nb" data-id="${id}" style="cursor:pointer;border-bottom:1px dotted var(--hair)">${byId[id].label}</span>`).join(" · ")}</p>`:""}
+  `;
+  pi.querySelector(".close").onclick=()=>{selected=null;renderPanel(null);apply();};
+  pi.querySelectorAll(".nb").forEach(el=>el.onclick=()=>{const n=byId[el.dataset.id];selected=n.id;renderPanel(n);apply();focusNode(n.id);});
+  const box=pi.querySelector("#works");
+  ws.forEach(w=>{
+    const rated=U.ratings[w.id]?.r, isRead=!!U.read[w.id];
+    const el=document.createElement("div");el.className="work"+(openWorks.has(w.id)?" open":"");
+    const head=document.createElement("div");head.className="head";
+    const cb=document.createElement("input");cb.type="checkbox";cb.checked=isRead;cb.title="Read";
+    cb.onchange=()=>{U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
+    const t=document.createElement("div");t.className="t";
+    t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}`;
+    t.onclick=()=>{el.classList.toggle("open");openWorks.has(w.id)?openWorks.delete(w.id):openWorks.add(w.id);};
+    const pill=document.createElement("span");
+    if(rated){pill.className="pill";pill.textContent="you: "+rated+"★";}
+    else{const s=score(w,node);pill.className="pill"+(s>=70?" hi":"");pill.textContent=s;pill.title="Recommendation score";}
+    head.append(cb,t,pill); el.appendChild(head);
+    const body=document.createElement("div");body.className="body";
+    body.innerHTML=`<p class="desc">${w.desc||"<i>No description yet - run the bibliography script or ask Claude to enrich this entry.</i>"}</p>`;
+    if(isRead){
+      body.appendChild(starRow(w,node,rated||0));
+      const qwrap=document.createElement("div");qwrap.style.marginTop="8px";
+      QUESTIONS.forEach(([key,label,opts])=>{
+        const q=document.createElement("div");q.className="q";
+        const cur=(U.dims[w.id]||{})[key];
+        q.innerHTML=`<label>${label}</label>`;
+        const sel=document.createElement("select");
+        sel.innerHTML=`<option value="">—</option>`+opts.split("|").map((o,i)=>`<option value="${i/2}" ${cur==i/2?"selected":""}>${o}</option>`).join("");
+        sel.onchange=()=>{
+          U.dims[w.id]=U.dims[w.id]||{};
+          if(sel.value==="")delete U.dims[w.id][key];else{
+            U.dims[w.id][key]=+sel.value;
+            if(key==="camp")U.dims[w.id]["irony"]=+sel.value;
+          }
+          if(U.ratings[w.id]?.r)learn(w,node,U.ratings[w.id].r);
+          save();renderTab();
+        };
+        q.appendChild(sel);qwrap.appendChild(q);
+      });
+      body.appendChild(qwrap);
+    }
+    const brk=document.createElement("div");brk.className="brk";brk.textContent="score breakdown";
+    const bb=document.createElement("div");bb.className="brkbox";
+    brk.onclick=()=>{bb.style.display=bb.style.display==="block"?"none":"block";
+      bb.innerHTML=breakdown(w,node).map(([k,v])=>`${k}: <b>${v>0?"+":""}${v}</b>`).join("<br>")+`<br>= <b>${score(w,node)}</b>`;};
+    body.append(brk,bb);
+    el.appendChild(body);box.appendChild(el);
+  });
+  panel.classList.add("open");
+}
+
+/* ---------- sidebar tabs ---------- */
+const tabbody=document.getElementById("tabbody");
+let tab="recs";
+document.getElementById("tabs").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  tab=b.dataset.tab;
+  document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("on",x===b));
+  renderTab();
+});
+
+function sideFilter(w,n){
+  if(!threadMatch(n))return false;
+  const done=U.read[w.id]||U.ratings[w.id]?.r;
+  if(readFilter==="read"&&!done)return false;
+  if(readFilter==="unread"&&done)return false;
+  const q=document.getElementById("search").value.trim().toLowerCase();
+  if(q&&!(w.title+" "+n.label).toLowerCase().includes(q))return false;
+  return true;
+}
+function recList(){
+  const out=[];
+  for(const n of nodes){
+    if(n.type==="director"||n.type==="publisher")continue;
+    for(const w of WORKS[n.id]||[]){
+      if(U.read[w.id]||U.ratings[w.id]?.r)continue;
+      if(!sideFilter(w,n))continue;
+      out.push({w,n,s:score(w,n)});
+    }
+  }
+  out.sort((a,b)=>b.s-a.s);
+  return out.slice(0,50);
+}
+function renderTab(){
+  updateReadMarkers();
+  tabbody.innerHTML="";
+  if(tab==="recs"){
+    recList().forEach(({w,n,s})=>{
+      const row=document.createElement("div");row.className="recrow";
+      row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}</span></div><span class="pill${s>=70?" hi":""}">${s}</span>`;
+      row.onmouseenter=()=>halo(n.id);
+      row.onmouseleave=()=>halo(selected);
+      row.onclick=()=>{selected=n.id;renderPanel(n);apply();focusNode(n.id);halo(n.id);};
+      tabbody.appendChild(row);
+    });
+  }
+  else if(tab==="all"){
+    const items=[];
+    for(const n of nodes){
+      if(n.type==="director"||n.type==="publisher")continue;
+      for(const w of WORKS[n.id]||[]) if(sideFilter(w,n)) items.push({w,n});
+    }
+    items.sort((a,b)=>a.n.label.localeCompare(b.n.label)||a.w.title.localeCompare(b.w.title));
+    items.forEach(({w,n})=>{
+      const rd=!!U.read[w.id], rt=U.ratings[w.id]?.r;
+      const row=document.createElement("div");row.className="recrow";
+      row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}</span></div>
+        <span class="st">${rd?'<span class="rd">✓ read</span>':""}${rt?` <span class="rt">${rt}★</span>`:""}${!rd&&!rt?`<span class="pill">${score(w,n)}</span>`:""}</span>`;
+      row.onmouseenter=()=>halo(n.id);
+      row.onmouseleave=()=>halo(selected);
+      row.onclick=()=>{selected=n.id;renderPanel(n);apply();focusNode(n.id);halo(n.id);};
+      tabbody.appendChild(row);
+    });
+  }
+  else if(tab==="rel"){
+    const btn=document.createElement("button");btn.id="relbtn";
+    btn.textContent="Check for new releases";
+    btn.onclick=triggerScan;
+    tabbody.appendChild(btn);
+    const cp=document.createElement("button");cp.id="cpbtn";cp.style.cssText="width:100%;margin:0 0 8px;padding:6px;border:1px solid var(--hair);border-radius:8px;background:none;cursor:pointer;font-size:12.5px";
+    cp.textContent="Copy Claude update prompt";
+    cp.onclick=async()=>{
+      const unmatched=(RELEASES.items||[]).filter(i=>!i.author).slice(0,40)
+        .map(i=>`- ${i.title} (${i.source})`).join("\n");
+      const rated=Object.entries(U.ratings||{}).map(([id,v])=>`${id}: ${v.r}★`).join("\n");
+      const prompt=`Review these new-release items from my horror release scan and identify authors worth adding to my Recommendotron influence map (graph.json). My taste profile is in your memory; recent ratings below. Return a JSON object {"nodes":[{id,label,type:"rec",cluster,note,works:[..]}],"links":[[newId,existingId],..]} matching my graph schema, ready for scripts/merge-graph-additions.mjs. Only include authors that genuinely fit; skip camp/ironic work.\n\nMY RATINGS\n${rated}\n\nUNMATCHED RELEASE ITEMS\n${unmatched}`;
+      try{await navigator.clipboard.writeText(prompt);cp.textContent="Copied - paste into Claude";}
+      catch{cp.textContent="Clipboard blocked - see console";console.log(prompt);}
+      setTimeout(()=>cp.textContent="Copy Claude update prompt",4000);
+    };
+    tabbody.appendChild(cp);
+    const ac=document.createElement("button");ac.style.cssText=cp.style.cssText;
+    ac.textContent="Ask Claude for author suggestions";
+    ac.onclick=()=>askClaude(ac);
+    tabbody.appendChild(ac);
+    if(suggestions&&suggestions.nodes){
+      suggestions.nodes.forEach(n=>{
+        const row=document.createElement("div");row.className="relrow";
+        const lk=(suggestions.links||[]).filter(l=>l[0]===n.id);
+        row.innerHTML=`<b>${n.label}</b><span class="src">${CLUSTERS[n.cluster]?CLUSTERS[n.cluster].label:n.cluster}</span><div>${n.note||""}</div>`;
+        const add=document.createElement("button");
+        add.textContent="Add to map";add.style.cssText="font-size:11px;margin-top:3px;padding:2px 8px;border:1px solid var(--hair);border-radius:10px;background:none;cursor:pointer";
+        add.onclick=()=>addAuthor(n,lk,add);
+        row.appendChild(add);
+        tabbody.appendChild(row);
+      });
+    }
+    const info=document.createElement("p");info.style.cssText="font-size:11.5px;color:var(--muted);margin:0 0 8px";
+    info.textContent=RELEASES.fetched?`Last scan: ${RELEASES.fetched.slice(0,10)}`:"No scan yet - run the Action or the script.";
+    tabbody.appendChild(info);
+    (RELEASES.items||[]).forEach(it=>{
+      const row=document.createElement("div");row.className="relrow";
+      row.innerHTML=`<b>${it.url?`<a href="${it.url}" target="_blank" rel="noopener">${it.title}</a>`:it.title}</b>
+        <span class="src">${it.source}${it.kind==="award"?" · award":""}${it.date?" · "+it.date.slice(0,16):""}${it.author&&byId[it.author]?" · <b>"+byId[it.author].label+"</b>":""}</span>
+        ${it.summary?`<div>${it.summary}</div>`:""}`;
+      if(it.author&&byId[it.author]){
+        const add=document.createElement("button");
+        add.textContent="Add to catalog";add.style.cssText="font-size:11px;margin-top:3px;padding:2px 8px;border:1px solid var(--hair);border-radius:10px;background:none;cursor:pointer";
+        add.onclick=()=>addRelease(it,add);
+        row.appendChild(add);
+      }
+      tabbody.appendChild(row);
+    });
+  }
+  else if(tab==="set"){
+    const s=document.createElement("div");s.className="set";
+    s.innerHTML=`<h3>Dimension weights</h3>`;
+    for(const d in SCORING.dimensions){
+      const row=document.createElement("div");
+      row.innerHTML=`<label>${SCORING.dimensions[d].label}</label>`;
+      const r2=document.createElement("div");r2.className="row";
+      const rng=document.createElement("input");rng.type="range";rng.min=-1.5;rng.max=1.5;rng.step=.05;rng.value=dimW(d);
+      const val=document.createElement("span");val.className="val";val.textContent=(+rng.value).toFixed(2);
+      rng.oninput=()=>{U.weights[d]=+rng.value;val.textContent=(+rng.value).toFixed(2);save();};
+      rng.onchange=()=>renderPanel(selected?byId[selected]:null)||void 0;
+      r2.append(rng,val);row.appendChild(r2);s.appendChild(row);
+    }
+    s.insertAdjacentHTML("beforeend","<h3>Taste match weight</h3>");
+    {const r2=document.createElement("div");r2.className="row";
+     const rng=document.createElement("input");rng.type="range";rng.min=0;rng.max=20;rng.step=1;rng.value=P("tasteWeight");
+     const val=document.createElement("span");val.className="val";val.textContent=rng.value;
+     rng.oninput=()=>{U.params.tasteWeight=+rng.value;val.textContent=rng.value;save();};
+     r2.append(rng,val);s.appendChild(r2);}
+    s.insertAdjacentHTML("beforeend","<h3>Cluster affinity</h3>");
+    for(const c in SCORING.clusterAffinity){
+      const row=document.createElement("div");
+      row.innerHTML=`<label>${CLUSTERS[c].label}</label>`;
+      const r2=document.createElement("div");r2.className="row";
+      const rng=document.createElement("input");rng.type="range";rng.min=0;rng.max=1.2;rng.step=.05;rng.value=clAff(c);
+      const val=document.createElement("span");val.className="val";val.textContent=(+rng.value).toFixed(2);
+      rng.oninput=()=>{U.clusterAff[c]=+rng.value;val.textContent=(+rng.value).toFixed(2);save();};
+      r2.append(rng,val);row.appendChild(r2);s.appendChild(row);
+    }
+    const deltas=Object.entries(U.authorDelta).filter(([,v])=>v);
+    if(deltas.length){
+      s.insertAdjacentHTML("beforeend","<h3>Learned author adjustments</h3><p style='font-size:12px;color:var(--muted)'>"+
+        deltas.sort((a,b)=>b[1]-a[1]).map(([id,v])=>`${byId[id]?.label||id}: ${v>0?"+":""}${v}`).join("<br>")+"</p>");
+    }
+    s.insertAdjacentHTML("beforeend",`<h3>Worker connection</h3>
+      <p style="font-size:11.5px;color:var(--muted);margin:4px 0">Catalog, releases, ratings, and Claude suggestions run through your Cloudflare Worker. Status: ${apiState}</p>
+      <label>Worker URL</label>`);
+    const wurl=document.createElement("input");wurl.type="text";wurl.value=localStorage.getItem("rt-api")||"";wurl.placeholder="https://recommendotron.you.workers.dev";
+    wurl.onchange=()=>{localStorage.setItem("rt-api",wurl.value.trim());location.reload();};
+    s.appendChild(wurl);
+    s.insertAdjacentHTML("beforeend","<label>App token (matches the worker's APP_TOKEN secret; stored in this browser only)</label>");
+    const wtok=document.createElement("input");wtok.type="password";wtok.value=localStorage.getItem("rt-token")||"";
+    wtok.onchange=()=>{localStorage.setItem("rt-token",wtok.value.trim());location.reload();};
+    s.appendChild(wtok);
+    const reset=document.createElement("button");reset.textContent="Reset model to defaults";
+    reset.onclick=()=>{U.weights={};U.clusterAff={};U.authorDelta={};U.params={};save();renderTab();};
+    s.appendChild(reset);
+    s.insertAdjacentHTML("beforeend","<h3>Your data</h3>");
+    if("showSaveFilePicker" in window){
+      const st=document.createElement("p");st.style.cssText="font-size:11.5px;color:var(--muted);margin:4px 0";
+      st.textContent=dataFile?`Saving to ${dataFile.name}`:"Not connected to a file (browser storage only)";
+      const con=document.createElement("button");con.textContent=dataFile?"Change data file…":"Connect data file…";
+      st.textContent=(dataFile?`Offline fallback: saving to ${dataFile.name}`:"Offline fallback: not connected (Chromium only)");
+      con.onclick=async()=>{
+        try{
+          const h=await window.showSaveFilePicker({suggestedName:"recommendotron-userdata.json",
+            types:[{description:"JSON",accept:{"application/json":[".json"]}}]});
+          const f=await h.getFile().catch(()=>null);
+          if(f){const t=await f.text();if(t.trim()){try{U=Object.assign(DEFAULTS(),JSON.parse(t));}catch{}}}
+          dataFile=h;await idb.set("dataFile",h);await writeDataFile();renderTab();
+        }catch(e){/* user cancelled */}
+      };
+      s.append(st,con);
+      s.insertAdjacentHTML("beforeend","<div style='height:4px'></div>");
+    }
+    const exp=document.createElement("button");exp.textContent="Export data";
+    exp.onclick=()=>{
+      const blob=new Blob([JSON.stringify(U,null,1)],{type:"application/json"});
+      const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="recommendotron-userdata.json";a.click();
+    };
+    const imp=document.createElement("button");imp.textContent="Import data";imp.style.marginLeft="6px";
+    imp.onclick=()=>document.getElementById("impfile").click();
+    s.append(exp,imp);
+    tabbody.appendChild(s);
+  }
+}
+
+async function addRelease(it,btn){
+  if(!API.base){btn.textContent="Set worker URL in Settings first";return;}
+  const guess=it.title.replace(new RegExp(byId[it.author].label,"i"),"").replace(/\bby\b|announcing|pre-?order|now available|:|-/gi," ").replace(/\s+/g," ").trim();
+  const title=prompt("Title to add under "+byId[it.author].label+":",guess||it.title);
+  if(!title)return;
+  btn.textContent="Adding…";
+  try{
+    const r=await A("/works",{method:"POST",body:JSON.stringify({author:it.author,title,year:new Date().getFullYear(),desc:it.summary||""})});
+    if(!r.ok)throw new Error(r.status);
+    const {id}=await r.json();
+    (WORKS[it.author]=WORKS[it.author]||[]).some(x=>x.id===id)||
+      WORKS[it.author].push({id,title,year:new Date().getFullYear(),kind:"novel",desc:it.summary||"",dims:{},signals:0,source:"release"});
+    btn.textContent="Added ✓";renderTab();
+  }catch(e){btn.textContent="Failed ("+e.message+")";}
+}
+async function triggerScan(){
+  const btn=document.getElementById("relbtn");
+  if(!API.base){btn.textContent="Set worker URL + token in Settings first";
+    setTimeout(()=>btn.textContent="Check for new releases",5000);return;}
+  btn.textContent="Scanning…";
+  try{
+    const r=await A("/scan",{method:"POST"});
+    if(!r.ok)throw new Error(r.status);
+    RELEASES=await (await A("/releases")).json();
+    btn.textContent="Scan complete";renderTab();
+  }catch(e){btn.textContent="Scan failed ("+e.message+")";
+    setTimeout(()=>btn.textContent="Check for new releases",5000);}
+}
+let suggestions=null;
+async function askClaude(btn){
+  if(!API.base){btn.textContent="Set worker URL in Settings first";return;}
+  btn.textContent="Asking Claude… (can take ~30s)";
+  try{
+    const r=await A("/claude/suggest",{method:"POST"});
+    if(!r.ok)throw new Error((await r.json()).error||r.status);
+    suggestions=await r.json();
+    btn.textContent="Suggestions below";renderTab();
+  }catch(e){btn.textContent="Failed: "+e.message;}
+}
+async function addAuthor(node,links,btn){
+  btn.textContent="Adding…";
+  try{
+    const r=await A("/authors",{method:"POST",body:JSON.stringify({node,links})});
+    if(!r.ok)throw new Error(r.status);
+    btn.textContent="Added ✓ (reload to see in map)";
+  }catch(e){btn.textContent="Failed ("+e.message+")";}
+}
+
+/* ---------- import ---------- */
+document.getElementById("impfile").onchange=e=>{
+  const f=e.target.files[0];if(!f)return;
+  f.text().then(t=>{U=Object.assign(DEFAULTS(),JSON.parse(t));save();renderTab();renderPanel(selected?byId[selected]:null);});
+};
+
+window.addEventListener("resize",()=>{sim.force("center",d3.forceCenter(W()/2,H()/2));sim.alpha(.3).restart();});
+renderTab();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4379 @@
+{
+ "clusters": {
+  "weird": {
+   "label": "European uncanny",
+   "color": "#3E7C76"
+  },
+  "core": {
+   "label": "Dread → concrete threat",
+   "color": "#D9822B"
+  },
+  "noir": {
+   "label": "Noir, giallo & thrillers",
+   "color": "#8C4A4A"
+  },
+  "consp": {
+   "label": "Conspiracy & accretion",
+   "color": "#7B6FC4"
+  },
+  "slash": {
+   "label": "Slasher, survival, paperback",
+   "color": "#C94F42"
+  },
+  "dream": {
+   "label": "Dreamlike & tonal shift",
+   "color": "#4C7FB8"
+  },
+  "spare": {
+   "label": "Elemental & spare",
+   "color": "#6B8F52"
+  },
+  "latam": {
+   "label": "Latin American",
+   "color": "#C06A93"
+  },
+  "asian": {
+   "label": "Asian",
+   "color": "#B8912F"
+  },
+  "african": {
+   "label": "African",
+   "color": "#85853B"
+  },
+  "fantasy": {
+   "label": "Medieval, grotesque & dark fantasy",
+   "color": "#5E5A8F"
+  },
+  "meta": {
+   "label": "Directors & publishers",
+   "color": "#8F8D86"
+  }
+ },
+ "nodes": [
+  {
+   "id": "blackwood",
+   "label": "Algernon Blackwood",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Nature as hostile cosmic presence; a core touchstone.",
+   "works": [
+    "The Willows",
+    "The Wendigo"
+   ]
+  },
+  {
+   "id": "machen",
+   "label": "Arthur Machen",
+   "type": "influence",
+   "cluster": "weird",
+   "note": "Occult-industrial dread; uncanny that steps into the room.",
+   "works": [
+    "The Great God Pan"
+   ]
+  },
+  {
+   "id": "aickman",
+   "label": "Robert Aickman",
+   "type": "influence",
+   "cluster": "weird",
+   "note": "Strange stories; dread that outlasts the reading.",
+   "works": [
+    "Cold Hand in Mine"
+   ]
+  },
+  {
+   "id": "ligotti",
+   "label": "Thomas Ligotti",
+   "type": "influence",
+   "cluster": "weird",
+   "note": "Philosophical pessimism as horror.",
+   "works": [
+    "Songs of a Dead Dreamer"
+   ]
+  },
+  {
+   "id": "grabinski",
+   "label": "Stefan Grabiński",
+   "type": "influence",
+   "cluster": "weird",
+   "note": "Polish weird fiction; motion and machinery haunted.",
+   "works": [
+    "The Dark Domain"
+   ]
+  },
+  {
+   "id": "ewers",
+   "label": "Hanns Heinz Ewers",
+   "type": "influence",
+   "cluster": "weird",
+   "note": "Decadent-psychological German horror.",
+   "works": [
+    "Alraune",
+    "The Spider"
+   ]
+  },
+  {
+   "id": "jackson",
+   "label": "Shirley Jackson",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Domestic register tipping into menace.",
+   "works": [
+    "The Summer People",
+    "We Have Always Lived in the Castle"
+   ]
+  },
+  {
+   "id": "leiber",
+   "label": "Fritz Leiber",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Urban supernatural; Smoke Ghost is a touchstone.",
+   "works": [
+    "Smoke Ghost"
+   ]
+  },
+  {
+   "id": "mcdowell",
+   "label": "Michael McDowell",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Southern Gothic; landscape as threat.",
+   "works": [
+    "The Elementals"
+   ]
+  },
+  {
+   "id": "tuttle",
+   "label": "Lisa Tuttle",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Dread out of view, then a real monster.",
+   "works": [
+    "A Nest of Nightmares",
+    "My Death"
+   ]
+  },
+  {
+   "id": "wagner",
+   "label": "Karl Edward Wagner",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Cosmic, visceral, bleak worldview.",
+   "works": [
+    "Why Not You and I?"
+   ]
+  },
+  {
+   "id": "scerbanenco",
+   "label": "Giorgio Scerbanenco",
+   "type": "influence",
+   "cluster": "noir",
+   "note": "Literary root of giallo fiction.",
+   "works": [
+    "A Private Venus"
+   ]
+  },
+  {
+   "id": "hughes",
+   "label": "Dorothy B. Hughes",
+   "type": "influence",
+   "cluster": "noir",
+   "note": "The villain as protagonist; interior inescapability.",
+   "works": [
+    "In a Lonely Place"
+   ]
+  },
+  {
+   "id": "thompson",
+   "label": "Jim Thompson",
+   "type": "influence",
+   "cluster": "noir",
+   "note": "Killer's POV, flat affectless voice.",
+   "works": [
+    "The Killer Inside Me"
+   ]
+  },
+  {
+   "id": "mccarthy",
+   "label": "Cormac McCarthy",
+   "type": "influence",
+   "cluster": "noir",
+   "note": "Fate wearing a human face.",
+   "works": [
+    "No Country for Old Men",
+    "Blood Meridian"
+   ]
+  },
+  {
+   "id": "christie",
+   "label": "Agatha Christie",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "Proto-slasher structure; the group picked off.",
+   "works": [
+    "And Then There Were None"
+   ]
+  },
+  {
+   "id": "demaria",
+   "label": "Giorgio De Maria",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Conspiracy assembling outside the narration.",
+   "works": [
+    "The Twenty Days of Turin"
+   ]
+  },
+  {
+   "id": "sebald",
+   "label": "W.G. Sebald",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Accretive essay-novels; the past contaminating the present.",
+   "works": [
+    "The Rings of Saturn",
+    "Austerlitz"
+   ]
+  },
+  {
+   "id": "bolano",
+   "label": "Roberto Bolaño",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Conspiracy, violence, literary ambition.",
+   "works": [
+    "2666"
+   ]
+  },
+  {
+   "id": "knausgard",
+   "label": "Karl Ove Knausgård",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "The uncanny bleeding into ordinary life.",
+   "works": [
+    "The Morning Star"
+   ]
+  },
+  {
+   "id": "bernhard",
+   "label": "Thomas Bernhard",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Obsessive monologue; bleakness as form.",
+   "works": [
+    "The Loser",
+    "Correction"
+   ]
+  },
+  {
+   "id": "labatut",
+   "label": "Benjamín Labatut",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Scientific knowledge as dread.",
+   "works": [
+    "When We Cease to Understand the World"
+   ]
+  },
+  {
+   "id": "cole",
+   "label": "Teju Cole",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Associative vignettes building a theme.",
+   "works": [
+    "Open City"
+   ]
+  },
+  {
+   "id": "ketchum",
+   "label": "Jack Ketchum",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "Realistic, human threat; no camp.",
+   "works": [
+    "Off Season",
+    "The Girl Next Door"
+   ]
+  },
+  {
+   "id": "lansdale",
+   "label": "Joe R. Lansdale",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "Serious horror and drama only — not the humor.",
+   "works": [
+    "The Nightrunners"
+   ]
+  },
+  {
+   "id": "sgj",
+   "label": "Stephen Graham Jones",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "Selective: relentless-antagonist work, not the genre-referential.",
+   "works": [
+    "The Only Good Indians",
+    "The Killer on the Road"
+   ]
+  },
+  {
+   "id": "king",
+   "label": "Stephen King",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "Survival compressed into a single trap.",
+   "works": [
+    "Cujo"
+   ]
+  },
+  {
+   "id": "partridge",
+   "label": "Norman Partridge",
+   "type": "influence",
+   "cluster": "slash",
+   "note": "October-night antagonist, taken straight.",
+   "works": [
+    "Dark Harvest"
+   ]
+  },
+  {
+   "id": "duras",
+   "label": "Marguerite Duras",
+   "type": "influence",
+   "cluster": "dream",
+   "note": "Dreamlike register; dread without a tonal seam.",
+   "works": [
+    "The Ravishing of Lol Stein"
+   ]
+  },
+  {
+   "id": "rulfo",
+   "label": "Juan Rulfo",
+   "type": "influence",
+   "cluster": "dream",
+   "note": "Dead-town ghost story; compression and method.",
+   "works": [
+    "Pedro Páramo"
+   ]
+  },
+  {
+   "id": "dumaurier",
+   "label": "Daphne du Maurier",
+   "type": "influence",
+   "cluster": "dream",
+   "note": "Dreamlike shifting suddenly into the concrete.",
+   "works": [
+    "Don't Look Now",
+    "The Birds"
+   ]
+  },
+  {
+   "id": "queneau",
+   "label": "Raymond Queneau",
+   "type": "influence",
+   "cluster": "dream",
+   "note": "Light, associative, low-tension surface.",
+   "works": [
+    "Pierrot Mon Ami"
+   ]
+  },
+  {
+   "id": "evenson",
+   "label": "Brian Evenson",
+   "type": "influence",
+   "cluster": "spare",
+   "note": "Spare and violent; no sentimentality.",
+   "works": [
+    "A Collapse of Horses",
+    "Last Days"
+   ]
+  },
+  {
+   "id": "hamsun",
+   "label": "Knut Hamsun",
+   "type": "influence",
+   "cluster": "spare",
+   "note": "Elemental prose reduced to essentials.",
+   "works": [
+    "Hunger",
+    "Pan"
+   ]
+  },
+  {
+   "id": "bass",
+   "label": "Rick Bass",
+   "type": "influence",
+   "cluster": "spare",
+   "note": "Not horror; awe from basic expressive elements.",
+   "works": [
+    "The Watch"
+   ]
+  },
+  {
+   "id": "enriquez",
+   "label": "Mariana Enriquez",
+   "type": "influence",
+   "cluster": "latam",
+   "note": "Culturally grounded supernatural, bleak.",
+   "works": [
+    "Our Share of Night",
+    "Things We Lost in the Fire"
+   ]
+  },
+  {
+   "id": "moshfegh",
+   "label": "Ottessa Moshfegh",
+   "type": "influence",
+   "cluster": "fantasy",
+   "note": "Self-disgusted narrators; medieval grotesque.",
+   "works": [
+    "Eileen",
+    "Lapvona"
+   ]
+  },
+  {
+   "id": "carpenter",
+   "label": "John Carpenter",
+   "type": "director",
+   "cluster": "meta",
+   "note": "Inescapable antagonist; survival framework.",
+   "works": [
+    "Halloween",
+    "The Thing"
+   ]
+  },
+  {
+   "id": "argento",
+   "label": "Dario Argento",
+   "type": "director",
+   "cluster": "meta",
+   "note": "Giallo style; dread with spectacle.",
+   "works": [
+    "Suspiria",
+    "Deep Red"
+   ]
+  },
+  {
+   "id": "lynch",
+   "label": "David Lynch",
+   "type": "director",
+   "cluster": "meta",
+   "note": "Naturalism with dream logic; unresolved.",
+   "works": [
+    "Twin Peaks",
+    "Mulholland Drive"
+   ]
+  },
+  {
+   "id": "rugna",
+   "label": "Demián Rugna",
+   "type": "director",
+   "cluster": "meta",
+   "note": "Argentine horror; dread plus concrete threat.",
+   "works": [
+    "When Evil Lurks",
+    "Terrified"
+   ]
+  },
+  {
+   "id": "valancourt",
+   "label": "Valancourt Books",
+   "type": "publisher",
+   "cluster": "meta",
+   "note": "Recovered Gothic and weird fiction; reliable fit.",
+   "works": []
+  },
+  {
+   "id": "wordhorde",
+   "label": "Word Horde",
+   "type": "publisher",
+   "cluster": "meta",
+   "note": "Contemporary weird in the Barron lineage.",
+   "works": []
+  },
+  {
+   "id": "jeanray",
+   "label": "Jean Ray",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Belgian weird; Grabiński's closest neighbor.",
+   "works": [
+    "Malpertuis",
+    "Whiskey Tales"
+   ]
+  },
+  {
+   "id": "meyrink",
+   "label": "Gustav Meyrink",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Prague occult dread, reality layering.",
+   "works": [
+    "The Golem",
+    "The Green Face"
+   ]
+  },
+  {
+   "id": "kubin",
+   "label": "Alfred Kubin",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Dream-city collapsing from within.",
+   "works": [
+    "The Other Side"
+   ]
+  },
+  {
+   "id": "perutz",
+   "label": "Leo Perutz",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Fate-machinery under historical settings.",
+   "works": [
+    "By Night Under the Stone Bridge"
+   ]
+  },
+  {
+   "id": "hodgson",
+   "label": "William Hope Hodgson",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Cosmic dread, strange structure.",
+   "works": [
+    "The House on the Borderland"
+   ]
+  },
+  {
+   "id": "mrjames",
+   "label": "M.R. James",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Suggestion, then the thing is in the room.",
+   "works": [
+    "Oh, Whistle, and I'll Come to You"
+   ]
+  },
+  {
+   "id": "hoffmann",
+   "label": "E.T.A. Hoffmann",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Source of the Central European uncanny.",
+   "works": [
+    "The Sandman"
+   ]
+  },
+  {
+   "id": "hedayat",
+   "label": "Sadegh Hedayat",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Obsessive, cyclical, deeply unwell narration.",
+   "works": [
+    "The Blind Owl"
+   ]
+  },
+  {
+   "id": "schulz",
+   "label": "Bruno Schulz",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Reality dissolving at the edges.",
+   "works": [
+    "The Street of Crocodiles"
+   ]
+  },
+  {
+   "id": "davila",
+   "label": "Amparo Dávila",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Unnamed threats, no explanations.",
+   "works": [
+    "The Houseguest"
+   ]
+  },
+  {
+   "id": "kavan",
+   "label": "Anna Kavan",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Pursuit as cosmic inevitability.",
+   "works": [
+    "Ice"
+   ]
+  },
+  {
+   "id": "barron",
+   "label": "Laird Barron",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Cosmic dread materializing; skip The Croning, read the stories.",
+   "works": [
+    "The Imago Sequence",
+    "Occultation"
+   ]
+  },
+  {
+   "id": "klein",
+   "label": "T.E.D. Klein",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Literary weird taken completely straight.",
+   "works": [
+    "The Ceremonies",
+    "Dark Gods"
+   ]
+  },
+  {
+   "id": "lamsley",
+   "label": "Terry Lamsley",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Village dread producing something monstrous.",
+   "works": [
+    "Conference With the Dead"
+   ]
+  },
+  {
+   "id": "straub",
+   "label": "Peter Straub",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Atmospheric presence that gains weight and agency.",
+   "works": [
+    "Ghost Story",
+    "Julia"
+   ]
+  },
+  {
+   "id": "tryon",
+   "label": "Thomas Tryon",
+   "type": "rec",
+   "cluster": "core",
+   "note": "American Gothic; folk horror discovered too late.",
+   "works": [
+    "Harvest Home",
+    "The Other"
+   ]
+  },
+  {
+   "id": "grant",
+   "label": "Charles L. Grant",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Quiet horror; atmosphere over incident.",
+   "works": [
+    "The Nestling",
+    "The Pet"
+   ]
+  },
+  {
+   "id": "rcampbell",
+   "label": "Ramsey Campbell",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Hit or miss across a huge output; strong at his best.",
+   "works": [
+    "The Face That Must Die",
+    "Alone With the Horrors"
+   ]
+  },
+  {
+   "id": "kiernan",
+   "label": "Caitlín R. Kiernan",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Cosmic dread never explained away.",
+   "works": [
+    "The Red Tree",
+    "The Drowning Girl"
+   ]
+  },
+  {
+   "id": "simmons",
+   "label": "Dan Simmons",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Inescapable threat; no lightness anywhere.",
+   "works": [
+    "Song of Kali"
+   ]
+  },
+  {
+   "id": "farris",
+   "label": "John Farris",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Gothic, visceral, underread.",
+   "works": [
+    "All Heads Turn When the Hunt Goes By",
+    "The Fury"
+   ]
+  },
+  {
+   "id": "ballingrud",
+   "label": "Nathan Ballingrud",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Visceral, bleak, supernatural taken straight.",
+   "works": [
+    "Wounds",
+    "North American Lake Monsters"
+   ]
+  },
+  {
+   "id": "tremblay",
+   "label": "Paul Tremblay",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Jackson-inflected ambiguity.",
+   "works": [
+    "A Head Full of Ghosts"
+   ]
+  },
+  {
+   "id": "draymond",
+   "label": "Derek Raymond",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Almost horror in register; no procedural comfort.",
+   "works": [
+    "He Died With His Eyes Open"
+   ]
+  },
+  {
+   "id": "goodis",
+   "label": "David Goodis",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Protagonists already destroyed before page one.",
+   "works": [
+    "Down There"
+   ]
+  },
+  {
+   "id": "woolrich",
+   "label": "Cornell Woolrich",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Paranoid urban dread; supernatural treated straight.",
+   "works": [
+    "Night Has a Thousand Eyes",
+    "The Bride Wore Black"
+   ]
+  },
+  {
+   "id": "highsmith",
+   "label": "Patricia Highsmith",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "The horror is the protagonist.",
+   "works": [
+    "Deep Water",
+    "Edith's Diary"
+   ]
+  },
+  {
+   "id": "gresham",
+   "label": "William Lindsay Gresham",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Fate as trap; carnival bleakness.",
+   "works": [
+    "Nightmare Alley"
+   ]
+  },
+  {
+   "id": "manchette",
+   "label": "Jean-Patrick Manchette",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Existential, violent, stripped prose.",
+   "works": [
+    "The Prone Gunman"
+   ]
+  },
+  {
+   "id": "malet",
+   "label": "Léo Malet",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Founding French noir; Série Noire lineage.",
+   "works": [
+    "Nestor Burma series"
+   ]
+  },
+  {
+   "id": "lucarelli",
+   "label": "Carlo Lucarelli",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Contemporary giallo line; bleak.",
+   "works": [
+    "Almost Blue"
+   ]
+  },
+  {
+   "id": "ellroy",
+   "label": "James Ellroy",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Corruption all the way down.",
+   "works": [
+    "The Black Dahlia"
+   ]
+  },
+  {
+   "id": "harris",
+   "label": "Thomas Harris",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Antagonist interiority as genuine horror.",
+   "works": [
+    "Red Dragon"
+   ]
+  },
+  {
+   "id": "mcgrath",
+   "label": "Patrick McGrath",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Clinical tone, unreliable narrators.",
+   "works": [
+    "Spider",
+    "Asylum"
+   ]
+  },
+  {
+   "id": "vachss",
+   "label": "Andrew Vachss",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Human monsters; extremely dark worldview.",
+   "works": [
+    "Flood"
+   ]
+  },
+  {
+   "id": "lecarre",
+   "label": "John le Carré",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Institutional betrayal; the plot larger than the protagonist.",
+   "works": [
+    "The Spy Who Came in From the Cold",
+    "Tinker Tailor Soldier Spy"
+   ]
+  },
+  {
+   "id": "furst",
+   "label": "Alan Furst",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Historical threat as atmosphere.",
+   "works": [
+    "Night Soldiers"
+   ]
+  },
+  {
+   "id": "fitzek",
+   "label": "Sebastian Fitzek",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "German survival-stakes thriller.",
+   "works": [
+    "Therapy"
+   ]
+  },
+  {
+   "id": "grange",
+   "label": "Jean-Christophe Grangé",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "French thriller with horror overtones.",
+   "works": [
+    "The Crimson Rivers"
+   ]
+  },
+  {
+   "id": "theorin",
+   "label": "Johan Theorin",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Swedish Gothic, atmospheric, concrete threat.",
+   "works": [
+    "Echoes From the Dead"
+   ]
+  },
+  {
+   "id": "urban",
+   "label": "Simon Urban",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Alternate-history noir; conspiracy outside the frame.",
+   "works": [
+    "Plan D"
+   ]
+  },
+  {
+   "id": "schirach",
+   "label": "Ferdinand von Schirach",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Cold, clinical, contained dread.",
+   "works": [
+    "Crime",
+    "Guilt"
+   ]
+  },
+  {
+   "id": "sciascia",
+   "label": "Leonardo Sciascia",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "De Maria's closest neighbor; conspiracy unacknowledged.",
+   "works": [
+    "Equal Danger",
+    "The Day of the Owl"
+   ]
+  },
+  {
+   "id": "lem",
+   "label": "Stanisław Lem",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The universe declines to explain itself.",
+   "works": [
+    "The Investigation"
+   ]
+  },
+  {
+   "id": "delillo",
+   "label": "Don DeLillo",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Conspiracy as cosmic inevitability.",
+   "works": [
+    "Libra",
+    "Running Dog"
+   ]
+  },
+  {
+   "id": "kis",
+   "label": "Danilo Kiš",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The historical record as active threat.",
+   "works": [
+    "A Tomb for Boris Davidovich"
+   ]
+  },
+  {
+   "id": "marias",
+   "label": "Javier Marías",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Essayistic prose, menace assembling slowly.",
+   "works": [
+    "Your Face Tomorrow"
+   ]
+  },
+  {
+   "id": "krasznahorkai",
+   "label": "László Krasznahorkai",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The plot arriving like weather.",
+   "works": [
+    "Satantango",
+    "The Melancholy of Resistance"
+   ]
+  },
+  {
+   "id": "spark",
+   "label": "Muriel Spark",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The ending telegraphed; pure structural dread.",
+   "works": [
+    "The Driver's Seat"
+   ]
+  },
+  {
+   "id": "kristof",
+   "label": "Agota Kristof",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Systemic, cold, quietly corrupting.",
+   "works": [
+    "The Notebook"
+   ]
+  },
+  {
+   "id": "auster",
+   "label": "Paul Auster",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The investigator dissolves into the investigation.",
+   "works": [
+    "City of Glass"
+   ]
+  },
+  {
+   "id": "gombrowicz",
+   "label": "Witold Gombrowicz",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Pattern recognition as dread.",
+   "works": [
+    "Cosmos"
+   ]
+  },
+  {
+   "id": "kadare",
+   "label": "Ismail Kadare",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Bureaucratic supernatural; the state as antagonist.",
+   "works": [
+    "The Palace of Dreams"
+   ]
+  },
+  {
+   "id": "kafka",
+   "label": "Franz Kafka",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The machinery never explained.",
+   "works": [
+    "The Trial"
+   ]
+  },
+  {
+   "id": "durrenmatt",
+   "label": "Friedrich Dürrenmatt",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The detective story that refuses to resolve.",
+   "works": [
+    "The Pledge"
+   ]
+  },
+  {
+   "id": "tabucchi",
+   "label": "Antonio Tabucchi",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Something assembling outside the frame.",
+   "works": [
+    "Indian Nocturne"
+   ]
+  },
+  {
+   "id": "buzzati",
+   "label": "Dino Buzzati",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "The dread is the waiting itself.",
+   "works": [
+    "The Tartar Steppe"
+   ]
+  },
+  {
+   "id": "carrere",
+   "label": "Emmanuel Carrère",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Documentary structure meeting what it can't account for.",
+   "works": [
+    "The Adversary"
+   ]
+  },
+  {
+   "id": "modiano",
+   "label": "Patrick Modiano",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Investigations of the past that won't resolve.",
+   "works": [
+    "Missing Person"
+   ]
+  },
+  {
+   "id": "houellebecq",
+   "label": "Michel Houellebecq",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Scientific knowledge as horror; cold.",
+   "works": [
+    "The Elementary Particles"
+   ]
+  },
+  {
+   "id": "macfarlane",
+   "label": "Robert Macfarlane",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Landscape vignettes accruing genuine dark.",
+   "works": [
+    "Underland"
+   ]
+  },
+  {
+   "id": "laymon",
+   "label": "Richard Laymon",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pure survival, uneven but committed.",
+   "works": [
+    "The Cellar",
+    "The Woods Are Dark"
+   ]
+  },
+  {
+   "id": "morrell",
+   "label": "David Morrell",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Stripped to survival; bleaker than the film.",
+   "works": [
+    "First Blood"
+   ]
+  },
+  {
+   "id": "koontz",
+   "label": "Dean Koontz",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Single location, inescapable pursuer.",
+   "works": [
+    "Intensity"
+   ]
+  },
+  {
+   "id": "rexmiller",
+   "label": "Rex Miller",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Chaingang: the closest print Jason.",
+   "works": [
+    "Slob"
+   ]
+  },
+  {
+   "id": "saul",
+   "label": "John Saul",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Paperback-era inescapable threat.",
+   "works": [
+    "Suffer the Children"
+   ]
+  },
+  {
+   "id": "herbert",
+   "label": "James Herbert",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "UK boom trigger; visceral survival.",
+   "works": [
+    "The Rats",
+    "The Fog"
+   ]
+  },
+  {
+   "id": "hutson",
+   "label": "Shaun Hutson",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "NEL-era British horror; relentless.",
+   "works": [
+    "Slugs",
+    "Erebus"
+   ]
+  },
+  {
+   "id": "guysmith",
+   "label": "Guy N. Smith",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pulpy but the threat is concrete.",
+   "works": [
+    "Night of the Crabs"
+   ]
+  },
+  {
+   "id": "bloch",
+   "label": "Robert Bloch",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "The direct slasher template.",
+   "works": [
+    "Psycho"
+   ]
+  },
+  {
+   "id": "connell",
+   "label": "Richard Connell",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pure hunted-protagonist precursor.",
+   "works": [
+    "The Most Dangerous Game"
+   ]
+  },
+  {
+   "id": "jonquet",
+   "label": "Thierry Jonquet",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Confined, inescapable French thriller.",
+   "works": [
+    "Tarantula"
+   ]
+  },
+  {
+   "id": "boileau",
+   "label": "Boileau-Narcejac",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pursuit and dread; no exit.",
+   "works": [
+    "Vertigo",
+    "She Who Was No More"
+   ]
+  },
+  {
+   "id": "leroux",
+   "label": "Gaston Leroux",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pursuit with a concrete antagonist.",
+   "works": [
+    "The Phantom of the Opera"
+   ]
+  },
+  {
+   "id": "donoso",
+   "label": "José Donoso",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Total unresolved uncanny; Lynch register.",
+   "works": [
+    "The Obscene Bird of Night"
+   ]
+  },
+  {
+   "id": "hawkes",
+   "label": "John Hawkes",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "The most Lynch-like novelist; menace structural.",
+   "works": [
+    "The Lime Twig"
+   ]
+  },
+  {
+   "id": "ballard",
+   "label": "J.G. Ballard",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Clinical tone over extreme content.",
+   "works": [
+    "Crash",
+    "High-Rise"
+   ]
+  },
+  {
+   "id": "djohnson",
+   "label": "Denis Johnson",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Violence arrives mid-sentence, no warning shift.",
+   "works": [
+    "Jesus' Son",
+    "Already Dead"
+   ]
+  },
+  {
+   "id": "fuentes",
+   "label": "Carlos Fuentes",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "The ending folds back on itself.",
+   "works": [
+    "Aura"
+   ]
+  },
+  {
+   "id": "bioy",
+   "label": "Adolfo Bioy Casares",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Unreliable reality; fate as trap.",
+   "works": [
+    "The Invention of Morel"
+   ]
+  },
+  {
+   "id": "obrien",
+   "label": "Flann O'Brien",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Internally consistent and completely unhinged.",
+   "works": [
+    "The Third Policeman"
+   ]
+  },
+  {
+   "id": "kosinski",
+   "label": "Jerzy Kosiński",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Scenes significant in ways never confirmed.",
+   "works": [
+    "Steps",
+    "The Painted Bird"
+   ]
+  },
+  {
+   "id": "vian",
+   "label": "Boris Vian",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Whimsical and associative, turning genuinely dark.",
+   "works": [
+    "Froth on the Daydream"
+   ]
+  },
+  {
+   "id": "perec",
+   "label": "Georges Perec",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Playful structure turning into real horror.",
+   "works": [
+    "W, or the Memory of Childhood"
+   ]
+  },
+  {
+   "id": "link",
+   "label": "Kelly Link",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Off-kilter and funny; then something wrong arrives.",
+   "works": [
+    "Get in Trouble",
+    "The Specialist's Hat"
+   ]
+  },
+  {
+   "id": "lockwood",
+   "label": "Patricia Lockwood",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Associative and funny; hard pivot, same voice.",
+   "works": [
+    "No One Is Talking About This"
+   ]
+  },
+  {
+   "id": "kbarry",
+   "label": "Kevin Barry",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Digressive Irish naturalism; darkness without a seam.",
+   "works": [
+    "Night Boat to Tangier"
+   ]
+  },
+  {
+   "id": "sarraute",
+   "label": "Nathalie Sarraute",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Dialogue-driven, unresolved tension.",
+   "works": [
+    "Tropisms"
+   ]
+  },
+  {
+   "id": "robbegrillet",
+   "label": "Alain Robbe-Grillet",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Obsessive repetition; dreamlike dread.",
+   "works": [
+    "Jealousy"
+   ]
+  },
+  {
+   "id": "ernaux",
+   "label": "Annie Ernaux",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Spare, autobiographical, unflinching.",
+   "works": [
+    "The Years"
+   ]
+  },
+  {
+   "id": "vann",
+   "label": "David Vann",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Elemental landscapes; violence inevitable.",
+   "works": [
+    "Legend of a Suicide",
+    "Caribou Island"
+   ]
+  },
+  {
+   "id": "vesaas",
+   "label": "Tarjei Vesaas",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Awe and dread in landscape; Hamsun's heir.",
+   "works": [
+    "The Ice Palace",
+    "The Birds"
+   ]
+  },
+  {
+   "id": "bjorneboe",
+   "label": "Jens Bjørneboe",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Bleaker, more violent Norwegian line.",
+   "works": [
+    "Moment of Freedom"
+   ]
+  },
+  {
+   "id": "larrybrown",
+   "label": "Larry Brown",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Menace in the ordinary; bare Southern prose.",
+   "works": [
+    "Joe"
+   ]
+  },
+  {
+   "id": "crews",
+   "label": "Harry Crews",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Grotesque, compressed, nothing wasted.",
+   "works": [
+    "A Feast of Snakes"
+   ]
+  },
+  {
+   "id": "quiroga",
+   "label": "Horacio Quiroga",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Jungle as inescapable antagonist.",
+   "works": [
+    "Stories"
+   ]
+  },
+  {
+   "id": "woodrell",
+   "label": "Daniel Woodrell",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Ozark Gothic; environmental dread.",
+   "works": [
+    "Winter's Bone",
+    "The Outlaw Album"
+   ]
+  },
+  {
+   "id": "pollock",
+   "label": "Donald Ray Pollock",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Rural Gothic, no irony anywhere.",
+   "works": [
+    "The Devil All the Time"
+   ]
+  },
+  {
+   "id": "rash",
+   "label": "Ron Rash",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Appalachian fatalism; landscape near-supernatural.",
+   "works": [
+    "Serena",
+    "The Cove"
+   ]
+  },
+  {
+   "id": "matthiessen",
+   "label": "Peter Matthiessen",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Landscape and violence, elemental.",
+   "works": [
+    "Shadow Country"
+   ]
+  },
+  {
+   "id": "schweblin",
+   "label": "Samanta Schweblin",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Fractured dread without resolution.",
+   "works": [
+    "Fever Dream",
+    "Mouthful of Birds"
+   ]
+  },
+  {
+   "id": "ojeda",
+   "label": "Mónica Ojeda",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Dark, experimental psychological horror.",
+   "works": [
+    "Jawbone"
+   ]
+  },
+  {
+   "id": "bazterrica",
+   "label": "Agustina Bazterrica",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Visceral near-future bleakness.",
+   "works": [
+    "Tender Is the Flesh"
+   ]
+  },
+  {
+   "id": "morenogarcia",
+   "label": "Silvia Moreno-Garcia",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Gothic with cultural grounding.",
+   "works": [
+    "Mexican Gothic"
+   ]
+  },
+  {
+   "id": "quintana",
+   "label": "Pilar Quintana",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Bleak; landscape as dread.",
+   "works": [
+    "The Bitch"
+   ]
+  },
+  {
+   "id": "lispector",
+   "label": "Clarice Lispector",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Embodiment as philosophical horror.",
+   "works": [
+    "The Passion According to G.H."
+   ]
+  },
+  {
+   "id": "villalobos",
+   "label": "Juan Pablo Villalobos",
+   "type": "rec",
+   "cluster": "latam",
+   "note": "Horror in the gap of a child narrator.",
+   "works": [
+    "Down the Rabbit Hole"
+   ]
+  },
+  {
+   "id": "otsuichi",
+   "label": "Otsuichi",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Cold, affectless, deeply unsettling.",
+   "works": [
+    "Goth",
+    "Zoo"
+   ]
+  },
+  {
+   "id": "kirino",
+   "label": "Natsuo Kirino",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Social horror; violence treated seriously.",
+   "works": [
+    "Out",
+    "Grotesque"
+   ]
+  },
+  {
+   "id": "yokomizo",
+   "label": "Seishi Yokomizo",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Village settings, something wrong underneath.",
+   "works": [
+    "The Honjin Murders",
+    "The Inugami Curse"
+   ]
+  },
+  {
+   "id": "borachung",
+   "label": "Bora Chung",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Folk and body horror taken straight.",
+   "works": [
+    "Cursed Bunny"
+   ]
+  },
+  {
+   "id": "jungyujin",
+   "label": "Jung Yu-jin",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Cold narrator; horror in the Highsmith sense.",
+   "works": [
+    "The Good Son"
+   ]
+  },
+  {
+   "id": "ryumurakami",
+   "label": "Ryū Murakami",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Violent, psychologically corrosive.",
+   "works": [
+    "In the Miso Soup"
+   ]
+  },
+  {
+   "id": "nakamura",
+   "label": "Fuminori Nakamura",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Cold pursuer register.",
+   "works": [
+    "The Thief",
+    "Evil and the Mask"
+   ]
+  },
+  {
+   "id": "abe",
+   "label": "Kobo Abe",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Existential trap as premise.",
+   "works": [
+    "The Woman in the Dunes"
+   ]
+  },
+  {
+   "id": "ranpo",
+   "label": "Edogawa Ranpo",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Predatory antagonist; confinement.",
+   "works": [
+    "The Human Chair",
+    "The Caterpillar"
+   ]
+  },
+  {
+   "id": "ito",
+   "label": "Junji Ito",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Manga; inescapable antagonist precisely.",
+   "works": [
+    "Tomie",
+    "Uzumaki"
+   ]
+  },
+  {
+   "id": "tutuola",
+   "label": "Amos Tutuola",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Folkloric survival against supernatural threat.",
+   "works": [
+    "The Palm-Wine Drinkard"
+   ]
+  },
+  {
+   "id": "okri",
+   "label": "Ben Okri",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Spirit world bleeding into the material.",
+   "works": [
+    "The Famished Road"
+   ]
+  },
+  {
+   "id": "beukes",
+   "label": "Lauren Beukes",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Inescapable serial antagonist.",
+   "works": [
+    "The Shining Girls"
+   ]
+  },
+  {
+   "id": "lotz",
+   "label": "Sarah Lotz",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Dread accumulating through structure.",
+   "works": [
+    "The Three"
+   ]
+  },
+  {
+   "id": "onoh",
+   "label": "Nuzo Onoh",
+   "type": "rec",
+   "cluster": "african",
+   "note": "African folkloric horror, concrete threat.",
+   "works": [
+    "Unhallowed Graves"
+   ]
+  },
+  {
+   "id": "meyer",
+   "label": "Deon Meyer",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Noir with survival stakes.",
+   "works": [
+    "Devil's Peak"
+   ]
+  },
+  {
+   "id": "lagerkvist",
+   "label": "Pär Lagerkvist",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Medieval body-as-theological-horror.",
+   "works": [
+    "The Dwarf",
+    "Barabbas"
+   ]
+  },
+  {
+   "id": "golding",
+   "label": "William Golding",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Consciousness and body failing; no comfort.",
+   "works": [
+    "The Inheritors",
+    "Pincher Martin"
+   ]
+  },
+  {
+   "id": "oconnor",
+   "label": "Flannery O'Connor",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Spiritual and physical grotesque at once.",
+   "works": [
+    "A Good Man Is Hard to Find"
+   ]
+  },
+  {
+   "id": "comyns",
+   "label": "Barbara Comyns",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Flat affect over disturbing content.",
+   "works": [
+    "The Vet's Daughter"
+   ]
+  },
+  {
+   "id": "eco",
+   "label": "Umberto Eco",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Medieval conspiracy and menace.",
+   "works": [
+    "The Name of the Rose"
+   ]
+  },
+  {
+   "id": "mantel",
+   "label": "Hilary Mantel",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Folk horror in a village; genuinely strange.",
+   "works": [
+    "Fludd"
+   ]
+  },
+  {
+   "id": "peake",
+   "label": "Mervyn Peake",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "The castle as inescapable system.",
+   "works": [
+    "Gormenghast trilogy"
+   ]
+  },
+  {
+   "id": "garner",
+   "label": "Alan Garner",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Myth as trap embedded in landscape.",
+   "works": [
+    "The Owl Service",
+    "Red Shift"
+   ]
+  },
+  {
+   "id": "mirrlees",
+   "label": "Hope Mirrlees",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Faerie as dread, never resolved.",
+   "works": [
+    "Lud-in-the-Mist"
+   ]
+  },
+  {
+   "id": "lindsay",
+   "label": "David Lindsay",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Cosmic horror as fantasy; bleak vision.",
+   "works": [
+    "A Voyage to Arcturus"
+   ]
+  },
+  {
+   "id": "wolfe",
+   "label": "Gene Wolfe",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Horror embedded in what's withheld.",
+   "works": [
+    "The Book of the New Sun"
+   ]
+  },
+  {
+   "id": "mjharrison",
+   "label": "M. John Harrison",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Entropy as atmosphere; flat affect.",
+   "works": [
+    "Viriconium"
+   ]
+  },
+  {
+   "id": "erikson",
+   "label": "Steven Erikson",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Cosmic scale, genuinely bleak.",
+   "works": [
+    "Malazan Book of the Fallen"
+   ]
+  },
+  {
+   "id": "vandermeer",
+   "label": "Jeff VanderMeer",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Cosmic dread, inescapable, unresolved.",
+   "works": [
+    "Annihilation"
+   ]
+  },
+  {
+   "id": "bakker",
+   "label": "R. Scott Bakker",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Epic fantasy in a horror register; Ligotti-adjacent.",
+   "works": [
+    "The Second Apocalypse",
+    "Neuropath"
+   ]
+  },
+  {
+   "id": "sapkowski",
+   "label": "Andrzej Sapkowski",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Folklore as genuine threat.",
+   "works": [
+    "The Witcher stories"
+   ]
+  },
+  {
+   "id": "despentes",
+   "label": "Virginie Despentes",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Bodies without sentimentality; social horror.",
+   "works": [
+    "Vernon Subutex"
+   ]
+  },
+  {
+   "id": "bierce",
+   "label": "Ambrose Bierce",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Sardonic American uncanny; war horror.",
+   "works": [
+    "The Death of Halpin Frayser",
+    "Tales of Soldiers and Civilians"
+   ]
+  },
+  {
+   "id": "stoker",
+   "label": "Bram Stoker",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The vampire template; epistolary dread.",
+   "works": [
+    "Dracula"
+   ]
+  },
+  {
+   "id": "poe",
+   "label": "Edgar Allan Poe",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The root of American horror interiority.",
+   "works": [
+    "Tales of Mystery and Imagination"
+   ]
+  },
+  {
+   "id": "hawthorne",
+   "label": "Nathaniel Hawthorne",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Puritan guilt as ambient dread.",
+   "works": [
+    "Young Goodman Brown",
+    "The House of the Seven Gables"
+   ]
+  },
+  {
+   "id": "akinari",
+   "label": "Ueda Akinari",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Edo-period ghost tales; elegant and cold.",
+   "works": [
+    "Ugetsu Monogatari"
+   ]
+  },
+  {
+   "id": "hearn",
+   "label": "Lafcadio Hearn",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Japanese ghost folklore, collected and retold.",
+   "works": [
+    "Kwaidan"
+   ]
+  },
+  {
+   "id": "maupassant",
+   "label": "Guy de Maupassant",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Psychological dissolution; The Horla is the peak.",
+   "works": [
+    "The Horla"
+   ]
+  },
+  {
+   "id": "aktolstoy",
+   "label": "Aleksey Konstantinovich Tolstoy",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Russian vampire tales taken straight.",
+   "works": [
+    "The Family of the Vourdalak"
+   ]
+  },
+  {
+   "id": "gotthelf",
+   "label": "Jeremias Gotthelf",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Black Spider: village sin as contagion.",
+   "works": [
+    "The Black Spider"
+   ]
+  },
+  {
+   "id": "buehlman",
+   "label": "Christopher Buehlman",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Medieval horror with real stakes.",
+   "works": [
+    "Between Two Fires",
+    "The Lesser Dead"
+   ]
+  },
+  {
+   "id": "koike",
+   "label": "Mariko Koike",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Japanese psychological gothic.",
+   "works": [
+    "The Graveyard Apartment"
+   ]
+  },
+  {
+   "id": "barker",
+   "label": "Clive Barker",
+   "type": "influence",
+   "cluster": "core",
+   "note": "Books of Blood: visceral imagination, no camp.",
+   "works": [
+    "Books of Blood",
+    "The Hellbound Heart"
+   ]
+  },
+  {
+   "id": "iglesias",
+   "label": "Gabino Iglesias",
+   "type": "influence",
+   "cluster": "noir",
+   "note": "The Devil Takes You Home yes; others less so.",
+   "works": [
+    "The Devil Takes You Home"
+   ]
+  },
+  {
+   "id": "saramago",
+   "label": "José Saramago",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Plot assembling outside the narration.",
+   "works": [
+    "The Double",
+    "Blindness"
+   ]
+  },
+  {
+   "id": "ogawa",
+   "label": "Yōko Ogawa",
+   "type": "influence",
+   "cluster": "consp",
+   "note": "Quiet systemic dread; The Memory Police.",
+   "works": [
+    "The Memory Police",
+    "Revenge"
+   ]
+  },
+  {
+   "id": "bulgakov",
+   "label": "Mikhail Bulgakov",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Woland as concrete inescapable antagonist.",
+   "works": [
+    "The Master and Margarita"
+   ]
+  },
+  {
+   "id": "andreyev",
+   "label": "Leonid Andreyev",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Russian expressionist psychological horror.",
+   "works": [
+    "The Red Laugh"
+   ]
+  },
+  {
+   "id": "villiers",
+   "label": "Villiers de l'Isle-Adam",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "French symbolist cruelty.",
+   "works": [
+    "Cruel Tales"
+   ]
+  },
+  {
+   "id": "lorrain",
+   "label": "Jean Lorrain",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Decadent psychological horror.",
+   "works": [
+    "Monsieur de Phocas"
+   ]
+  },
+  {
+   "id": "masterton",
+   "label": "Graham Masterton",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Inescapable supernatural threat, no reasoning.",
+   "works": [
+    "The Manitou"
+   ]
+  },
+  {
+   "id": "slade",
+   "label": "Michael Slade",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Extremely visceral procedural horror.",
+   "works": [
+    "Headhunter"
+   ]
+  },
+  {
+   "id": "coyne",
+   "label": "John Coyne",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Paperback-era supernatural survival.",
+   "works": [
+    "The Piercing"
+   ]
+  },
+  {
+   "id": "jensen",
+   "label": "Ruby Jean Jensen",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pure dread, concrete antagonist.",
+   "works": [
+    "Wait and See"
+   ]
+  },
+  {
+   "id": "johnstone",
+   "label": "William W. Johnstone",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Pulpy but the threat is relentless.",
+   "works": [
+    "The Devil's Cat"
+   ]
+  },
+  {
+   "id": "simenon",
+   "label": "Georges Simenon",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "The romans durs: confined, inescapable.",
+   "works": [
+    "The Strangers in the House"
+   ]
+  },
+  {
+   "id": "vargas",
+   "label": "Fred Vargas",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "The supernatural hovers at the edges.",
+   "works": [
+    "The Chalk Circle Man"
+   ]
+  },
+  {
+   "id": "sjowall",
+   "label": "Maj Sjöwall & Per Wahlöö",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Bleaker than the Scandinavian mainstream.",
+   "works": [
+    "The Laughing Policeman"
+   ]
+  },
+  {
+   "id": "fossum",
+   "label": "Karin Fossum",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Psychological, bleak, inescapable menace.",
+   "works": [
+    "Don't Look Back"
+   ]
+  },
+  {
+   "id": "shimada",
+   "label": "Soji Shimada",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Locked-room horror logic.",
+   "works": [
+    "The Tokyo Zodiac Murders"
+   ]
+  },
+  {
+   "id": "japrisot",
+   "label": "Sébastien Japrisot",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Fractured identity and dread.",
+   "works": [
+    "Trap for Cinderella"
+   ]
+  },
+  {
+   "id": "suzuki",
+   "label": "Koji Suzuki",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Philosophical dread under the famous premise.",
+   "works": [
+    "Ring",
+    "Dark Water"
+   ]
+  },
+  {
+   "id": "leguin",
+   "label": "Ursula K. Le Guin",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Colonial dread and psychological confinement.",
+   "works": [
+    "The Tombs of Atuan",
+    "The Word for World Is Forest"
+   ]
+  },
+  {
+   "id": "blicher",
+   "label": "Steen Steensen Blicher",
+   "type": "rec",
+   "cluster": "spare",
+   "note": "Danish fatalism; bleak parish tales.",
+   "works": [
+    "The Hosier and His Daughter"
+   ]
+  },
+  {
+   "id": "hankang",
+   "label": "Han Kang",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Bodily autonomy as social horror.",
+   "works": [
+    "The Vegetarian",
+    "Human Acts"
+   ]
+  },
+  {
+   "id": "chaze",
+   "label": "Elliott Chaze",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Dreamlike doomed-couple noir.",
+   "works": [
+    "Black Wings Has My Angel"
+   ]
+  },
+  {
+   "id": "wehunt",
+   "label": "Michael Wehunt",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Southern gothic weird; grief-driven.",
+   "works": [
+    "Greener Pastures"
+   ]
+  },
+  {
+   "id": "mrshelley",
+   "label": "Mary Shelley",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The creature as inescapable consequence.",
+   "works": [
+    "Frankenstein"
+   ]
+  },
+  {
+   "id": "lefanu",
+   "label": "Sheridan Le Fanu",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Victorian master of oblique haunting.",
+   "works": [
+    "Carmilla",
+    "Green Tea"
+   ]
+  },
+  {
+   "id": "hjames",
+   "label": "Henry James",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Ambiguity as the engine of dread.",
+   "works": [
+    "The Turn of the Screw"
+   ]
+  },
+  {
+   "id": "wharton",
+   "label": "Edith Wharton",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Cold social ghost stories.",
+   "works": [
+    "The Ghost Stories of Edith Wharton"
+   ]
+  },
+  {
+   "id": "chambers",
+   "label": "Robert W. Chambers",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The King in Yellow: contagious text.",
+   "works": [
+    "The King in Yellow"
+   ]
+  },
+  {
+   "id": "dunsany",
+   "label": "Lord Dunsany",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Dream-geography; the root of weird fantasy.",
+   "works": [
+    "The Gods of Pegāna"
+   ]
+  },
+  {
+   "id": "lovecraft",
+   "label": "H.P. Lovecraft",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Cosmic indifference codified.",
+   "works": [
+    "The Shadow Over Innsmouth",
+    "At the Mountains of Madness"
+   ]
+  },
+  {
+   "id": "cas",
+   "label": "Clark Ashton Smith",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Decadent cosmic prose-poetry.",
+   "works": [
+    "The Dark Eidolon"
+   ]
+  },
+  {
+   "id": "rehoward",
+   "label": "Robert E. Howard",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Violent weird adventure; Pigeons From Hell.",
+   "works": [
+    "Pigeons From Hell"
+   ]
+  },
+  {
+   "id": "gilman",
+   "label": "Charlotte Perkins Gilman",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Confinement as horror.",
+   "works": [
+    "The Yellow Wallpaper"
+   ]
+  },
+  {
+   "id": "onions",
+   "label": "Oliver Onions",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Beckoning Fair One: slow possession.",
+   "works": [
+    "Widdershins"
+   ]
+  },
+  {
+   "id": "delamare",
+   "label": "Walter de la Mare",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Oblique, unresolved English uncanny.",
+   "works": [
+    "Seaton's Aunt",
+    "The Return"
+   ]
+  },
+  {
+   "id": "benson",
+   "label": "E.F. Benson",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Physical, confident English ghost stories.",
+   "works": [
+    "The Room in the Tower"
+   ]
+  },
+  {
+   "id": "wakefield",
+   "label": "H.R. Wakefield",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Late ghost-story tradition, mean streak.",
+   "works": [
+    "They Return at Evening"
+   ]
+  },
+  {
+   "id": "oliphant",
+   "label": "Margaret Oliphant",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Victorian supernatural with real grief.",
+   "works": [
+    "The Open Door"
+   ]
+  },
+  {
+   "id": "riddell",
+   "label": "Charlotte Riddell",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Haunted-house economics.",
+   "works": [
+    "Weird Stories"
+   ]
+  },
+  {
+   "id": "saki",
+   "label": "Saki",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Cruel miniatures; Sredni Vashtar.",
+   "works": [
+    "The Chronicles of Clovis"
+   ]
+  },
+  {
+   "id": "wfharvey",
+   "label": "W.F. Harvey",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "August Heat and The Beast with Five Fingers.",
+   "works": [
+    "The Beast with Five Fingers"
+   ]
+  },
+  {
+   "id": "gautier",
+   "label": "Théophile Gautier",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "French romantic supernatural.",
+   "works": [
+    "La Morte Amoureuse"
+   ]
+  },
+  {
+   "id": "strobl",
+   "label": "Karl Hans Strobl",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Austrian weird contemporary of Ewers.",
+   "works": [
+    "Lemuria"
+   ]
+  },
+  {
+   "id": "gogol",
+   "label": "Nikolai Gogol",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Viy and the Petersburg grotesques.",
+   "works": [
+    "Viy",
+    "The Nose"
+   ]
+  },
+  {
+   "id": "potocki",
+   "label": "Jan Potocki",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Nested tales inside nested tales.",
+   "works": [
+    "The Manuscript Found in Saragossa"
+   ]
+  },
+  {
+   "id": "pusongling",
+   "label": "Pu Songling",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Strange tales; fox spirits and scholars.",
+   "works": [
+    "Strange Tales from a Chinese Studio"
+   ]
+  },
+  {
+   "id": "kyoka",
+   "label": "Izumi Kyōka",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Japanese gothic surrealism.",
+   "works": [
+    "The Holy Man of Mount Koya"
+   ]
+  },
+  {
+   "id": "sologub",
+   "label": "Fyodor Sologub",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Petty Demon: paranoia as weather.",
+   "works": [
+    "The Petty Demon"
+   ]
+  },
+  {
+   "id": "panizza",
+   "label": "Oskar Panizza",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Blasphemous German grotesque.",
+   "works": [
+    "The Pig"
+   ]
+  },
+  {
+   "id": "schwob",
+   "label": "Marcel Schwob",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Imaginary lives, cruel and jeweled.",
+   "works": [
+    "The King in the Golden Mask"
+   ]
+  },
+  {
+   "id": "dinesen",
+   "label": "Isak Dinesen",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Gothic tales with fate machinery.",
+   "works": [
+    "Seven Gothic Tales"
+   ]
+  },
+  {
+   "id": "matheson",
+   "label": "Richard Matheson",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Survival premises stripped to essentials.",
+   "works": [
+    "I Am Legend",
+    "Hell House"
+   ]
+  },
+  {
+   "id": "beaumont",
+   "label": "Charles Beaumont",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Twilight Zone-era unease, sharper in print.",
+   "works": [
+    "Perchance to Dream"
+   ]
+  },
+  {
+   "id": "bradbury",
+   "label": "Ray Bradbury",
+   "type": "rec",
+   "cluster": "core",
+   "note": "October lyricism; the dark carnival.",
+   "works": [
+    "Something Wicked This Way Comes",
+    "The October Country"
+   ]
+  },
+  {
+   "id": "jfinney",
+   "label": "Jack Finney",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Paranoid replacement dread.",
+   "works": [
+    "The Body Snatchers"
+   ]
+  },
+  {
+   "id": "levin",
+   "label": "Ira Levin",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Paranoid horror engineered like clockwork.",
+   "works": [
+    "Rosemary's Baby",
+    "A Kiss Before Dying"
+   ]
+  },
+  {
+   "id": "blatty",
+   "label": "William Peter Blatty",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Possession taken with total seriousness.",
+   "works": [
+    "The Exorcist"
+   ]
+  },
+  {
+   "id": "siddons",
+   "label": "Anne Rivers Siddons",
+   "type": "rec",
+   "cluster": "core",
+   "note": "The House Next Door: suburban wrongness.",
+   "works": [
+    "The House Next Door"
+   ]
+  },
+  {
+   "id": "marasco",
+   "label": "Robert Marasco",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Burnt Offerings: the house feeds.",
+   "works": [
+    "Burnt Offerings"
+   ]
+  },
+  {
+   "id": "etchison",
+   "label": "Dennis Etchison",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Quiet California dread.",
+   "works": [
+    "The Dark Country"
+   ]
+  },
+  {
+   "id": "tem",
+   "label": "Steve Rasnic Tem",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Grief-soaked quiet horror.",
+   "works": [
+    "Ubo",
+    "City Fishing"
+   ]
+  },
+  {
+   "id": "brite",
+   "label": "Poppy Z. Brite",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Gothic visceral excess, seriously meant.",
+   "works": [
+    "Exquisite Corpse"
+   ]
+  },
+  {
+   "id": "mccammon",
+   "label": "Robert McCammon",
+   "type": "rec",
+   "cluster": "slash",
+   "note": "Paperback-era scope and momentum.",
+   "works": [
+    "Swan Song",
+    "Boy's Life"
+   ]
+  },
+  {
+   "id": "ellison",
+   "label": "Harlan Ellison",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Vicious speculative horror.",
+   "works": [
+    "The Deathbird",
+    "I Have No Mouth and I Must Scream"
+   ]
+  },
+  {
+   "id": "oates",
+   "label": "Joyce Carol Oates",
+   "type": "rec",
+   "cluster": "core",
+   "note": "American gothic psychology; Zombie.",
+   "works": [
+    "Zombie",
+    "Where Are You Going, Where Have You Been?"
+   ]
+  },
+  {
+   "id": "morrison",
+   "label": "Toni Morrison",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Beloved: haunting as history.",
+   "works": [
+    "Beloved"
+   ]
+  },
+  {
+   "id": "topor",
+   "label": "Roland Topor",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "The Tenant: identity dissolving in an apartment.",
+   "works": [
+    "The Tenant"
+   ]
+  },
+  {
+   "id": "cain",
+   "label": "James M. Cain",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Doomed desire, compressed.",
+   "works": [
+    "The Postman Always Rings Twice"
+   ]
+  },
+  {
+   "id": "willeford",
+   "label": "Charles Willeford",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Affectless sociopath studies.",
+   "works": [
+    "The Woman Chaser",
+    "Miami Blues"
+   ]
+  },
+  {
+   "id": "himes",
+   "label": "Chester Himes",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Harlem noir, violent and absurd.",
+   "works": [
+    "A Rage in Harlem"
+   ]
+  },
+  {
+   "id": "millar",
+   "label": "Margaret Millar",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Psychological suspense with trapdoor endings.",
+   "works": [
+    "Beast in View"
+   ]
+  },
+  {
+   "id": "rendell",
+   "label": "Ruth Rendell",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Obsession and inevitability.",
+   "works": [
+    "A Judgement in Stone"
+   ]
+  },
+  {
+   "id": "izzo",
+   "label": "Jean-Claude Izzo",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Marseille noir, elegiac and doomed.",
+   "works": [
+    "Total Chaos"
+   ]
+  },
+  {
+   "id": "dard",
+   "label": "Frédéric Dard",
+   "type": "rec",
+   "cluster": "noir",
+   "note": "Cruel little French thrillers.",
+   "works": [
+    "The Executioner Weeps",
+    "Bird in a Cage"
+   ]
+  },
+  {
+   "id": "suskind",
+   "label": "Patrick Süskind",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Perfume: monstrous sensory obsession.",
+   "works": [
+    "Perfume"
+   ]
+  },
+  {
+   "id": "machado",
+   "label": "Carmen Maria Machado",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Formally restless body horror.",
+   "works": [
+    "Her Body and Other Parties"
+   ]
+  },
+  {
+   "id": "nevill",
+   "label": "Adam Nevill",
+   "type": "rec",
+   "cluster": "core",
+   "note": "British folk and apartment horror, committed.",
+   "works": [
+    "The Ritual",
+    "Last Days"
+   ]
+  },
+  {
+   "id": "langan",
+   "label": "John Langan",
+   "type": "rec",
+   "cluster": "core",
+   "note": "The Fisherman: grief opening onto the cosmic.",
+   "works": [
+    "The Fisherman"
+   ]
+  },
+  {
+   "id": "files",
+   "label": "Gemma Files",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Experimental Canadian weird.",
+   "works": [
+    "Experimental Film"
+   ]
+  },
+  {
+   "id": "llewellyn",
+   "label": "Livia Llewellyn",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Dense, transgressive weird erotica-horror.",
+   "works": [
+    "Furnace"
+   ]
+  },
+  {
+   "id": "cisco",
+   "label": "Michael Cisco",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Divinity Student: pure oneiric weird.",
+   "works": [
+    "The Divinity Student"
+   ]
+  },
+  {
+   "id": "samuels",
+   "label": "Mark Samuels",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "Ligottian office-block horror.",
+   "works": [
+    "The White Hands"
+   ]
+  },
+  {
+   "id": "padgett",
+   "label": "Jon Padgett",
+   "type": "rec",
+   "cluster": "weird",
+   "note": "The Secret of Ventriloquism.",
+   "works": [
+    "The Secret of Ventriloquism"
+   ]
+  },
+  {
+   "id": "malerman",
+   "label": "Josh Malerman",
+   "type": "rec",
+   "cluster": "core",
+   "note": "High-concept dread engines.",
+   "works": [
+    "Bird Box"
+   ]
+  },
+  {
+   "id": "lavalle",
+   "label": "Victor LaValle",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Lovecraft answered and repurposed.",
+   "works": [
+    "The Ballad of Black Tom",
+    "The Changeling"
+   ]
+  },
+  {
+   "id": "due",
+   "label": "Tananarive Due",
+   "type": "rec",
+   "cluster": "core",
+   "note": "American horror with historical weight.",
+   "works": [
+    "The Reformatory",
+    "Ghost Summer"
+   ]
+  },
+  {
+   "id": "ward",
+   "label": "Catriona Ward",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Structural misdirection with real dread.",
+   "works": [
+    "The Last House on Needless Street"
+   ]
+  },
+  {
+   "id": "kiste",
+   "label": "Gwendolyn Kiste",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Lyrical feminist gothic.",
+   "works": [
+    "The Rust Maidens"
+   ]
+  },
+  {
+   "id": "katsu",
+   "label": "Alma Katsu",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Historical horror; The Hunger.",
+   "works": [
+    "The Hunger"
+   ]
+  },
+  {
+   "id": "lindqvist",
+   "label": "John Ajvide Lindqvist",
+   "type": "rec",
+   "cluster": "core",
+   "note": "Swedish horror, social realism first.",
+   "works": [
+    "Let the Right One In",
+    "Handling the Undead"
+   ]
+  },
+  {
+   "id": "tidbeck",
+   "label": "Karin Tidbeck",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Swedish weird; bureaucracies of elsewhere.",
+   "works": [
+    "Jagannath",
+    "Amatka"
+   ]
+  },
+  {
+   "id": "tokarczuk",
+   "label": "Olga Tokarczuk",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Drive Your Plow: fate, astrology, bodies.",
+   "works": [
+    "Drive Your Plow Over the Bones of the Dead"
+   ]
+  },
+  {
+   "id": "couto",
+   "label": "Mia Couto",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Mozambican dream-realism with war under it.",
+   "works": [
+    "Sleepwalking Land"
+   ]
+  },
+  {
+   "id": "emezi",
+   "label": "Akwaeke Emezi",
+   "type": "rec",
+   "cluster": "african",
+   "note": "Ogbanje selfhood as genuine metaphysics.",
+   "works": [
+    "Freshwater"
+   ]
+  },
+  {
+   "id": "mieville",
+   "label": "China Miéville",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "The weird city; dread in the architecture.",
+   "works": [
+    "Perdido Street Station",
+    "The City & the City"
+   ]
+  },
+  {
+   "id": "crowley",
+   "label": "John Crowley",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Little, Big: the uncanny domesticated.",
+   "works": [
+    "Little, Big"
+   ]
+  },
+  {
+   "id": "holdstock",
+   "label": "Robert Holdstock",
+   "type": "rec",
+   "cluster": "fantasy",
+   "note": "Mythago Wood: myth as predator.",
+   "works": [
+    "Mythago Wood"
+   ]
+  },
+  {
+   "id": "akutagawa",
+   "label": "Ryūnosuke Akutagawa",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Rashomon-era psychological cruelty.",
+   "works": [
+    "Rashōmon",
+    "Hell Screen"
+   ]
+  },
+  {
+   "id": "tanizaki",
+   "label": "Jun'ichirō Tanizaki",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Obsession aestheticized.",
+   "works": [
+    "The Key",
+    "Quicksand"
+   ]
+  },
+  {
+   "id": "ono",
+   "label": "Fuyumi Ono",
+   "type": "rec",
+   "cluster": "asian",
+   "note": "Ghost Hunt-era Japanese horror.",
+   "works": [
+    "Shiki"
+   ]
+  },
+  {
+   "id": "cortazar",
+   "label": "Julio Cortázar",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "House Taken Over; the uncanny domestic.",
+   "works": [
+    "Blow-Up and Other Stories"
+   ]
+  },
+  {
+   "id": "borges",
+   "label": "Jorge Luis Borges",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Infinite libraries; dread of the infinite.",
+   "works": [
+    "Ficciones"
+   ]
+  },
+  {
+   "id": "felisberto",
+   "label": "Felisberto Hernández",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "Uruguayan proto-weird; haunted pianos.",
+   "works": [
+    "Piano Stories"
+   ]
+  },
+  {
+   "id": "sabato",
+   "label": "Ernesto Sabato",
+   "type": "rec",
+   "cluster": "dream",
+   "note": "The Tunnel: obsession as confession.",
+   "works": [
+    "The Tunnel"
+   ]
+  },
+  {
+   "id": "pynchon",
+   "label": "Thomas Pynchon",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Paranoia as cosmology.",
+   "works": [
+    "The Crying of Lot 49"
+   ]
+  },
+  {
+   "id": "dick",
+   "label": "Philip K. Dick",
+   "type": "rec",
+   "cluster": "consp",
+   "note": "Reality failing its own checks.",
+   "works": [
+    "Ubik",
+    "A Scanner Darkly"
+   ]
+  }
+ ],
+ "links": [
+  [
+   "grabinski",
+   "jeanray"
+  ],
+  [
+   "grabinski",
+   "meyrink"
+  ],
+  [
+   "grabinski",
+   "kubin"
+  ],
+  [
+   "grabinski",
+   "perutz"
+  ],
+  [
+   "ewers",
+   "jeanray"
+  ],
+  [
+   "ewers",
+   "kubin"
+  ],
+  [
+   "machen",
+   "klein"
+  ],
+  [
+   "machen",
+   "barron"
+  ],
+  [
+   "machen",
+   "hodgson"
+  ],
+  [
+   "machen",
+   "mrjames"
+  ],
+  [
+   "machen",
+   "garner"
+  ],
+  [
+   "ligotti",
+   "barron"
+  ],
+  [
+   "ligotti",
+   "schulz"
+  ],
+  [
+   "ligotti",
+   "hedayat"
+  ],
+  [
+   "ligotti",
+   "bakker"
+  ],
+  [
+   "aickman",
+   "lamsley"
+  ],
+  [
+   "aickman",
+   "mrjames"
+  ],
+  [
+   "aickman",
+   "straub"
+  ],
+  [
+   "hoffmann",
+   "meyrink"
+  ],
+  [
+   "hoffmann",
+   "kubin"
+  ],
+  [
+   "kavan",
+   "labatut"
+  ],
+  [
+   "davila",
+   "enriquez"
+  ],
+  [
+   "blackwood",
+   "klein"
+  ],
+  [
+   "blackwood",
+   "barron"
+  ],
+  [
+   "blackwood",
+   "hodgson"
+  ],
+  [
+   "blackwood",
+   "lindsay"
+  ],
+  [
+   "blackwood",
+   "vandermeer"
+  ],
+  [
+   "jackson",
+   "straub"
+  ],
+  [
+   "jackson",
+   "tryon"
+  ],
+  [
+   "jackson",
+   "link"
+  ],
+  [
+   "jackson",
+   "tremblay"
+  ],
+  [
+   "jackson",
+   "comyns"
+  ],
+  [
+   "jackson",
+   "mantel"
+  ],
+  [
+   "leiber",
+   "barron"
+  ],
+  [
+   "leiber",
+   "rcampbell"
+  ],
+  [
+   "leiber",
+   "klein"
+  ],
+  [
+   "mcdowell",
+   "klein"
+  ],
+  [
+   "mcdowell",
+   "tryon"
+  ],
+  [
+   "mcdowell",
+   "grant"
+  ],
+  [
+   "mcdowell",
+   "farris"
+  ],
+  [
+   "mcdowell",
+   "theorin"
+  ],
+  [
+   "tuttle",
+   "lamsley"
+  ],
+  [
+   "tuttle",
+   "link"
+  ],
+  [
+   "tuttle",
+   "kiernan"
+  ],
+  [
+   "wagner",
+   "barron"
+  ],
+  [
+   "wagner",
+   "ballingrud"
+  ],
+  [
+   "scerbanenco",
+   "draymond"
+  ],
+  [
+   "scerbanenco",
+   "lucarelli"
+  ],
+  [
+   "scerbanenco",
+   "manchette"
+  ],
+  [
+   "hughes",
+   "draymond"
+  ],
+  [
+   "hughes",
+   "highsmith"
+  ],
+  [
+   "hughes",
+   "harris"
+  ],
+  [
+   "thompson",
+   "goodis"
+  ],
+  [
+   "thompson",
+   "mcgrath"
+  ],
+  [
+   "thompson",
+   "highsmith"
+  ],
+  [
+   "thompson",
+   "kirino"
+  ],
+  [
+   "thompson",
+   "nakamura"
+  ],
+  [
+   "mccarthy",
+   "harris"
+  ],
+  [
+   "mccarthy",
+   "vann"
+  ],
+  [
+   "mccarthy",
+   "pollock"
+  ],
+  [
+   "mccarthy",
+   "woodrell"
+  ],
+  [
+   "draymond",
+   "meyer"
+  ],
+  [
+   "harris",
+   "beukes"
+  ],
+  [
+   "harris",
+   "fitzek"
+  ],
+  [
+   "highsmith",
+   "jungyujin"
+  ],
+  [
+   "lecarre",
+   "furst"
+  ],
+  [
+   "lecarre",
+   "urban"
+  ],
+  [
+   "sciascia",
+   "lecarre"
+  ],
+  [
+   "fitzek",
+   "theorin"
+  ],
+  [
+   "woolrich",
+   "gresham"
+  ],
+  [
+   "malet",
+   "manchette"
+  ],
+  [
+   "evenson",
+   "schirach"
+  ],
+  [
+   "demaria",
+   "sciascia"
+  ],
+  [
+   "demaria",
+   "lem"
+  ],
+  [
+   "demaria",
+   "delillo"
+  ],
+  [
+   "demaria",
+   "buzzati"
+  ],
+  [
+   "demaria",
+   "tabucchi"
+  ],
+  [
+   "sebald",
+   "kis"
+  ],
+  [
+   "sebald",
+   "marias"
+  ],
+  [
+   "sebald",
+   "macfarlane"
+  ],
+  [
+   "sebald",
+   "modiano"
+  ],
+  [
+   "bolano",
+   "kis"
+  ],
+  [
+   "bolano",
+   "marias"
+  ],
+  [
+   "bolano",
+   "donoso"
+  ],
+  [
+   "knausgard",
+   "marias"
+  ],
+  [
+   "knausgard",
+   "krasznahorkai"
+  ],
+  [
+   "bernhard",
+   "krasznahorkai"
+  ],
+  [
+   "bernhard",
+   "kristof"
+  ],
+  [
+   "labatut",
+   "houellebecq"
+  ],
+  [
+   "labatut",
+   "carrere"
+  ],
+  [
+   "cole",
+   "macfarlane"
+  ],
+  [
+   "kafka",
+   "auster"
+  ],
+  [
+   "kafka",
+   "kadare"
+  ],
+  [
+   "kafka",
+   "abe"
+  ],
+  [
+   "kafka",
+   "gombrowicz"
+  ],
+  [
+   "spark",
+   "durrenmatt"
+  ],
+  [
+   "sciascia",
+   "eco"
+  ],
+  [
+   "ketchum",
+   "laymon"
+  ],
+  [
+   "ketchum",
+   "rexmiller"
+  ],
+  [
+   "ketchum",
+   "ryumurakami"
+  ],
+  [
+   "lansdale",
+   "morrell"
+  ],
+  [
+   "sgj",
+   "ballingrud"
+  ],
+  [
+   "partridge",
+   "laymon"
+  ],
+  [
+   "king",
+   "koontz"
+  ],
+  [
+   "king",
+   "saul"
+  ],
+  [
+   "king",
+   "herbert"
+  ],
+  [
+   "king",
+   "straub"
+  ],
+  [
+   "king",
+   "morrell"
+  ],
+  [
+   "christie",
+   "bloch"
+  ],
+  [
+   "christie",
+   "connell"
+  ],
+  [
+   "christie",
+   "yokomizo"
+  ],
+  [
+   "herbert",
+   "hutson"
+  ],
+  [
+   "herbert",
+   "guysmith"
+  ],
+  [
+   "bloch",
+   "rexmiller"
+  ],
+  [
+   "boileau",
+   "jonquet"
+  ],
+  [
+   "leroux",
+   "boileau"
+  ],
+  [
+   "duras",
+   "hawkes"
+  ],
+  [
+   "duras",
+   "sarraute"
+  ],
+  [
+   "duras",
+   "robbegrillet"
+  ],
+  [
+   "duras",
+   "ernaux"
+  ],
+  [
+   "duras",
+   "vian"
+  ],
+  [
+   "rulfo",
+   "donoso"
+  ],
+  [
+   "rulfo",
+   "fuentes"
+  ],
+  [
+   "rulfo",
+   "schweblin"
+  ],
+  [
+   "rulfo",
+   "bioy"
+  ],
+  [
+   "dumaurier",
+   "donoso"
+  ],
+  [
+   "queneau",
+   "vian"
+  ],
+  [
+   "queneau",
+   "perec"
+  ],
+  [
+   "queneau",
+   "obrien"
+  ],
+  [
+   "link",
+   "lockwood"
+  ],
+  [
+   "djohnson",
+   "kbarry"
+  ],
+  [
+   "hamsun",
+   "vesaas"
+  ],
+  [
+   "hamsun",
+   "bjorneboe"
+  ],
+  [
+   "evenson",
+   "vann"
+  ],
+  [
+   "evenson",
+   "ballingrud"
+  ],
+  [
+   "bass",
+   "vann"
+  ],
+  [
+   "bass",
+   "larrybrown"
+  ],
+  [
+   "bass",
+   "matthiessen"
+  ],
+  [
+   "larrybrown",
+   "crews"
+  ],
+  [
+   "woodrell",
+   "rash"
+  ],
+  [
+   "quiroga",
+   "rulfo"
+  ],
+  [
+   "enriquez",
+   "schweblin"
+  ],
+  [
+   "enriquez",
+   "ojeda"
+  ],
+  [
+   "enriquez",
+   "bazterrica"
+  ],
+  [
+   "enriquez",
+   "borachung"
+  ],
+  [
+   "enriquez",
+   "morenogarcia"
+  ],
+  [
+   "enriquez",
+   "quintana"
+  ],
+  [
+   "enriquez",
+   "onoh"
+  ],
+  [
+   "moshfegh",
+   "lagerkvist"
+  ],
+  [
+   "moshfegh",
+   "oconnor"
+  ],
+  [
+   "moshfegh",
+   "comyns"
+  ],
+  [
+   "moshfegh",
+   "lispector"
+  ],
+  [
+   "moshfegh",
+   "villalobos"
+  ],
+  [
+   "moshfegh",
+   "despentes"
+  ],
+  [
+   "moshfegh",
+   "golding"
+  ],
+  [
+   "oconnor",
+   "crews"
+  ],
+  [
+   "peake",
+   "mjharrison"
+  ],
+  [
+   "bakker",
+   "erikson"
+  ],
+  [
+   "garner",
+   "sapkowski"
+  ],
+  [
+   "otsuichi",
+   "jungyujin"
+  ],
+  [
+   "ranpo",
+   "yokomizo"
+  ],
+  [
+   "tutuola",
+   "okri"
+  ],
+  [
+   "tutuola",
+   "onoh"
+  ],
+  [
+   "beukes",
+   "lotz"
+  ],
+  [
+   "carpenter",
+   "partridge"
+  ],
+  [
+   "carpenter",
+   "morrell"
+  ],
+  [
+   "carpenter",
+   "koontz"
+  ],
+  [
+   "carpenter",
+   "king"
+  ],
+  [
+   "argento",
+   "woolrich"
+  ],
+  [
+   "argento",
+   "grange"
+  ],
+  [
+   "argento",
+   "ranpo"
+  ],
+  [
+   "argento",
+   "scerbanenco"
+  ],
+  [
+   "lynch",
+   "hawkes"
+  ],
+  [
+   "lynch",
+   "donoso"
+  ],
+  [
+   "lynch",
+   "ballard"
+  ],
+  [
+   "lynch",
+   "kosinski"
+  ],
+  [
+   "lynch",
+   "djohnson"
+  ],
+  [
+   "rugna",
+   "enriquez"
+  ],
+  [
+   "rugna",
+   "schweblin"
+  ],
+  [
+   "valancourt",
+   "mcdowell"
+  ],
+  [
+   "valancourt",
+   "jeanray"
+  ],
+  [
+   "valancourt",
+   "tryon"
+  ],
+  [
+   "valancourt",
+   "mirrlees"
+  ],
+  [
+   "wordhorde",
+   "barron"
+  ],
+  [
+   "bierce",
+   "poe"
+  ],
+  [
+   "stoker",
+   "lefanu"
+  ],
+  [
+   "poe",
+   "hoffmann"
+  ],
+  [
+   "hawthorne",
+   "poe"
+  ],
+  [
+   "akinari",
+   "pusongling"
+  ],
+  [
+   "hearn",
+   "akinari"
+  ],
+  [
+   "maupassant",
+   "poe"
+  ],
+  [
+   "aktolstoy",
+   "gogol"
+  ],
+  [
+   "gotthelf",
+   "hoffmann"
+  ],
+  [
+   "buehlman",
+   "lagerkvist"
+  ],
+  [
+   "koike",
+   "kirino"
+  ],
+  [
+   "barker",
+   "ballingrud"
+  ],
+  [
+   "iglesias",
+   "enriquez"
+  ],
+  [
+   "saramago",
+   "kadare"
+  ],
+  [
+   "ogawa",
+   "abe"
+  ],
+  [
+   "bulgakov",
+   "gogol"
+  ],
+  [
+   "andreyev",
+   "grabinski"
+  ],
+  [
+   "villiers",
+   "lorrain"
+  ],
+  [
+   "lorrain",
+   "ewers"
+  ],
+  [
+   "masterton",
+   "herbert"
+  ],
+  [
+   "slade",
+   "rexmiller"
+  ],
+  [
+   "coyne",
+   "saul"
+  ],
+  [
+   "jensen",
+   "saul"
+  ],
+  [
+   "johnstone",
+   "guysmith"
+  ],
+  [
+   "simenon",
+   "boileau"
+  ],
+  [
+   "vargas",
+   "grange"
+  ],
+  [
+   "sjowall",
+   "fossum"
+  ],
+  [
+   "fossum",
+   "theorin"
+  ],
+  [
+   "shimada",
+   "yokomizo"
+  ],
+  [
+   "japrisot",
+   "boileau"
+  ],
+  [
+   "suzuki",
+   "ito"
+  ],
+  [
+   "leguin",
+   "wolfe"
+  ],
+  [
+   "blicher",
+   "hamsun"
+  ],
+  [
+   "hankang",
+   "borachung"
+  ],
+  [
+   "chaze",
+   "goodis"
+  ],
+  [
+   "wehunt",
+   "ballingrud"
+  ],
+  [
+   "mrshelley",
+   "stoker"
+  ],
+  [
+   "lefanu",
+   "mrjames"
+  ],
+  [
+   "hjames",
+   "jackson"
+  ],
+  [
+   "wharton",
+   "hjames"
+  ],
+  [
+   "chambers",
+   "lovecraft"
+  ],
+  [
+   "dunsany",
+   "lovecraft"
+  ],
+  [
+   "lovecraft",
+   "machen"
+  ],
+  [
+   "lovecraft",
+   "blackwood"
+  ],
+  [
+   "cas",
+   "lovecraft"
+  ],
+  [
+   "rehoward",
+   "lovecraft"
+  ],
+  [
+   "gilman",
+   "jackson"
+  ],
+  [
+   "onions",
+   "mrjames"
+  ],
+  [
+   "delamare",
+   "aickman"
+  ],
+  [
+   "benson",
+   "mrjames"
+  ],
+  [
+   "wakefield",
+   "mrjames"
+  ],
+  [
+   "oliphant",
+   "lefanu"
+  ],
+  [
+   "riddell",
+   "lefanu"
+  ],
+  [
+   "saki",
+   "bierce"
+  ],
+  [
+   "wfharvey",
+   "mrjames"
+  ],
+  [
+   "gautier",
+   "maupassant"
+  ],
+  [
+   "strobl",
+   "ewers"
+  ],
+  [
+   "gogol",
+   "hoffmann"
+  ],
+  [
+   "potocki",
+   "jeanray"
+  ],
+  [
+   "pusongling",
+   "akinari"
+  ],
+  [
+   "kyoka",
+   "hearn"
+  ],
+  [
+   "sologub",
+   "gogol"
+  ],
+  [
+   "panizza",
+   "ewers"
+  ],
+  [
+   "schwob",
+   "villiers"
+  ],
+  [
+   "dinesen",
+   "aickman"
+  ],
+  [
+   "matheson",
+   "bloch"
+  ],
+  [
+   "beaumont",
+   "matheson"
+  ],
+  [
+   "bradbury",
+   "partridge"
+  ],
+  [
+   "jfinney",
+   "bradbury"
+  ],
+  [
+   "levin",
+   "blatty"
+  ],
+  [
+   "blatty",
+   "king"
+  ],
+  [
+   "siddons",
+   "mcdowell"
+  ],
+  [
+   "marasco",
+   "mcdowell"
+  ],
+  [
+   "etchison",
+   "grant"
+  ],
+  [
+   "tem",
+   "grant"
+  ],
+  [
+   "brite",
+   "barker"
+  ],
+  [
+   "mccammon",
+   "king"
+  ],
+  [
+   "ellison",
+   "matheson"
+  ],
+  [
+   "oates",
+   "jackson"
+  ],
+  [
+   "morrison",
+   "oates"
+  ],
+  [
+   "topor",
+   "kosinski"
+  ],
+  [
+   "cain",
+   "thompson"
+  ],
+  [
+   "willeford",
+   "thompson"
+  ],
+  [
+   "himes",
+   "goodis"
+  ],
+  [
+   "millar",
+   "hughes"
+  ],
+  [
+   "rendell",
+   "highsmith"
+  ],
+  [
+   "izzo",
+   "manchette"
+  ],
+  [
+   "dard",
+   "boileau"
+  ],
+  [
+   "suskind",
+   "ewers"
+  ],
+  [
+   "machado",
+   "link"
+  ],
+  [
+   "nevill",
+   "tryon"
+  ],
+  [
+   "langan",
+   "barron"
+  ],
+  [
+   "files",
+   "kiernan"
+  ],
+  [
+   "llewellyn",
+   "barron"
+  ],
+  [
+   "cisco",
+   "ligotti"
+  ],
+  [
+   "samuels",
+   "ligotti"
+  ],
+  [
+   "padgett",
+   "ligotti"
+  ],
+  [
+   "malerman",
+   "tremblay"
+  ],
+  [
+   "lavalle",
+   "lovecraft"
+  ],
+  [
+   "due",
+   "lavalle"
+  ],
+  [
+   "ward",
+   "tremblay"
+  ],
+  [
+   "kiste",
+   "jackson"
+  ],
+  [
+   "katsu",
+   "simmons"
+  ],
+  [
+   "lindqvist",
+   "king"
+  ],
+  [
+   "tidbeck",
+   "link"
+  ],
+  [
+   "tokarczuk",
+   "gombrowicz"
+  ],
+  [
+   "couto",
+   "okri"
+  ],
+  [
+   "emezi",
+   "okri"
+  ],
+  [
+   "mieville",
+   "mjharrison"
+  ],
+  [
+   "crowley",
+   "mirrlees"
+  ],
+  [
+   "holdstock",
+   "garner"
+  ],
+  [
+   "akutagawa",
+   "ranpo"
+  ],
+  [
+   "tanizaki",
+   "ranpo"
+  ],
+  [
+   "ono",
+   "suzuki"
+  ],
+  [
+   "cortazar",
+   "borges"
+  ],
+  [
+   "borges",
+   "bioy"
+  ],
+  [
+   "felisberto",
+   "cortazar"
+  ],
+  [
+   "sabato",
+   "donoso"
+  ],
+  [
+   "pynchon",
+   "delillo"
+  ],
+  [
+   "dick",
+   "lem"
+  ]
+ ]
+}

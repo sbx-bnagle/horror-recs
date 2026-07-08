@@ -1,0 +1,145 @@
+{
+ "comment": "Sources for scripts/fetch-releases.mjs. type 'rss' fetches the feed directly; type 'auto' fetches the page and looks for an RSS/Atom link; type 'wikipedia' pulls the page's list items (used for awards). Add or correct feed URLs here as you find better ones.",
+ "publishers": [
+  {
+   "id": "valancourt",
+   "name": "Valancourt Books",
+   "type": "auto",
+   "url": "https://www.valancourtbooks.com/"
+  },
+  {
+   "id": "wordhorde",
+   "name": "Word Horde",
+   "type": "auto",
+   "url": "https://wordhorde.com/"
+  },
+  {
+   "id": "cemeterydance",
+   "name": "Cemetery Dance",
+   "type": "auto",
+   "url": "https://www.cemeterydance.com/"
+  },
+  {
+   "id": "blacklizard",
+   "name": "Vintage Crime/Black Lizard",
+   "type": "auto",
+   "url": "https://knopfdoubleday.com/imprint/vintage-crime-black-lizard/"
+  },
+  {
+   "id": "tartarus",
+   "name": "Tartarus Press",
+   "type": "auto",
+   "url": "https://www.tartaruspress.com/"
+  },
+  {
+   "id": "nightshade",
+   "name": "Night Shade Books",
+   "type": "auto",
+   "url": "https://www.nightshadebooks.com/"
+  },
+  {
+   "id": "creature",
+   "name": "Creature Publishing",
+   "type": "auto",
+   "url": "https://creaturehorror.com/"
+  },
+  {
+   "id": "darkmoon",
+   "name": "Dark Moon Books",
+   "type": "auto",
+   "url": "https://www.darkmoonbooks.com/"
+  },
+  {
+   "id": "flametree",
+   "name": "Flame Tree Press",
+   "type": "auto",
+   "url": "https://www.flametreepublishing.com/"
+  },
+  {
+   "id": "shortwave",
+   "name": "Shortwave Publishing",
+   "type": "auto",
+   "url": "https://shortwavepublishing.com/"
+  },
+  {
+   "id": "nightfire",
+   "name": "Tor Nightfire",
+   "type": "auto",
+   "url": "https://tornightfire.com/"
+  },
+  {
+   "id": "tenebrous",
+   "name": "Tenebrous Press",
+   "type": "auto",
+   "url": "https://www.tenebrouspress.com/"
+  },
+  {
+   "id": "undertow",
+   "name": "Undertow Publications",
+   "type": "auto",
+   "url": "https://undertowpublications.com/"
+  },
+  {
+   "id": "grimscribe",
+   "name": "Grimscribe Press",
+   "type": "auto",
+   "url": "https://grimscribepress.com/"
+  },
+  {
+   "id": "subterranean",
+   "name": "Subterranean Press",
+   "type": "auto",
+   "url": "https://subterraneanpress.com/"
+  },
+  {
+   "id": "penguin",
+   "name": "Penguin Random House (horror)",
+   "type": "auto",
+   "url": "https://www.penguinrandomhouse.com/books/horror/"
+  },
+  {
+   "id": "bloodydisgusting",
+   "name": "Bloody Disgusting (books)",
+   "type": "rss",
+   "url": "https://bloody-disgusting.com/feed/"
+  }
+ ],
+ "awards": [
+  {
+   "id": "stoker",
+   "name": "Bram Stoker Awards",
+   "type": "wikipedia",
+   "page": "Bram_Stoker_Award"
+  },
+  {
+   "id": "jackson",
+   "name": "Shirley Jackson Awards",
+   "type": "wikipedia",
+   "page": "Shirley_Jackson_Award"
+  },
+  {
+   "id": "booker",
+   "name": "Booker Prize",
+   "type": "wikipedia",
+   "page": "Booker_Prize"
+  },
+  {
+   "id": "poe",
+   "name": "Edgar Awards",
+   "type": "wikipedia",
+   "page": "Edgar_Award"
+  },
+  {
+   "id": "locus",
+   "name": "Locus Award (horror)",
+   "type": "wikipedia",
+   "page": "Locus_Award_for_Best_Horror_Novel"
+  },
+  {
+   "id": "splatterpunk",
+   "name": "Splatterpunk Awards",
+   "type": "wikipedia",
+   "page": "Splatterpunk_Award"
+  }
+ ]
+}
