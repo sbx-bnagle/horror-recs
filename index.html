@@ -726,7 +726,7 @@ async function triggerScan(){
     setTimeout(()=>btn.textContent="Check for new releases",5000);return;}
   btn.textContent="Scanning…";
   try{
-    const r=await A("/scan-books",{method:"POST"});
+    const r=await A("/scan",{method:"POST"});
     if(!r.ok)throw new Error(r.status);
     RELEASES=await (await A("/releases")).json();
     btn.textContent="Scan complete";renderTab();
