@@ -17,7 +17,7 @@ const AWARDS = [
   ["Locus Award (horror)", "Locus_Award_for_Best_Horror_Novel"],
   ["Splatterpunk Awards", "Splatterpunk_Award"]
 ];
-const AUTHOR_BATCH = 35;      // authors checked per scan run (rotates; stays under subrequest limits)
+const AUTHOR_BATCH = 25;      // authors checked per scan run (rotates; free tier caps 50 subrequests incl. D1 calls)
 const MONTHS_BACK = 18;       // how recent a publication date counts as "new"
 
 /* ---------------- scan ---------------- */
@@ -28,7 +28,7 @@ const strip = s => s.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&#8
 const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
 
 async function gbooks(q) {
-  const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&orderBy=newest&maxResults=15&printType=books`, UA);
+  const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&orderBy=newest&maxResults=15&printType=books&langRestrict=en`, UA);
   if (!r.ok) throw new Error("gbooks " + r.status);
   return (await r.json()).items || [];
 }
