@@ -1,0 +1,15 @@
+name = "recommendotron"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[triggers]
+crons = ["0 12 * * 1", "0 6 * * *"]   # Mon: feed+award scan; daily: rotating new-book check
+
+[[d1_databases]]
+binding = "DB"
+database_name = "recommendotron"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+# secrets (set via: wrangler secret put <NAME>)
+#   ANTHROPIC_API_KEY  - for in-app Claude suggestions
+#   APP_TOKEN          - shared secret; enter the same value in the app's Settings
