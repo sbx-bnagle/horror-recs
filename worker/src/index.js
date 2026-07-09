@@ -9,27 +9,6 @@ const CORS = {
 const J = (o, s = 200) => new Response(JSON.stringify(o), { status: s, headers: { "content-type": "application/json", ...CORS } });
 
 /* ---------------- sources ---------------- */
-const SOURCES = [
-  ["Valancourt Books", "https://www.valancourtbooks.com/"],
-  ["Word Horde", "https://wordhorde.com/"],
-  ["Cemetery Dance", "https://www.cemeterydance.com/"],
-  ["Vintage Crime/Black Lizard", "https://knopfdoubleday.com/imprint/vintage-crime-black-lizard/"],
-  ["Tartarus Press", "https://www.tartaruspress.com/"],
-  ["Night Shade Books", "https://www.nightshadebooks.com/"],
-  ["Creature Publishing", "https://creaturehorror.com/"],
-  ["Dark Moon Books", "https://www.darkmoonbooks.com/"],
-  ["Flame Tree Press", "https://www.flametreepublishing.com/"],
-  ["Shortwave Publishing", "https://shortwavepublishing.com/"],
-  ["Tor Nightfire", "https://tornightfire.com/"],
-  ["Tenebrous Press", "https://www.tenebrouspress.com/"],
-  ["Undertow Publications", "https://undertowpublications.com/"],
-  ["Grimscribe Press", "https://grimscribepress.com/"],
-  ["Subterranean Press", "https://subterraneanpress.com/"],
-  ["Penguin Random House (horror)", "https://www.penguinrandomhouse.com/books/horror/"],
-  ["Bloody Disgusting", "https://bloody-disgusting.com/feed/", true],
-  ["CrimeReads", "https://crimereads.com/feed/", true],
-  ["Reactor", "https://reactormag.com/feed/", true]
-];
 const AWARDS = [
   ["Bram Stoker Awards", "Bram_Stoker_Award"],
   ["Shirley Jackson Awards", "Shirley_Jackson_Award"],
@@ -38,69 +17,91 @@ const AWARDS = [
   ["Locus Award (horror)", "Locus_Award_for_Best_Horror_Novel"],
   ["Splatterpunk Awards", "Splatterpunk_Award"]
 ];
+const AUTHOR_BATCH = 35;      // authors checked per scan run (rotates; stays under subrequest limits)
+const MONTHS_BACK = 18;       // how recent a publication date counts as "new"
 
 /* ---------------- scan ---------------- */
 const UA = { headers: { "user-agent": "recommendotron/2.0 (personal reading tool)" } };
 const strip = s => s.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&#8217;|&rsquo;/g, "\u2019")
   .replace(/&#8216;/g, "\u2018").replace(/&#821[12];|&mdash;|&ndash;/g, "-").replace(/&quot;/g, '"')
   .replace(/&#\d+;/g, "").replace(/\s+/g, " ").trim();
+const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-async function get(url) {
-  const r = await fetch(url, UA);
-  if (!r.ok) throw new Error(`${r.status} ${url}`);
-  return r.text();
+async function gbooks(q) {
+  const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&orderBy=newest&maxResults=15&printType=books`, UA);
+  if (!r.ok) throw new Error("gbooks " + r.status);
+  return (await r.json()).items || [];
 }
-function parseFeed(xml, source) {
-  const blocks = xml.match(/<item[\s>][\s\S]*?<\/item>/g) || xml.match(/<entry[\s>][\s\S]*?<\/entry>/g) || [];
-  return blocks.slice(0, 20).map(b => {
-    const pick = t => { const m = b.match(new RegExp(`<${t}[^>]*>([\\s\\S]*?)</${t}>`)); return m ? strip(m[1]) : ""; };
-    const la = b.match(/<link[^>]*href="([^"]+)"/);
-    return { title: pick("title"), url: pick("link") || (la ? la[1] : ""), date: pick("pubDate") || pick("updated") || "",
-      summary: (pick("description") || pick("summary")).slice(0, 240), source, kind: "publisher" };
-  }).filter(i => i.title);
-}
-async function findFeed(pageUrl) {
-  const html = await get(pageUrl);
-  const m = html.match(/<link[^>]+type="application\/(?:rss|atom)\+xml"[^>]+href="([^"]+)"/i)
-        || html.match(/href="([^"]+(?:feed|rss)[^"]*)"/i);
-  return m ? new URL(m[1], pageUrl).href : null;
-}
+
 async function scan(env) {
-  const items = [];
-  for (const [name, url, isFeed] of SOURCES) {
-    try {
-      const feed = isFeed ? url : await findFeed(url);
-      if (!feed) continue;
-      items.push(...parseFeed(await get(feed), name));
-    } catch (e) { console.log(`skip ${name}: ${e.message}`); }
-  }
-  const yr = new Date().getFullYear();
-  for (const [name, page] of AWARDS) {
-    try {
-      const html = await get(`https://en.wikipedia.org/api/rest_v1/page/html/${page}`);
-      for (const li of html.match(/<li[\s>][\s\S]*?<\/li>/g) || []) {
-        const text = strip(li);
-        if ((text.includes(String(yr)) || text.includes(String(yr - 1))) && text.length > 15 && text.length < 220)
-          items.push({ title: text, url: `https://en.wikipedia.org/wiki/${page}`, date: "", summary: "", source: name, kind: "award" });
-      }
-    } catch (e) { console.log(`skip ${name}: ${e.message}`); }
-  }
-  // tag known authors
-  const nodes = (await env.DB.prepare("SELECT id,label FROM nodes WHERE type IN ('influence','rec')").all()).results;
-  const authors = nodes.map(n => ({ id: n.id, label: n.label.toLowerCase() })).filter(a => a.label.length > 5);
-  const now = new Date().toISOString();
+  const now = new Date();
+  const cutoff = new Date(now); cutoff.setMonth(cutoff.getMonth() - MONTHS_BACK);
+  const isRecent = d => d && new Date(d.length === 4 ? d + "-06-15" : d) >= cutoff;
+
+  const authors = (await env.DB.prepare("SELECT id,label FROM nodes WHERE type IN ('influence','rec') ORDER BY id").all()).results;
+  const knownLabels = authors.map(a => a.label.toLowerCase());
+  const wrows = (await env.DB.prepare("SELECT author,title FROM works").all()).results;
+  const haveTitles = new Set(wrows.map(w => w.author + "|" + norm(w.title)));
+
   const stmt = env.DB.prepare(
     "INSERT OR IGNORE INTO releases(key,title,url,date,source,kind,author,summary,fetched) VALUES(?,?,?,?,?,?,?,?,?)");
   const batch = [];
-  for (const it of items) {
-    const hay = (it.title + " " + it.summary).toLowerCase();
-    const hit = authors.find(a => hay.includes(a.label));
-    batch.push(stmt.bind((it.title + "|" + it.source).toLowerCase().slice(0, 300),
-      it.title, it.url, it.date, it.source, it.kind, hit ? hit.id : null, it.summary, now));
+  const nowISO = now.toISOString();
+  const push = (key, title, url, date, source, kind, author, summary) =>
+    batch.push(stmt.bind(key.toLowerCase().slice(0, 300), title, url || "", date || "", source || "", kind, author, (summary || "").slice(0, 240), nowISO));
+
+  /* A. new books by collected authors (rotating batch) */
+  const curRow = await env.DB.prepare("SELECT value FROM kv WHERE key='authorCursor'").first();
+  let cur = curRow ? parseInt(curRow.value) : 0;
+  if (cur >= authors.length) cur = 0;
+  const slice = authors.slice(cur, cur + AUTHOR_BATCH);
+  for (const a of slice) {
+    try {
+      for (const it of await gbooks(`inauthor:"${a.label}"`)) {
+        const v = it.volumeInfo || {};
+        if (!v.title || !isRecent(v.publishedDate)) continue;
+        if (!(v.authors || []).some(x => x.toLowerCase().includes(a.label.toLowerCase()))) continue;
+        if (haveTitles.has(a.id + "|" + norm(v.title))) continue;
+        push(`book|${a.id}|${v.title}`, v.title, v.infoLink, v.publishedDate,
+          v.publisher || "Google Books", "book", a.id, v.description);
+      }
+    } catch (e) { console.log(`skip ${a.label}: ${e.message}`); }
   }
+  await env.DB.prepare("INSERT INTO kv(key,value) VALUES('authorCursor',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .bind(String(cur + AUTHOR_BATCH >= authors.length ? 0 : cur + AUTHOR_BATCH)).run();
+
+  /* B. discovery: recent horror by authors not yet collected */
+  for (const q of ['subject:horror', 'subject:"horror fiction"']) {
+    try {
+      for (const it of await gbooks(q)) {
+        const v = it.volumeInfo || {};
+        if (!v.title || !v.authors || !isRecent(v.publishedDate)) continue;
+        const names = v.authors.join(", ");
+        if (v.authors.some(x => knownLabels.includes(x.toLowerCase()))) continue;
+        push(`disc|${names}|${v.title}`, `${v.title} \u2014 ${names}`, v.infoLink, v.publishedDate,
+          v.publisher || "Google Books", "discovery", null, v.description);
+      }
+    } catch (e) { console.log(`skip discovery: ${e.message}`); }
+  }
+
+  /* C. awards (current + previous year) */
+  const yr = now.getFullYear();
+  for (const [name, page] of AWARDS) {
+    try {
+      const html = await (await fetch(`https://en.wikipedia.org/api/rest_v1/page/html/${page}`, UA)).text();
+      for (const li of html.match(/<li[\s>][\s\S]*?<\/li>/g) || []) {
+        const text = strip(li);
+        if ((text.includes(String(yr)) || text.includes(String(yr - 1))) && text.length > 15 && text.length < 220) {
+          const hit = authors.find(a => a.label.length > 5 && text.toLowerCase().includes(a.label.toLowerCase()));
+          push(`award|${text}|${name}`, text, `https://en.wikipedia.org/wiki/${page}`, "", name, "award", hit ? hit.id : null, "");
+        }
+      }
+    } catch (e) { console.log(`skip ${name}: ${e.message}`); }
+  }
+
   if (batch.length) await env.DB.batch(batch);
-  await env.DB.prepare("INSERT INTO kv(key,value) VALUES('lastScan',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").bind(now).run();
-  return items.length;
+  await env.DB.prepare("INSERT INTO kv(key,value) VALUES('lastScan',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").bind(nowISO).run();
+  return batch.length;
 }
 
 /* ---------------- Claude ---------------- */
@@ -151,7 +152,10 @@ async function insertAuthor(env, node, links) {
 
 /* ---------------- router ---------------- */
 export default {
-  async scheduled(event, env) { await scan(env); },
+  async scheduled(event, env) {
+    if (event.cron === "0 6 * * *") await scanBooks(env);
+    else await scan(env);
+  },
   async fetch(req, env) {
     if (req.method === "OPTIONS") return new Response(null, { headers: CORS });
     if (req.headers.get("x-app-token") !== env.APP_TOKEN) return J({ error: "unauthorized" }, 401);
@@ -184,12 +188,26 @@ export default {
         return J({ fetched: last ? last.value : null, items });
       }
       if (p === "/scan" && req.method === "POST") return J({ ok: true, found: await scan(env) });
+      if (p === "/scan-books" && req.method === "POST") return J({ ok: true, found: await scanBooks(env) });
       if (p === "/works" && req.method === "POST") {
         const b = await req.json();
         const id = b.author + "::" + slug(b.title);
         await env.DB.prepare("INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,source) VALUES(?,?,?,?,?,?,?,?)")
           .bind(id, b.author, b.title, b.year || null, b.kind || "novel", b.desc || "", "{}", "release").run();
         return J({ ok: true, id });
+      }
+      if (p === "/works/describe" && req.method === "POST") {
+        const { id } = await req.json();
+        const w = await env.DB.prepare("SELECT * FROM works WHERE id=?").bind(id).first();
+        if (!w) return J({ error: "unknown work" }, 404);
+        const n = await env.DB.prepare("SELECT label FROM nodes WHERE id=?").bind(w.author).first();
+        const items = await gbooks(`intitle:"${w.title}" inauthor:"${n ? n.label : ""}"`);
+        const hit = items.map(i => i.volumeInfo || {}).find(v => v.description);
+        if (!hit) return J({ desc: "" });
+        const desc = hit.description.slice(0, 500);
+        await env.DB.prepare("UPDATE works SET desc=?, year=COALESCE(year,?) WHERE id=?")
+          .bind(desc, hit.publishedDate ? parseInt(hit.publishedDate) : null, id).run();
+        return J({ desc, year: hit.publishedDate ? parseInt(hit.publishedDate) : null });
       }
       if (p === "/authors" && req.method === "POST") {
         const b = await req.json();

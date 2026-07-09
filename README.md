@@ -115,7 +115,7 @@ These steps assume the repo is already pushed to GitHub (as `sbx-bnagle/horror-r
 ## Scripts
 
 ```
-node scripts/fetch-releases.mjs            # publisher feeds + award pages → releases.json
+node scripts/fetch-releases.mjs            # new books by your authors + discoveries, via Google Books
 node scripts/fetch-bibliographies.mjs --all         # full bibliographies via Open Library
 node scripts/fetch-bibliographies.mjs barron tuttle # specific authors
 ```
@@ -148,7 +148,18 @@ npx wrangler d1 execute recommendotron --remote --file=seed.sql
 
 The seed uses `INSERT OR IGNORE`, so new works are added without clobbering anything already in D1. Reload the app to see the expanded works lists.
 
-Expectation to set: Open Library data is messy for prolific authors — duplicate-ish entries under variant titles, omnibus editions, occasional wrong attributions. Fine as raw material; prune oddities from the All tab as you notice them, or ask Claude for a cleanup pass on `works.json`.
+Expectation to set: Open Library data is messy — variant editions, omnibus titles, and homonym authors (the 17th-century Thomas Tryon's brewing manuals attach to the novelist's name). The fetch now filters obvious junk, non-English editions, and canonical duplicates, but some slip through. Clean up afterward:
+
+```
+node scripts/clean-works.mjs --dry              # preview what would be removed
+node scripts/clean-works.mjs --min-year 1700    # apply; year floor optional
+node scripts/make-seed-sql.mjs --sync-works     # propagate deletions to D1
+cd worker && npx wrangler d1 execute recommendotron --remote --file=seed.sql
+```
+
+`clean-works.mjs` never touches seed works, app-added works, or anything you've enriched or classified. `--sync-works` purges only seed/openlibrary rows before re-inserting, so works added via the app survive. Remaining oddities can be hidden from recommendations per-work in the app (expand a work → "hide from recommendations").
+
+Descriptions fill in lazily: with the worker connected, expanding a work with no description fetches one from Google Books and saves it to D1.
 
 ## Scoring model
 

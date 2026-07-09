@@ -147,7 +147,7 @@ const CLUSTERS = GRAPH.clusters;
 
 /* ---------- user state ---------- */
 const DEFAULTS = () => ({
-  read:{}, ratings:{}, dims:{},           // per-work
+  read:{}, ratings:{}, dims:{}, hidden:{},   // per-work
   weights:{}, clusterAff:{}, authorDelta:{}, params:{}   // model overrides
 });
 let U = Object.assign(DEFAULTS(), JSON.parse(localStorage.getItem("imap-user")||"{}"));
@@ -424,13 +424,26 @@ function renderPanel(node){
     cb.onchange=()=>{U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
     const t=document.createElement("div");t.className="t";
     t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}`;
-    t.onclick=()=>{el.classList.toggle("open");openWorks.has(w.id)?openWorks.delete(w.id):openWorks.add(w.id);};
+    t.onclick=()=>{el.classList.toggle("open");openWorks.has(w.id)?openWorks.delete(w.id):openWorks.add(w.id);
+      if(el.classList.contains("open")&&!w.desc&&API.base&&!w._descTried){
+        w._descTried=true;
+        const de=el.querySelector(".desc");if(de)de.textContent="Fetching description…";
+        A("/works/describe",{method:"POST",body:JSON.stringify({id:w.id})})
+          .then(r=>r.json()).then(j=>{
+            w.desc=j.desc||"";if(j.year&&!w.year)w.year=j.year;
+            if(de)de.innerHTML=w.desc||"<i>No description found.</i>";})
+          .catch(()=>{if(de)de.innerHTML="<i>Description fetch failed.</i>";});
+      }};
     const pill=document.createElement("span");
     if(rated){pill.className="pill";pill.textContent="you: "+rated+"★";}
     else{const s=score(w,node);pill.className="pill"+(s>=70?" hi":"");pill.textContent=s;pill.title="Recommendation score";}
     head.append(cb,t,pill); el.appendChild(head);
     const body=document.createElement("div");body.className="body";
-    body.innerHTML=`<p class="desc">${w.desc||"<i>No description yet - run the bibliography script or ask Claude to enrich this entry.</i>"}</p>`;
+    body.innerHTML=`<p class="desc">${w.desc||(API.base?"<i>Expand to fetch a description.</i>":"<i>No description yet - connect the worker or ask Claude to enrich this entry.</i>")}</p>`;
+    const hide=document.createElement("div");hide.className="brk";
+    hide.textContent=U.hidden[w.id]?"unhide (returns to recommendations)":"hide from recommendations";
+    hide.onclick=()=>{if(U.hidden[w.id])delete U.hidden[w.id];else U.hidden[w.id]=true;save();renderPanel(node);renderTab();};
+    body.appendChild(hide);
     if(isRead){
       body.appendChild(starRow(w,node,rated||0));
       const qwrap=document.createElement("div");qwrap.style.marginTop="8px";
@@ -487,7 +500,7 @@ function recList(){
   for(const n of nodes){
     if(n.type==="director"||n.type==="publisher")continue;
     for(const w of WORKS[n.id]||[]){
-      if(U.read[w.id]||U.ratings[w.id]?.r)continue;
+      if(U.read[w.id]||U.ratings[w.id]?.r||U.hidden[w.id])continue;
       if(!sideFilter(w,n))continue;
       out.push({w,n,s:score(w,n)});
     }
@@ -516,10 +529,10 @@ function renderTab(){
     }
     items.sort((a,b)=>a.n.label.localeCompare(b.n.label)||a.w.title.localeCompare(b.w.title));
     items.forEach(({w,n})=>{
-      const rd=!!U.read[w.id], rt=U.ratings[w.id]?.r;
+      const rd=!!U.read[w.id], rt=U.ratings[w.id]?.r, hd=!!U.hidden[w.id];
       const row=document.createElement("div");row.className="recrow";
       row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}</span></div>
-        <span class="st">${rd?'<span class="rd">✓ read</span>':""}${rt?` <span class="rt">${rt}★</span>`:""}${!rd&&!rt?`<span class="pill">${score(w,n)}</span>`:""}</span>`;
+        <span class="st">${hd?'<span style="opacity:.6">hidden</span> ':""}${rd?'<span class="rd">✓ read</span>':""}${rt?` <span class="rt">${rt}★</span>`:""}${!rd&&!rt&&!hd?`<span class="pill">${score(w,n)}</span>`:""}</span>`;
       row.onmouseenter=()=>halo(n.id);
       row.onmouseleave=()=>halo(selected);
       row.onclick=()=>{selected=n.id;renderPanel(n);apply();focusNode(n.id);halo(n.id);};
@@ -528,7 +541,7 @@ function renderTab(){
   }
   else if(tab==="rel"){
     const btn=document.createElement("button");btn.id="relbtn";
-    btn.textContent="Check for new releases";
+    btn.textContent="Check for new books";
     btn.onclick=triggerScan;
     tabbody.appendChild(btn);
     const cp=document.createElement("button");cp.id="cpbtn";cp.style.cssText="width:100%;margin:0 0 8px;padding:6px;border:1px solid var(--hair);border-radius:8px;background:none;cursor:pointer;font-size:12.5px";
@@ -562,7 +575,46 @@ function renderTab(){
     const info=document.createElement("p");info.style.cssText="font-size:11.5px;color:var(--muted);margin:0 0 8px";
     info.textContent=RELEASES.fetched?`Last scan: ${RELEASES.fetched.slice(0,10)}`:"No scan yet - run the Action or the script.";
     tabbody.appendChild(info);
-    (RELEASES.items||[]).forEach(it=>{
+    const books=(RELEASES.items||[]).filter(i=>i.kind==="book");
+    const rest=(RELEASES.items||[]).filter(i=>i.kind!=="book");
+    if(books.length){
+      const h=document.createElement("h3");
+      h.style.cssText="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:8px 0 4px";
+      h.textContent="New books by your authors";
+      tabbody.appendChild(h);
+    } else {
+      const none=document.createElement("p");
+      none.style.cssText="font-size:12px;color:var(--muted)";
+      none.textContent="No new books found yet - the daily scan rotates through authors, so coverage builds over the first week or so.";
+      tabbody.appendChild(none);
+    }
+    books.forEach(it=>{
+      const row=document.createElement("div");row.className="relrow";
+      row.innerHTML=`<b>${it.url?`<a href="${it.url}" target="_blank" rel="noopener">${it.title}</a>`:it.title}</b>
+        <span class="src">${byId[it.author]?byId[it.author].label:""}${it.date?" · "+it.date.slice(0,10):""}</span>
+        ${it.summary?`<div>${it.summary}</div>`:""}`;
+      if(it.author&&byId[it.author]){
+        const add=document.createElement("button");
+        add.textContent="Add to catalog";add.style.cssText="font-size:11px;margin-top:3px;padding:2px 8px;border:1px solid var(--hair);border-radius:10px;background:none;cursor:pointer";
+        add.onclick=()=>addRelease(it,add);
+        row.appendChild(add);
+      }
+      tabbody.appendChild(row);
+    });
+    const det=document.createElement("details");
+    det.innerHTML="<summary style='font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);cursor:pointer;margin:12px 0 4px'>Discovery: press, articles &amp; awards ("+rest.length+")</summary>";
+    const scanFeeds=document.createElement("button");
+    scanFeeds.textContent="Scan feeds & awards";
+    scanFeeds.style.cssText="font-size:11px;margin:4px 0;padding:2px 8px;border:1px solid var(--hair);border-radius:10px;background:none;cursor:pointer";
+    scanFeeds.onclick=async()=>{
+      if(!API.base){scanFeeds.textContent="Set worker URL in Settings first";return;}
+      scanFeeds.textContent="Scanning…";
+      try{await A("/scan",{method:"POST"});RELEASES=await (await A("/releases")).json();renderTab();}
+      catch(e){scanFeeds.textContent="Failed";}
+    };
+    det.appendChild(scanFeeds);
+    tabbody.appendChild(det);
+    rest.forEach(it=>{
       const row=document.createElement("div");row.className="relrow";
       row.innerHTML=`<b>${it.url?`<a href="${it.url}" target="_blank" rel="noopener">${it.title}</a>`:it.title}</b>
         <span class="src">${it.source}${it.kind==="award"?" · award":""}${it.date?" · "+it.date.slice(0,16):""}${it.author&&byId[it.author]?" · <b>"+byId[it.author].label+"</b>":""}</span>
@@ -573,7 +625,7 @@ function renderTab(){
         add.onclick=()=>addRelease(it,add);
         row.appendChild(add);
       }
-      tabbody.appendChild(row);
+      det.appendChild(row);
     });
   }
   else if(tab==="set"){
@@ -655,7 +707,7 @@ function renderTab(){
 
 async function addRelease(it,btn){
   if(!API.base){btn.textContent="Set worker URL in Settings first";return;}
-  const guess=it.title.replace(new RegExp(byId[it.author].label,"i"),"").replace(/\bby\b|announcing|pre-?order|now available|:|-/gi," ").replace(/\s+/g," ").trim();
+  const guess=it.kind==="book"?it.title:it.title.replace(new RegExp(byId[it.author].label,"i"),"").replace(/\bby\b|announcing|pre-?order|now available|:|-/gi," ").replace(/\s+/g," ").trim();
   const title=prompt("Title to add under "+byId[it.author].label+":",guess||it.title);
   if(!title)return;
   btn.textContent="Adding…";
@@ -674,12 +726,12 @@ async function triggerScan(){
     setTimeout(()=>btn.textContent="Check for new releases",5000);return;}
   btn.textContent="Scanning…";
   try{
-    const r=await A("/scan",{method:"POST"});
+    const r=await A("/scan-books",{method:"POST"});
     if(!r.ok)throw new Error(r.status);
     RELEASES=await (await A("/releases")).json();
     btn.textContent="Scan complete";renderTab();
   }catch(e){btn.textContent="Scan failed ("+e.message+")";
-    setTimeout(()=>btn.textContent="Check for new releases",5000);}
+    setTimeout(()=>btn.textContent="Check for new books",5000);}
 }
 let suggestions=null;
 async function askClaude(btn){

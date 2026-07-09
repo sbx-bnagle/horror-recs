@@ -16,6 +16,8 @@ const targets = args.includes("--all")
 
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+const canon = s => s.toLowerCase().replace(/[:(].*$/, "").replace(/^(the|a|an)\s+/, "").replace(/[^a-z0-9]/g, "");
+const JUNK = /brewing|cookery|husbandry|treatise|sermon|epistle|pythagor|way to health|grand preservative|letters? (to|of)|essays? upon|miscellan/i;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 for (const id of targets) {
@@ -23,14 +25,17 @@ for (const id of targets) {
   if (!node) { console.warn(`unknown id: ${id}`); continue; }
   try {
     const q = encodeURIComponent(node.label);
-    const r = await fetch(`https://openlibrary.org/search.json?author=${q}&limit=200&fields=title,first_publish_year,subject`);
+    const r = await fetch(`https://openlibrary.org/search.json?author=${q}&limit=200&fields=title,first_publish_year,subject,language`);
     const docs = (await r.json()).docs || [];
     works[id] = works[id] || [];
     const have = new Set(works[id].map(w => norm(w.title)));
+    const haveCanon = new Set(works[id].map(w => canon(w.title)));
     let added = 0;
     for (const d of docs) {
-      if (!d.title || have.has(norm(d.title))) continue;
-      have.add(norm(d.title));
+      if (!d.title || have.has(norm(d.title)) || haveCanon.has(canon(d.title))) continue;
+      if (JUNK.test(d.title)) continue;
+      if (d.language && d.language.length && !d.language.includes("eng")) continue;
+      have.add(norm(d.title)); haveCanon.add(canon(d.title));
       works[id].push({
         id: id + "::" + slug(d.title),
         title: d.title,
