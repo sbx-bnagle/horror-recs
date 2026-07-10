@@ -254,7 +254,11 @@ nodes.forEach(n => {
   t.delete("meta");
   nodeThreads[n.id] = t;
 });
-const threadMatch = n => activeClusters.size===0 || [...activeClusters].every(c => nodeThreads[n.id].has(c));
+const threadMatch = n => {
+  if(activeClusters.size===0) return true;
+  if(activeClusters.size===1) return n.cluster===[...activeClusters][0];
+  return [...activeClusters].every(c => nodeThreads[n.id].has(c));
+};
 
 const graphEl = document.getElementById("graph");
 const W = () => graphEl.clientWidth, H = () => graphEl.clientHeight;
@@ -423,7 +427,7 @@ function renderPanel(node){
     const cb=document.createElement("input");cb.type="checkbox";cb.checked=isRead;cb.title="Read";
     cb.onchange=()=>{U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
     const t=document.createElement("div");t.className="t";
-    t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}`;
+    t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}${w.kind==="story"||w.kind==="novella"?` <span class="yr">· ${w.kind}</span>`:""}`;
     t.onclick=()=>{el.classList.toggle("open");openWorks.has(w.id)?openWorks.delete(w.id):openWorks.add(w.id);
       if(el.classList.contains("open")&&!w.desc&&API.base&&!w._descTried){
         w._descTried=true;
@@ -506,15 +510,17 @@ function recList(){
     }
   }
   out.sort((a,b)=>b.s-a.s);
-  return out.slice(0,50);
+  return out;
 }
 function renderTab(){
   updateReadMarkers();
   tabbody.innerHTML="";
   if(tab==="recs"){
-    recList().forEach(({w,n,s})=>{
+    const byAuthor=new Map();
+    recList().forEach(e=>{const c=byAuthor.get(e.n.id);if(!c||e.s>c.s)byAuthor.set(e.n.id,e);});
+    [...byAuthor.values()].sort((a,b)=>b.s-a.s).slice(0,50).forEach(({w,n,s})=>{
       const row=document.createElement("div");row.className="recrow";
-      row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}</span></div><span class="pill${s>=70?" hi":""}">${s}</span>`;
+      row.innerHTML=`<div class="t"><b>${n.label}</b><span>${w.title}</span></div><span class="pill${s>=70?" hi":""}">${s}</span>`;
       row.onmouseenter=()=>halo(n.id);
       row.onmouseleave=()=>halo(selected);
       row.onclick=()=>{selected=n.id;renderPanel(n);apply();focusNode(n.id);halo(n.id);};

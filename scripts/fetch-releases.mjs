@@ -20,7 +20,7 @@ const isRecent = d => d && new Date(d.length === 4 ? d + "-06-15" : d) >= cutoff
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function gbooks(q) {
-  const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&orderBy=newest&maxResults=15&printType=books`);
+  const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&orderBy=newest&maxResults=15&printType=books&langRestrict=en`);
   if (!r.ok) throw new Error("gbooks " + r.status);
   return (await r.json()).items || [];
 }
