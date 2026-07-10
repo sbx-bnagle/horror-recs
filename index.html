@@ -427,7 +427,8 @@ function renderPanel(node){
     const cb=document.createElement("input");cb.type="checkbox";cb.checked=isRead;cb.title="Read";
     cb.onchange=()=>{U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
     const t=document.createElement("div");t.className="t";
-    t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}${w.kind==="story"||w.kind==="novella"?` <span class="yr">· ${w.kind}</span>`:""}`;
+    const kindTag=w.kind&&w.kind!=="novel"?(w.kind==="story"&&/anthologized/i.test(w.desc||"")?"story · anthologized":w.kind):"";
+    t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}${kindTag?` <span class="yr">· ${kindTag}</span>`:""}`;
     t.onclick=()=>{el.classList.toggle("open");openWorks.has(w.id)?openWorks.delete(w.id):openWorks.add(w.id);
       if(el.classList.contains("open")&&!w.desc&&API.base&&!w._descTried){
         w._descTried=true;
@@ -505,6 +506,7 @@ function recList(){
     if(n.type==="director"||n.type==="publisher")continue;
     for(const w of WORKS[n.id]||[]){
       if(U.read[w.id]||U.ratings[w.id]?.r||U.hidden[w.id])continue;
+      if(w.kind==="story")continue;
       if(!sideFilter(w,n))continue;
       out.push({w,n,s:score(w,n)});
     }
@@ -537,7 +539,7 @@ function renderTab(){
     items.forEach(({w,n})=>{
       const rd=!!U.read[w.id], rt=U.ratings[w.id]?.r, hd=!!U.hidden[w.id];
       const row=document.createElement("div");row.className="recrow";
-      row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}</span></div>
+      row.innerHTML=`<div class="t"><b>${w.title}</b><span>${n.label}${w.kind&&w.kind!=="novel"?" · "+w.kind:""}</span></div>
         <span class="st">${hd?'<span style="opacity:.6">hidden</span> ':""}${rd?'<span class="rd">✓ read</span>':""}${rt?` <span class="rt">${rt}★</span>`:""}${!rd&&!rt&&!hd?`<span class="pill">${score(w,n)}</span>`:""}</span>`;
       row.onmouseenter=()=>halo(n.id);
       row.onmouseleave=()=>halo(selected);
