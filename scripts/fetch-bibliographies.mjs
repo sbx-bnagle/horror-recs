@@ -17,8 +17,10 @@ const targets = args.includes("--all")
   : args;
 
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, "");
-const canon = s => s.toLowerCase().replace(/[:(].*$/, "").replace(/^(the|a|an)\s+/, "").replace(/[^a-z0-9]/g, "");
+const deacc = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const norm = s => deacc(s).toLowerCase().replace(/[^a-z0-9]/g, "");
+const canon = s => deacc(s).toLowerCase().replace(/[:(].*$/, "").replace(/^(the|a|an)\s+/, "").replace(/[^a-z0-9]/g, "");
+const canonMatch = (a, b) => a.length > 5 && b.length > 5 && (a.includes(b) || b.includes(a));
 const JUNK = /brewing|cookery|husbandry|treatise|sermon|epistle|pythagor|way to health|grand preservative|letters? (to|of)|essays? upon|miscellan|planter|friendly advice|country-man/i;
 const STRONG = new Set("el los las la le il un una une les de des dei aux au der und das dem ein eine einer gli della delle nel nella degli uno dos uma umas och det ett av na przy dla het een lo di du y".split(" "));
 const isForeign = (t, exempt = "") => {
@@ -32,12 +34,47 @@ const mostlyLatin = t => { const l = (t.match(/[a-z]/gi) || []).length; return l
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const jget = async url => { const r = await fetch(url); if (!r.ok) throw new Error(r.status + " " + url); return r.json(); };
 
-async function authorWorks(key, limit = 200) {
+// search.json filtered by author key: relevance-ranked (canonical works first),
+// English titles where English editions exist, with years and languages.
+async function keyWorks(key, pages = 1) {
   const out = [];
-  for (let offset = 0; offset < limit; offset += 100) {
-    const j = await jget(`https://openlibrary.org/authors/${key}/works.json?limit=100&offset=${offset}`);
-    out.push(...(j.entries || []).map(e => e.title).filter(Boolean));
-    if (!j.entries || j.entries.length < 100) break;
+  for (let p = 1; p <= pages; p++) {
+    const j = await jget(`https://openlibrary.org/search.json?q=author_key%3A${key}&fields=title,first_publish_year,language&limit=100&page=${p}`);
+    out.push(...(j.docs || []).filter(d => d.title));
+    if (!j.docs || j.docs.length < 100) break;
+    await sleep(400);
+  }
+  return out;
+}
+
+async function resolveByWork(label, seedTitles) {
+  const counts = {};
+  for (const t of seedTitles.slice(0, 3)) {
+    try {
+      const j = await jget(`https://openlibrary.org/search.json?title=${encodeURIComponent(t)}&author=${encodeURIComponent(label)}&fields=author_key&limit=5`);
+      for (const d of j.docs || []) for (const k of d.author_key || []) counts[k] = (counts[k] || 0) + 1;
+    } catch {}
+    await sleep(400);
+  }
+  const best = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+  return best ? best[0] : null;
+}
+
+async function gbooksAuthor(label) {
+  const out = [];
+  for (let start = 0; start < 120; start += 40) {
+    const r = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent('inauthor:"' + label + '"')}&langRestrict=en&maxResults=40&startIndex=${start}&printType=books`);
+    if (!r.ok) break;
+    const items = (await r.json()).items || [];
+    for (const it of items) {
+      const v = it.volumeInfo || {};
+      if (!v.title) continue;
+      // strict: the author list must contain this exact name (diacritic-insensitive)
+      if (!(v.authors || []).some(a => norm(a) === norm(label))) continue;
+      out.push({ title: v.title.length && v.subtitle ? v.title : v.title,
+        first_publish_year: v.publishedDate ? parseInt(v.publishedDate) : null, language: ["eng"] });
+    }
+    if (items.length < 40) break;
     await sleep(400);
   }
   return out;
@@ -49,41 +86,62 @@ for (const id of targets) {
   works[id] = works[id] || [];
   const knownCanon = new Set(works[id].map(w => canon(w.title)));
   try {
-    // 1. candidate author entities matching the name
-    const search = await jget(`https://openlibrary.org/search/authors.json?q=${encodeURIComponent(node.label)}`);
-    const candidates = (search.docs || [])
-      .filter(d => norm(d.name || "") === norm(node.label) || norm(d.name || "").includes(norm(node.label)))
-      .sort((a, b) => (b.work_count || 0) - (a.work_count || 0))
-      .slice(0, 4);
-    if (!candidates.length) { console.warn(`${node.label}: no author entity found, skipped`); continue; }
+    const seedTitles = works[id].filter(w => w.source === "seed").map(w => w.title)
+      .concat(works[id].map(w => w.title)).filter((t, i, a) => a.indexOf(t) === i);
+    const knownArr = [...knownCanon];
 
-    // 2. pick the candidate whose catalog overlaps our known works
-    let best = null, bestTitles = null, bestOverlap = 0;
-    for (const c of candidates) {
-      await sleep(400);
-      const titles = await authorWorks(c.key, 100);
-      const overlap = titles.filter(t => knownCanon.has(canon(t))).length
-        + (c.top_work && knownCanon.has(canon(c.top_work)) ? 1 : 0);
-      if (overlap > bestOverlap) { best = c; bestTitles = titles; bestOverlap = overlap; }
+    // 1. PRIMARY: resolve author key via a known work (immune to name/diacritic variants)
+    let key = await resolveByWork(node.label, seedTitles);
+    let bestDocs = null;
+    if (key) {
+      bestDocs = await keyWorks(key, 1);
+    } else {
+      // 2. FALLBACK: entity candidates with tolerant name + title matching
+      const search = await jget(`https://openlibrary.org/search/authors.json?q=${encodeURIComponent(node.label)}`);
+      const candidates = (search.docs || [])
+        .filter(d => { const a = norm(d.name || ""), b = norm(node.label);
+          return a === b || a.includes(b) || b.includes(a); })
+        .sort((a, b) => (b.work_count || 0) - (a.work_count || 0))
+        .slice(0, 8);
+      let bestOverlap = 0;
+      for (const c of candidates) {
+        await sleep(400);
+        let docs = [];
+        try { docs = await keyWorks(c.key.replace(/^\/authors\//, ""), 1); } catch { continue; }
+        const overlap = docs.filter(d => knownArr.some(k => canonMatch(canon(d.title), k))).length
+          + (c.top_work && knownArr.some(k => canonMatch(canon(c.top_work), k)) ? 1 : 0);
+        if (overlap > bestOverlap) { key = c.key.replace(/^\/authors\//, ""); bestDocs = docs; bestOverlap = overlap; }
+      }
+      if (!key) {
+        // FALLBACK 2: Google Books with strict author-name equality
+        await sleep(400);
+        const gb = await gbooksAuthor(node.label);
+        if (!gb.length) { console.warn(`${node.label}: unresolved everywhere, skipped (add manually)`); continue; }
+        bestDocs = gb; key = "gbooks";
+        console.log(`${node.label}: via Google Books (${gb.length} volumes)`);
+      }
     }
-    if (!best) { console.warn(`${node.label}: no candidate matched known works, skipped (add manually if needed)`); continue; }
+    const best = { key };
+    const bestOverlap = "work-resolved";
 
     // 3. full catalog of the verified entity, filtered and merged
-    await sleep(400);
-    const titles = bestTitles.length >= 100 ? await authorWorks(best.key, 300) : bestTitles;
+    let docs = bestDocs;
+    if (best.key !== "gbooks" && docs.length >= 100) { await sleep(400);
+      docs = await keyWorks(best.key, 3); }
     let added = 0;
     const haveCanon = new Set(knownCanon);
-    for (const t of titles) {
-      const c = canon(t);
+    for (const d of docs) {
+      const t = d.title, c = canon(t);
       if (!c || haveCanon.has(c)) continue;
       if (JUNK.test(t) || !mostlyLatin(t) || isForeign(t, node.label)) continue;
+      if (d.language && d.language.length && !d.language.includes("eng")) continue;
       haveCanon.add(c);
-      works[id].push({ id: id + "::" + slug(t), title: t, year: null,
+      works[id].push({ id: id + "::" + slug(t), title: t, year: d.first_publish_year || null,
         kind: /stories|tales|collection/i.test(t) ? "collection" : "novel",
         desc: "", dims: {}, signals: 0, source: "openlibrary" });
       added++;
     }
-    console.log(`${node.label}: matched ${best.key} (overlap ${bestOverlap}), +${added} (${works[id].length} total)`);
+    console.log(`${node.label}: matched ${best.key}, +${added} (${works[id].length} total)`);
   } catch (e) { console.warn(`skip ${id}: ${e.message}`); }
   await sleep(600);
 }

@@ -5,7 +5,7 @@
    "color": "#3E7C76"
   },
   "core": {
-   "label": "Dread → concrete threat",
+   "label": "Dread \u2192 concrete threat",
    "color": "#D9822B"
   },
   "noir": {
@@ -93,7 +93,7 @@
   },
   {
    "id": "grabinski",
-   "label": "Stefan Grabiński",
+   "label": "Stefan Grabi\u0144ski",
    "type": "influence",
    "cluster": "weird",
    "note": "Polish weird fiction; motion and machinery haunted.",
@@ -238,7 +238,7 @@
   },
   {
    "id": "bolano",
-   "label": "Roberto Bolaño",
+   "label": "Roberto Bola\u00f1o",
    "type": "influence",
    "cluster": "consp",
    "note": "Conspiracy, violence, literary ambition.",
@@ -248,7 +248,7 @@
   },
   {
    "id": "knausgard",
-   "label": "Karl Ove Knausgård",
+   "label": "Karl Ove Knausg\u00e5rd",
    "type": "influence",
    "cluster": "consp",
    "note": "The uncanny bleeding into ordinary life.",
@@ -269,7 +269,7 @@
   },
   {
    "id": "labatut",
-   "label": "Benjamín Labatut",
+   "label": "Benjam\u00edn Labatut",
    "type": "influence",
    "cluster": "consp",
    "note": "Scientific knowledge as dread.",
@@ -303,7 +303,7 @@
    "label": "Joe R. Lansdale",
    "type": "influence",
    "cluster": "slash",
-   "note": "Serious horror and drama only — not the humor.",
+   "note": "Serious horror and drama only \u2014 not the humor.",
    "works": [
     "The Nightrunners"
    ]
@@ -356,7 +356,7 @@
    "cluster": "dream",
    "note": "Dead-town ghost story; compression and method.",
    "works": [
-    "Pedro Páramo"
+    "Pedro P\u00e1ramo"
    ]
   },
   {
@@ -469,7 +469,7 @@
   },
   {
    "id": "rugna",
-   "label": "Demián Rugna",
+   "label": "Demi\u00e1n Rugna",
    "type": "director",
    "cluster": "meta",
    "note": "Argentine horror; dread plus concrete threat.",
@@ -499,7 +499,7 @@
    "label": "Jean Ray",
    "type": "rec",
    "cluster": "weird",
-   "note": "Belgian weird; Grabiński's closest neighbor.",
+   "note": "Belgian weird; Grabi\u0144ski's closest neighbor.",
    "works": [
     "Malpertuis",
     "Whiskey Tales"
@@ -588,7 +588,7 @@
   },
   {
    "id": "davila",
-   "label": "Amparo Dávila",
+   "label": "Amparo D\u00e1vila",
    "type": "rec",
    "cluster": "weird",
    "note": "Unnamed threats, no explanations.",
@@ -684,7 +684,7 @@
   },
   {
    "id": "kiernan",
-   "label": "Caitlín R. Kiernan",
+   "label": "Caitl\u00edn R. Kiernan",
    "type": "rec",
    "cluster": "core",
    "note": "Cosmic dread never explained away.",
@@ -799,10 +799,10 @@
   },
   {
    "id": "malet",
-   "label": "Léo Malet",
+   "label": "L\u00e9o Malet",
    "type": "rec",
    "cluster": "noir",
-   "note": "Founding French noir; Série Noire lineage.",
+   "note": "Founding French noir; S\u00e9rie Noire lineage.",
    "works": [
     "Nestor Burma series"
    ]
@@ -860,7 +860,7 @@
   },
   {
    "id": "lecarre",
-   "label": "John le Carré",
+   "label": "John le Carr\u00e9",
    "type": "rec",
    "cluster": "noir",
    "note": "Institutional betrayal; the plot larger than the protagonist.",
@@ -891,7 +891,7 @@
   },
   {
    "id": "grange",
-   "label": "Jean-Christophe Grangé",
+   "label": "Jean-Christophe Grang\u00e9",
    "type": "rec",
    "cluster": "noir",
    "note": "French thriller with horror overtones.",
@@ -943,7 +943,7 @@
   },
   {
    "id": "lem",
-   "label": "Stanisław Lem",
+   "label": "Stanis\u0142aw Lem",
    "type": "rec",
    "cluster": "consp",
    "note": "The universe declines to explain itself.",
@@ -964,7 +964,7 @@
   },
   {
    "id": "kis",
-   "label": "Danilo Kiš",
+   "label": "Danilo Ki\u0161",
    "type": "rec",
    "cluster": "consp",
    "note": "The historical record as active threat.",
@@ -974,7 +974,7 @@
   },
   {
    "id": "marias",
-   "label": "Javier Marías",
+   "label": "Javier Mar\u00edas",
    "type": "rec",
    "cluster": "consp",
    "note": "Essayistic prose, menace assembling slowly.",
@@ -984,7 +984,7 @@
   },
   {
    "id": "krasznahorkai",
-   "label": "László Krasznahorkai",
+   "label": "L\u00e1szl\u00f3 Krasznahorkai",
    "type": "rec",
    "cluster": "consp",
    "note": "The plot arriving like weather.",
@@ -1055,7 +1055,7 @@
   },
   {
    "id": "durrenmatt",
-   "label": "Friedrich Dürrenmatt",
+   "label": "Friedrich D\u00fcrrenmatt",
    "type": "rec",
    "cluster": "consp",
    "note": "The detective story that refuses to resolve.",
@@ -1085,7 +1085,7 @@
   },
   {
    "id": "carrere",
-   "label": "Emmanuel Carrère",
+   "label": "Emmanuel Carr\u00e8re",
    "type": "rec",
    "cluster": "consp",
    "note": "Documentary structure meeting what it can't account for.",
@@ -1259,7 +1259,7 @@
   },
   {
    "id": "donoso",
-   "label": "José Donoso",
+   "label": "Jos\u00e9 Donoso",
    "type": "rec",
    "cluster": "dream",
    "note": "Total unresolved uncanny; Lynch register.",
@@ -1331,7 +1331,7 @@
   },
   {
    "id": "kosinski",
-   "label": "Jerzy Kosiński",
+   "label": "Jerzy Kosi\u0144ski",
    "type": "rec",
    "cluster": "dream",
    "note": "Scenes significant in ways never confirmed.",
@@ -1445,7 +1445,7 @@
   },
   {
    "id": "bjorneboe",
-   "label": "Jens Bjørneboe",
+   "label": "Jens Bj\u00f8rneboe",
    "type": "rec",
    "cluster": "spare",
    "note": "Bleaker, more violent Norwegian line.",
@@ -1480,7 +1480,7 @@
    "cluster": "spare",
    "note": "Jungle as inescapable antagonist.",
    "works": [
-    "Stories"
+    "The Decapitated Chicken and Other Stories"
    ]
   },
   {
@@ -1538,7 +1538,7 @@
   },
   {
    "id": "ojeda",
-   "label": "Mónica Ojeda",
+   "label": "M\u00f3nica Ojeda",
    "type": "rec",
    "cluster": "latam",
    "note": "Dark, experimental psychological horror.",
@@ -1641,7 +1641,7 @@
   },
   {
    "id": "jungyujin",
-   "label": "Jung Yu-jin",
+   "label": "Jeong You-jeong",
    "type": "rec",
    "cluster": "asian",
    "note": "Cold narrator; horror in the Highsmith sense.",
@@ -1651,7 +1651,7 @@
   },
   {
    "id": "ryumurakami",
-   "label": "Ryū Murakami",
+   "label": "Ry\u016b Murakami",
    "type": "rec",
    "cluster": "asian",
    "note": "Violent, psychologically corrosive.",
@@ -1764,7 +1764,7 @@
   },
   {
    "id": "lagerkvist",
-   "label": "Pär Lagerkvist",
+   "label": "P\u00e4r Lagerkvist",
    "type": "rec",
    "cluster": "fantasy",
    "note": "Medieval body-as-theological-horror.",
@@ -1923,6 +1923,7 @@
    "cluster": "fantasy",
    "note": "Folklore as genuine threat.",
    "works": [
+    "The Last Wish",
     "The Witcher stories"
    ]
   },
@@ -2072,7 +2073,7 @@
   },
   {
    "id": "saramago",
-   "label": "José Saramago",
+   "label": "Jos\u00e9 Saramago",
    "type": "influence",
    "cluster": "consp",
    "note": "Plot assembling outside the narration.",
@@ -2083,7 +2084,7 @@
   },
   {
    "id": "ogawa",
-   "label": "Yōko Ogawa",
+   "label": "Y\u014dko Ogawa",
    "type": "influence",
    "cluster": "consp",
    "note": "Quiet systemic dread; The Memory Police.",
@@ -2204,7 +2205,7 @@
   },
   {
    "id": "sjowall",
-   "label": "Maj Sjöwall & Per Wahlöö",
+   "label": "Maj Sj\u00f6wall & Per Wahl\u00f6\u00f6",
    "type": "rec",
    "cluster": "noir",
    "note": "Bleaker than the Scandinavian mainstream.",
@@ -2234,7 +2235,7 @@
   },
   {
    "id": "japrisot",
-   "label": "Sébastien Japrisot",
+   "label": "S\u00e9bastien Japrisot",
    "type": "rec",
    "cluster": "noir",
    "note": "Fractured identity and dread.",
@@ -2363,7 +2364,7 @@
    "cluster": "fantasy",
    "note": "Dream-geography; the root of weird fantasy.",
    "works": [
-    "The Gods of Pegāna"
+    "The Gods of Peg\u0101na"
    ]
   },
   {
@@ -2490,7 +2491,7 @@
   },
   {
    "id": "gautier",
-   "label": "Théophile Gautier",
+   "label": "Th\u00e9ophile Gautier",
    "type": "rec",
    "cluster": "weird",
    "note": "French romantic supernatural.",
@@ -2541,7 +2542,7 @@
   },
   {
    "id": "kyoka",
-   "label": "Izumi Kyōka",
+   "label": "Izumi Ky\u014dka",
    "type": "rec",
    "cluster": "asian",
    "note": "Japanese gothic surrealism.",
@@ -2819,7 +2820,7 @@
   },
   {
    "id": "dard",
-   "label": "Frédéric Dard",
+   "label": "Fr\u00e9d\u00e9ric Dard",
    "type": "rec",
    "cluster": "noir",
    "note": "Cruel little French thrillers.",
@@ -2830,7 +2831,7 @@
   },
   {
    "id": "suskind",
-   "label": "Patrick Süskind",
+   "label": "Patrick S\u00fcskind",
    "type": "rec",
    "cluster": "weird",
    "note": "Perfume: monstrous sensory obsession.",
@@ -3035,7 +3036,7 @@
   },
   {
    "id": "mieville",
-   "label": "China Miéville",
+   "label": "China Mi\u00e9ville",
    "type": "rec",
    "cluster": "fantasy",
    "note": "The weird city; dread in the architecture.",
@@ -3066,18 +3067,18 @@
   },
   {
    "id": "akutagawa",
-   "label": "Ryūnosuke Akutagawa",
+   "label": "Ry\u016bnosuke Akutagawa",
    "type": "rec",
    "cluster": "asian",
    "note": "Rashomon-era psychological cruelty.",
    "works": [
-    "Rashōmon",
+    "Rash\u014dmon",
     "Hell Screen"
    ]
   },
   {
    "id": "tanizaki",
-   "label": "Jun'ichirō Tanizaki",
+   "label": "Jun'ichir\u014d Tanizaki",
    "type": "rec",
    "cluster": "asian",
    "note": "Obsession aestheticized.",
@@ -3098,7 +3099,7 @@
   },
   {
    "id": "cortazar",
-   "label": "Julio Cortázar",
+   "label": "Julio Cort\u00e1zar",
    "type": "rec",
    "cluster": "dream",
    "note": "House Taken Over; the uncanny domestic.",
@@ -3118,7 +3119,7 @@
   },
   {
    "id": "felisberto",
-   "label": "Felisberto Hernández",
+   "label": "Felisberto Hern\u00e1ndez",
    "type": "rec",
    "cluster": "dream",
    "note": "Uruguayan proto-weird; haunted pianos.",
