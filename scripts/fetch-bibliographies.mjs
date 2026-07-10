@@ -23,13 +23,15 @@ const canon = s => deacc(s).toLowerCase().replace(/[:(].*$/, "").replace(/^(the|
 const canonMatch = (a, b) => a.length > 5 && b.length > 5 && (a.includes(b) || b.includes(a));
 const JUNK = /brewing|cookery|husbandry|treatise|sermon|epistle|pythagor|way to health|grand preservative|letters? (to|of)|essays? upon|miscellan|planter|friendly advice|country-man/i;
 const STRONG = new Set("el los las la le il un una une les de des dei aux au der und das dem ein eine einer gli della delle nel nella degli uno dos uma umas och det ett av na przy dla het een lo di du y".split(" "));
-const isForeign = (t, exempt = "") => {
-  const ex = new Set(exempt.toLowerCase().split(/[^a-z\u00e0-\u00ff]+/));
-  const toks = t.toLowerCase().split(/[^a-z\u00e0-\u00ff]+/).filter(x => x && !ex.has(x));
+const foreignScore = (t, exempt = "") => {
+  const ex = new Set(exempt.toLowerCase().split(/[^a-z\u00e0-\u024f]+/));
+  const toks = t.toLowerCase().split(/[^a-z\u00e0-\u024f]+/).filter(x => x && !ex.has(x));
   let score = toks.filter(x => STRONG.has(x)).length;
-  if (/[\u00e0-\u00f6\u00f8-\u00ff]/.test(t.toLowerCase())) score++;
-  return score >= 2;
+  const acc = (t.match(/[\u00c0-\u024f]/g) || []).length;   // accented/extended Latin chars
+  score += acc >= 2 ? 2 : acc === 1 ? 1 : 0;
+  return score;
 };
+const isForeign = (t, exempt = "") => foreignScore(t, exempt) >= 2;
 const mostlyLatin = t => { const l = (t.match(/[a-z]/gi) || []).length; return l / Math.max(t.length, 1) > 0.5; };
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const jget = async url => { const r = await fetch(url); if (!r.ok) throw new Error(r.status + " " + url); return r.json(); };
