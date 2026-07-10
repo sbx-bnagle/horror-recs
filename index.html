@@ -406,7 +406,11 @@ function starRow(w,node,cur){
 }
 function renderPanel(node){
   if(!node){panel.classList.remove("open");pi.innerHTML="";halo(null);return;}
-  const ws=WORKS[node.id]||[];
+  const ws=(WORKS[node.id]||[]).slice().sort((a,b)=>{
+    const ra=U.ratings[a.id]?.r||0, rb=U.ratings[b.id]?.r||0;
+    if(ra!==rb)return rb-ra;
+    return score(b,node)-score(a,node);
+  });
   pi.innerHTML=`
     <button class="close">✕</button>
     <h2>${node.label}</h2>
@@ -420,7 +424,7 @@ function renderPanel(node){
   pi.querySelector(".close").onclick=()=>{selected=null;renderPanel(null);apply();};
   pi.querySelectorAll(".nb").forEach(el=>el.onclick=()=>{const n=byId[el.dataset.id];selected=n.id;renderPanel(n);apply();focusNode(n.id);});
   const box=pi.querySelector("#works");
-  ws.forEach(w=>{
+  ws.filter(w=>w.kind!=="story").forEach(w=>{
     const rated=U.ratings[w.id]?.r, isRead=!!U.read[w.id];
     const el=document.createElement("div");el.className="work"+(openWorks.has(w.id)?" open":"");
     const head=document.createElement("div");head.className="head";
@@ -506,7 +510,7 @@ function recList(){
     if(n.type==="director"||n.type==="publisher")continue;
     for(const w of WORKS[n.id]||[]){
       if(U.read[w.id]||U.ratings[w.id]?.r||U.hidden[w.id])continue;
-      if(w.kind==="story")continue;
+      if(w.kind==="story"||w.kind==="anthology")continue;
       if(!sideFilter(w,n))continue;
       out.push({w,n,s:score(w,n)});
     }
@@ -533,7 +537,7 @@ function renderTab(){
     const items=[];
     for(const n of nodes){
       if(n.type==="director"||n.type==="publisher")continue;
-      for(const w of WORKS[n.id]||[]) if(sideFilter(w,n)) items.push({w,n});
+      for(const w of WORKS[n.id]||[]) if(w.kind!=="story"&&sideFilter(w,n)) items.push({w,n});
     }
     items.sort((a,b)=>a.n.label.localeCompare(b.n.label)||a.w.title.localeCompare(b.w.title));
     items.forEach(({w,n})=>{

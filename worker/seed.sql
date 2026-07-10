@@ -964,7 +964,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('aickman::compulsory-games','aickman','Compulsory games',2018,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('aickman::go-back-at-once','aickman','Go Back at Once',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('aickman::el-modelo','aickman','El modelo',2023,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('aickman::cold-hand-in-mine','aickman','Cold Hand in Mine',NULL,'novel','Aickman is Goodreads'' top similar author for Ligotti; strange stories, unresolved.','{}',2,0.75,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('aickman::cold-hand-in-mine','aickman','Cold Hand in Mine',NULL,'collection','Aickman is Goodreads'' top similar author for Ligotti; strange stories, unresolved.','{}',2,0.75,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::prime-evil','ligotti','Prime Evil',1988,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::grimscribe','ligotti','Grimscribe',1991,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::best-new-horror-4-mammoth-book-of-best-new-horror','ligotti','Best New Horror 4 (Mammoth Book  of Best New Horror)',1993,'novel','','{}',0,0,'openlibrary');
@@ -1006,12 +1006,12 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::noctuary-the-spectral-link','ligotti','Noctuary & the Spectral Link',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::paradoxes-from-helll','ligotti','Paradoxes from Helll',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::michigan-basement','ligotti','Michigan Basement',2024,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::songs-of-a-dead-dreamer','ligotti','Songs of a Dead Dreamer',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ligotti::songs-of-a-dead-dreamer','ligotti','Songs of a Dead Dreamer',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::the-motion-demon','grabinski','The Motion Demon',2005,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::in-sarah-s-house','grabinski','In Sarah''s House',2007,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::on-the-hill-of-roses','grabinski','On the Hill of Roses',2012,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::hareket-i-blisi','grabinski','Hareket İblisi',2019,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::the-dark-domain','grabinski','The Dark Domain',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grabinski::the-dark-domain','grabinski','The Dark Domain',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ewers::edgar-allan-poe','ewers','Edgar Allan Poe',1905,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ewers::deutsche-kriegslieder','ewers','Deutsche Kriegslieder',1914,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ewers::indien-und-ich','ewers','Indien und Ich ...',1919,'novel','','{}',0,0,'openlibrary');
@@ -1498,7 +1498,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::classic-ghost-stories','tuttle','Classic Ghost Stories',2024,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::missing-mummies','tuttle','Missing Mummies',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::black-crow-book-of-best-new-horror-volume-1','tuttle','Black Crow Book of Best New Horror Volume 1',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::a-nest-of-nightmares','tuttle','A Nest of Nightmares',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::a-nest-of-nightmares','tuttle','A Nest of Nightmares',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::my-death','tuttle','My Death',NULL,'novella','Novella; reissued standalone by NYRB Classics (2023).','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::death-to-life','tuttle','Death to life',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tuttle::dreamtime-bk-6','tuttle','Dreamtime Bk 6',NULL,'novel','','{}',0,0,'openlibrary');
@@ -2876,7 +2876,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::l-amant','duras','L''Amant',1984,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::whole-days-in-the-trees','duras','Whole Days in the Trees',1984,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::th-tre','duras','Théâtre',1984,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::the-war-a-memoir','duras','The War: A Memoir',1985,'novel','','{}',0,0,'claude');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::the-war-a-memoir','duras','The War: A Memoir',1985,'other','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::blue-eyes-black-hair','duras','Blue Eyes, Black Hair',1986,'novel','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::destroy-she-said-destruction-and-language','duras','Destroy, she said ; Destruction and language',1986,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('duras::eden-cinema','duras','eden cinema',1986,'novel','','{}',0,0,'openlibrary');
@@ -3224,7 +3224,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::paradoxes-of-robert-ryman','evenson','Paradoxes of Robert Ryman',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::further-reports','evenson','Further Reports',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::brotherhood-of-mutilation','evenson','Brotherhood of Mutilation',2026,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::a-collapse-of-horses','evenson','A Collapse of Horses',NULL,'novel','Appears directly on reader lists of books like Songs of a Dead Dreamer.','{}',2,0.85,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::a-collapse-of-horses','evenson','A Collapse of Horses',NULL,'collection','Appears directly on reader lists of books like Songs of a Dead Dreamer.','{}',2,0.85,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('evenson::last-days','evenson','Last Days',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hamsun::fra-det-moderne-amerikas-aandsliv','hamsun','Fra det moderne Amerikas aandsliv',1889,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hamsun::sult','hamsun','Sult',1890,'novel','','{}',0,0,'openlibrary');
@@ -3350,7 +3350,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bass::all-the-land-to-hold-us','bass','All the Land to Hold Us',2013,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bass::for-a-little-while','bass','For a little while',2016,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bass::the-traveling-feast','bass','The traveling feast',2018,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bass::the-watch','bass','The Watch',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bass::the-watch','bass','The Watch',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::mitologia-egipcia-gradifco','enriquez','MITOLOGIA EGIPCIA Gradifco',2013,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::als-wir-mit-den-toten-sprachen','enriquez','Als wir mit den Toten sprachen',2013,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::alguien-camina-sobre-tu-tumba','enriquez','Alguien camina sobre tu tumba',2014,'novel','','{}',0,0,'openlibrary');
@@ -3366,7 +3366,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::question-of-belonging','enriquez','Question of Belonging',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::bestiario-del-miedo','enriquez','Bestiario del Miedo',2026,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::our-share-of-night','enriquez','Our Share of Night',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::things-we-lost-in-the-fire','enriquez','Things We Lost in the Fire',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('enriquez::things-we-lost-in-the-fire','enriquez','Things We Lost in the Fire',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('moshfegh::paris-review-issue-207','moshfegh','Paris Review Issue 207',1656,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('moshfegh::mcglue','moshfegh','McGlue',2014,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('moshfegh::retro-4','moshfegh','Retro 4',2014,'novel','','{}',0,0,'openlibrary');
@@ -3806,11 +3806,11 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schulz::towards-schulz','schulz','Towards Schulz',2006,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schulz::the-street-of-crocodiles-and-other-stories','schulz','The street of crocodiles and other stories',2007,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schulz::collected-stories','schulz','Collected stories',2018,'collection','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schulz::the-street-of-crocodiles','schulz','The Street of Crocodiles',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schulz::the-street-of-crocodiles','schulz','The Street of Crocodiles',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('davila::m-sica-concreta','davila','Música concreta',2002,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('davila::the-houseguest-and-other-stories','davila','The houseguest and other stories',2018,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('davila::very-mexican-christmas','davila','Very Mexican Christmas',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('davila::the-houseguest','davila','The Houseguest',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('davila::the-houseguest','davila','The Houseguest',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kavan::a-charmed-circle','kavan','A charmed circle',1929,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kavan::let-me-alone','kavan','Let me alone',1930,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kavan::the-dark-sisters','kavan','The Dark Sisters',1930,'novel','','{}',0,0,'openlibrary');
@@ -3903,8 +3903,8 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::el-hombre-sin-nombre','barron','El hombre sin nombre',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::old-moon-quarterly-volume-8','barron','Old Moon Quarterly Volume 8',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::agate-way','barron','Agate Way',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::the-imago-sequence','barron','The Imago Sequence',NULL,'novel','Barron''s collections are the most-cited follow-on for Ligotti readers.','{}',2,0.8,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::occultation','barron','Occultation',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::the-imago-sequence','barron','The Imago Sequence',NULL,'collection','Barron''s collections are the most-cited follow-on for Ligotti readers.','{}',2,0.8,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::occultation','barron','Occultation',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barron::el-rito','barron','El rito',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::dark-forces','klein','Dark Forces',1980,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::new-tales-of-the-cthulhu-mythos','klein','New Tales of the Cthulhu Mythos',1980,'collection','','{}',0,0,'openlibrary');
@@ -3915,7 +3915,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::reassuring-tales','klein','Reassuring Tales',2006,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::a-mountain-walked-great-tales-of-the-cthulhu-mythos','klein','A Mountain Walked: Great Tales of the Cthulhu Mythos',2015,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::the-ceremonies','klein','The Ceremonies',NULL,'novel','Cited alongside Harvest Home for the same slow ritual dread; Machen-derived.','{}',2,0.8,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::dark-gods','klein','Dark Gods',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::dark-gods','klein','Dark Gods',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::nighttown','klein','Nighttown',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('klein::ceremonies-the','klein','Ceremonies,the',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::the-year-s-best-fantasy-and-horror','lamsley','The Year''s Best Fantasy and Horror',1996,'novel','','{}',0,0,'openlibrary');
@@ -3924,7 +3924,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::fourbodings','lamsley','Fourbodings',2005,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::made-ready-cupboard-love','lamsley','Made Ready & Cupboard Love',2005,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::the-century-s-best-horror-fiction-volume-2','lamsley','The Century''s Best Horror Fiction. Volume 2',2008,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::conference-with-the-dead','lamsley','Conference With the Dead',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lamsley::conference-with-the-dead','lamsley','Conference With the Dead',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('straub::mystery-by-peter-straub-1990-01-03','straub','Mystery by Peter Straub (1990-01-03)',1639,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('straub::the-talisman','straub','The talisman',1925,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('straub::ishmael','straub','Ishmael',1972,'novel','','{}',0,0,'openlibrary');
@@ -4081,7 +4081,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::shadows-8','grant','Shadows 8',1985,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::the-dark-cry-of-the-moon','grant','The dark cry of the moon',1985,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::midnight','grant','Midnight',1985,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::the-orchard','grant','The orchard',1986,'novel','','{}',0,0,'openlibrary');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::the-orchard','grant','The orchard',1986,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::shadows-9','grant','Shadows 9',1986,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::the-long-night-of-the-grave','grant','The long night of the grave',1986,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('grant::shadows-5','grant','Shadows 5',1986,'novel','','{}',0,0,'openlibrary');
@@ -4344,7 +4344,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::dancers-at-dusk','rcampbell','Dancers at Dusk',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::algernon-blackwood-horror-stories','rcampbell','Algernon Blackwood Horror Stories',2023,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::the-face-that-must-die','rcampbell','The Face That Must Die',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::alone-with-the-horrors','rcampbell','Alone With the Horrors',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::alone-with-the-horrors','rcampbell','Alone With the Horrors',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('rcampbell::nazareth-hill','rcampbell','Nazareth Hill',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kiernan::from-weird-and-distant-shores','kiernan','From weird and distant shores',1902,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kiernan::the-year-s-best-fantasy-and-horror','kiernan','The Year''s Best Fantasy and Horror',1998,'novel','','{}',0,0,'openlibrary');
@@ -4571,8 +4571,8 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::interplanetaries','ballingrud','Interplanetaries',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::crypt-of-the-moon-spider','ballingrud','Crypt of the Moon Spider',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::cathedral-of-the-drowned','ballingrud','Cathedral of the Drowned',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::wounds','ballingrud','Wounds',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::north-american-lake-monsters','ballingrud','North American Lake Monsters',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::wounds','ballingrud','Wounds',NULL,'collection','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ballingrud::north-american-lake-monsters','ballingrud','North American Lake Monsters',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tremblay::compositons-for-the-young-and-old','tremblay','Compositons for the Young and Old',2005,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tremblay::bandersnatch','tremblay','Bandersnatch',2007,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tremblay::fantasy','tremblay','Fantasy',2007,'novel','','{}',0,0,'openlibrary');
@@ -4932,7 +4932,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malet::agenda-nestor-burma-2001','malet','Agenda Nestor Burma 2001',2000,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malet::ad-le-blanc-sec','malet','Adèle Blanc-Sec',2001,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malet::nestor-burma','malet','Nestor Burma',2006,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malet::nestor-burma-series','malet','Nestor Burma series',NULL,'collection','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malet::nestor-burma-series','malet','Nestor Burma series',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lucarelli::l-inverno-pi-nero','lucarelli','L'' inverno più nero',1900,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lucarelli::via-delle-oche','lucarelli','Via delle Oche',1996,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lucarelli::phalange-arm-e','lucarelli','Phalange armée',1996,'novel','','{}',0,0,'openlibrary');
@@ -5315,8 +5315,8 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::collini-davasi','schirach','Collini Davasi',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::punishment','schirach','Punishment',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::sie-sagt-er-sagt','schirach','Sie sagt. Er sagt.',2024,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::crime','schirach','Crime',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::guilt','schirach','Guilt',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::crime','schirach','Crime',NULL,'collection','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schirach::guilt','schirach','Guilt',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sciascia::ii-giorno-della-civetta','sciascia','Ii Giorno Della civetta',1961,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sciascia::mafia-vendetta','sciascia','Mafia vendetta',1963,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sciascia::a-ciascuno-il-suo','sciascia','A ciascuno il suo',1966,'novel','','{}',0,0,'openlibrary');
@@ -5542,7 +5542,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kis::the-legend-of-the-sleepers','kis','The Legend of the Sleepers',2018,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kis::oluler-ansiklopedisi','kis','oluler Ansiklopedisi',2018,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kis::bahce-k-ller','kis','Bahce , Küller',2021,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kis::a-tomb-for-boris-davidovich','kis','A Tomb for Boris Davidovich',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kis::a-tomb-for-boris-davidovich','kis','A Tomb for Boris Davidovich',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('marias::heart-so-white','marias','Heart So White',1994,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('marias::man-of-feeling','marias','Man of Feeling',1999,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('marias::boira','marias','BOIRA',2001,'novel','','{}',0,0,'openlibrary');
@@ -5749,7 +5749,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kristof::analfabetoa-idazle','kristof','Analfabetoa idazle',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kristof::da-igual','kristof','DA IGUAL',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kristof::donde-estas-mathias','kristof','¿DONDE ESTAS, MATHIAS?',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kristof::the-notebook','kristof','The Notebook',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kristof::the-notebook','kristof','The Notebook',NULL,'novella','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('auster::sunset-park','auster','Sunset Park',1900,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('auster::chronique-des-indiens-guayaki','auster','Chronique des Indiens Guayaki',1972,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('auster::a-little-anthology-of-surrealist-poems','auster','A little anthology of surrealist poems',1972,'novel','','{}',0,0,'openlibrary');
@@ -6460,7 +6460,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::from-here-to-the-horizon','macfarlane','From Here to the Horizon',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::world-to-come','macfarlane','World to Come',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::is-a-river-alive','macfarlane','Is a River Alive?',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::underland','macfarlane','Underland',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::underland','macfarlane','Underland',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::wild-cards','macfarlane','Wild Cards',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::lost-words-20-postcard-pack','macfarlane','Lost Words 20 Postcard Pack',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('macfarlane::the-lost-words-otter-puzzle','macfarlane','The Lost Words Otter Puzzle',NULL,'novel','','{}',0,0,'openlibrary');
@@ -8030,7 +8030,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::the-best-american-science-fiction-and-fantasy-2022','link','The Best American Science Fiction and Fantasy 2022',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::white-cat-black-dog','link','White Cat, Black Dog',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::book-of-love','link','Book of Love',2024,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::get-in-trouble','link','Get in Trouble',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::get-in-trouble','link','Get in Trouble',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::the-specialist-s-hat','link','The Specialist''s Hat',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('link::the-year-s-best-fantasy-and-horror','link','The Year''s Best Fantasy and Horror',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lockwood::balloon-pop-outlaw-black','lockwood','Balloon Pop Outlaw Black',2012,'novel','','{}',0,0,'openlibrary');
@@ -8185,7 +8185,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::bright-air-black','vann','Bright air black',2017,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::halibut-on-the-moon','vann','Halibut on the Moon',2019,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::legenda-o-samob-jstwie','vann','Legenda o samobójstwie',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::legend-of-a-suicide','vann','Legend of a Suicide',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::legend-of-a-suicide','vann','Legend of a Suicide',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vann::caribou-island','vann','Caribou Island',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vesaas::v-rnatt','vesaas','Vårnatt',1954,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vesaas::fuglane','vesaas','Fuglane',1957,'novel','','{}',0,0,'openlibrary');
@@ -8335,7 +8335,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('woodrell::the-bayou-trilogy','woodrell','The Bayou trilogy',2011,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('woodrell::the-maids-version','woodrell','The Maids Version',2013,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('woodrell::winter-s-bone','woodrell','Winter''s Bone',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('woodrell::the-outlaw-album','woodrell','The Outlaw Album',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('woodrell::the-outlaw-album','woodrell','The Outlaw Album',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('pollock::knockemstiff','pollock','Knockemstiff',2008,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('pollock::work','pollock','Work',2010,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('pollock::fish-sticks-rainy-sunday-storycuts','pollock','Fish Sticks / Rainy Sunday (Storycuts)',2011,'novel','','{}',0,0,'openlibrary');
@@ -8507,7 +8507,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('otsuichi::my-capricorn-friend','otsuichi','My Capricorn Friend',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('otsuichi::summer-ghost','otsuichi','Summer Ghost',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('otsuichi::goth','otsuichi','Goth',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('otsuichi::zoo','otsuichi','Zoo',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('otsuichi::zoo','otsuichi','Zoo',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kirino::die-umarmung-des-todes','kirino','Die Umarmung des Todes',2003,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kirino::real-world','kirino','Real world',2008,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('kirino::k-n','kirino','Kín',2009,'novel','','{}',0,0,'openlibrary');
@@ -8532,7 +8532,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borachung::your-utopia','borachung','Your Utopia',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borachung::red-sword','borachung','Red Sword',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borachung::midnight-timetable','borachung','Midnight Timetable',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borachung::cursed-bunny','borachung','Cursed Bunny',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borachung::cursed-bunny','borachung','Cursed Bunny',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('jungyujin::seven-years-of-darkness','jungyujin','Seven Years of Darkness',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('jungyujin::perfect-happiness','jungyujin','Perfect Happiness',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('jungyujin::the-good-son','jungyujin','The Good Son',NULL,'novel','','{}',0,0,'seed');
@@ -8668,8 +8668,8 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::stitches','ito','Stitches',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::liminal-zone-vol-2','ito','Liminal Zone, Vol. 2',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::moan','ito','Moan',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::tomie','ito','Tomie',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::uzumaki','ito','Uzumaki',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::tomie','ito','Tomie',NULL,'other','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::uzumaki','ito','Uzumaki',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::tombs','ito','Tombs',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::shibito-no-koiwazurai','ito','Shibito No Koiwazurai',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ito::lovesickness-liebeskranker-horror','ito','Lovesickness - Liebeskranker Horror',NULL,'novel','','{}',0,0,'openlibrary');
@@ -8803,7 +8803,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onoh::african-ghost-short-stories','onoh','African Ghost Short Stories',2024,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onoh::where-the-dead-brides-gather','onoh','Where the Dead Brides Gather',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onoh::fake-ghost','onoh','Fake Ghost',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onoh::unhallowed-graves','onoh','Unhallowed Graves',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onoh::unhallowed-graves','onoh','Unhallowed Graves',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('meyer::dead-at-daybreak','meyer','Dead at Daybreak',2000,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('meyer::heart-of-the-hunter','meyer','Heart of the Hunter',2003,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('meyer::sombras-del-pasado','meyer','Sombras del pasado',2006,'novel','','{}',0,0,'openlibrary');
@@ -9008,7 +9008,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('oconnor::good-things-out-of-nazareth','oconnor','Good Things Out of Nazareth',2019,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('oconnor::misterium-i-maniery','oconnor','Misterium i maniery',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('oconnor::selected-stories','oconnor','Selected Stories',2025,'collection','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('oconnor::a-good-man-is-hard-to-find','oconnor','A Good Man Is Hard to Find',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('oconnor::a-good-man-is-hard-to-find','oconnor','A Good Man Is Hard to Find',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('comyns::our-spoons-came-from-woolworths','comyns','Our spoons came from Woolworths',1950,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('comyns::a-touch-of-mistletoe','comyns','A touch of mistletoe',1967,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('comyns::the-vet-s-daughter','comyns','The Vet''s Daughter',NULL,'novel','','{}',0,0,'seed');
@@ -9248,7 +9248,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::collected-poems','peake','Collected Poems',2008,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::the-illustrated-gormenghast-trilogy','peake','The Illustrated Gormenghast Trilogy',2011,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::complete-nonsense','peake','Complete nonsense',2011,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::gormenghast-trilogy','peake','Gormenghast trilogy',NULL,'collection','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::gormenghast-trilogy','peake','Gormenghast trilogy',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('peake::writings-and-drawings','peake','Writings and drawings',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('garner::the-weirdstone-of-brisingamen','garner','The Weirdstone of Brisingamen',1960,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('garner::the-weirdstone','garner','The weirdstone',1961,'novel','','{}',0,0,'openlibrary');
@@ -9475,7 +9475,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::the-sunken-land-begins-to-rise-again','mjharrison','The sunken land begins to rise again',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::the-deep-roads','mjharrison','The Deep Roads',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::wish-i-was-here','mjharrison','Wish I Was Here',2023,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::viriconium','mjharrison','Viriconium',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::viriconium','mjharrison','Viriconium',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mjharrison::empty-space','mjharrison','Empty Space',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::house-of-chains','erikson','House of Chains',1998,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::midnight-tides-malazan-book-of-the-fallen-book-5','erikson','Midnight Tides (Malazan Book of the Fallen, Book 5)',1998,'novel','','{}',0,0,'openlibrary');
@@ -9518,7 +9518,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::willful-child-series','erikson','Willful Child Series',2019,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::the-god-is-not-willing','erikson','The God is Not Willing',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::no-life-forsaken','erikson','No Life Forsaken',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::malazan-book-of-the-fallen','erikson','Malazan Book of the Fallen',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('erikson::malazan-book-of-the-fallen','erikson','Malazan Book of the Fallen',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vandermeer::the-book-of-lost-places-the-selected-works-of-jeff-vandermeer','vandermeer','The Book of Lost Places: The Selected Works of Jeff VanderMeer',1996,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vandermeer::dradin-in-love','vandermeer','Dradin, in love',1996,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('vandermeer::leviathan-2','vandermeer','Leviathan 2',1998,'novel','','{}',0,0,'openlibrary');
@@ -9606,7 +9606,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::unholy-consult-the-aspect-emperor','bakker','Unholy Consult : The Aspect-Emperor',2017,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::the-great-ordeal-the-aspect-emperor-book-three','bakker','The Great Ordeal: The Aspect-Emperor: Book Three',2017,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::evil-is-a-matter-of-perspective','bakker','Evil Is a Matter of Perspective',2017,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::the-second-apocalypse','bakker','The Second Apocalypse',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::the-second-apocalypse','bakker','The Second Apocalypse',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('bakker::neuropath','bakker','Neuropath',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::miecz-przeznaczenia','sapkowski','Miecz przeznaczenia',1992,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::ostatnie-z-yczenie','sapkowski','Ostatnie Życzenie',1993,'novel','','{}',0,0,'openlibrary');
@@ -9687,7 +9687,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::andrzej-sapkowski-s-the-witcher','sapkowski','Andrzej Sapkowski''s the Witcher',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::wied-min-rozdro-e-kruk-w','sapkowski','Wiedźmin. Rozdroże kruków',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::edge-of-the-world','sapkowski','Edge of the World',2024,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::the-last-wish','sapkowski','The Last Wish',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::the-last-wish','sapkowski','The Last Wish',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::der-schwalbenturm','sapkowski','Der Schwalbenturm',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::die-dame-vom-see','sapkowski','Die Dame vom See',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sapkowski::zeit-des-sturms','sapkowski','Zeit des Sturms',NULL,'novel','','{}',0,0,'openlibrary');
@@ -10596,7 +10596,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('akinari::tandai-shoshin-roku','akinari','Tandai Shoshin Roku',2009,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('akinari::ugetsu-monogatari-or-tales-of-moonlight-and-rain','akinari','Ugetsu Monogatari or Tales of Moonlight and Rain',2014,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('akinari::foggy-moon','akinari','Foggy Moon',2020,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('akinari::ugetsu-monogatari','akinari','Ugetsu Monogatari',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('akinari::ugetsu-monogatari','akinari','Ugetsu Monogatari',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::undine','hearn','Undine',1818,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::stray-leaves-from-strange-literature','hearn','Stray leaves from strange literature',1884,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::la-cuisine-creole','hearn','La cuisine creole',1885,'novel','','{}',0,0,'openlibrary');
@@ -10714,7 +10714,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::creole-sketches','hearn','Creole Sketches',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::romance-of-the-milky-way-and-other-studies-stories-by-lafcadio-hearn','hearn','Romance of the Milky Way, and Other Studies & Stories /by Lafcadio Hearn',2023,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::snow-ghost-and-other-tales','hearn','Snow Ghost and Other Tales',2023,'collection','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::kwaidan','hearn','Kwaidan',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hearn::kwaidan','hearn','Kwaidan',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('maupassant::monsieur-parent','maupassant','Monsieur Parent',1800,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('maupassant::mademoiselle-fifi','maupassant','Mademoiselle Fifi',1882,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('maupassant::une-vie','maupassant','Une vie',1883,'novel','','{}',0,0,'openlibrary');
@@ -10902,7 +10902,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::die-schwarze-spinne-der-besenbinder-von-rychiswyl-lernmaterialien','gotthelf','Die schwarze Spinne / Der Besenbinder von Rychiswyl. (Lernmaterialien)',1996,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::die-schwarze-spinne-novelle','gotthelf','Die schwarze Spinne. Novelle.',1997,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::gotthelf','gotthelf','Gotthelf',2004,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::the-black-spider','gotthelf','The Black Spider',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::the-black-spider','gotthelf','The Black Spider',NULL,'novella','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::uli-der-pachter','gotthelf','Uli, Der Pachter',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::die-sch-nsten-erz-hlungen','gotthelf','Die schönsten Erzählungen',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gotthelf::kalenderpredigten','gotthelf','Kalenderpredigten',NULL,'novel','','{}',0,0,'openlibrary');
@@ -11057,7 +11057,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::behind-the-mask-tales-from-the-id-things-in-the-well','barker','Behind the Mask - Tales from the Id (Things In The Well)',2018,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::beneath-the-waves-tales-from-the-deep-things-in-the-well','barker','Beneath the Waves: Tales from the Deep (Things In The Well)',2018,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::books-of-blood','barker','Books of Blood',NULL,'collection','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::the-hellbound-heart','barker','The Hellbound Heart',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::the-hellbound-heart','barker','The Hellbound Heart',NULL,'novella','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::clive-barkers-hellraiser-volume-3','barker','Clive Barkers Hellraiser Volume 3',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::sudario','barker','Sudario',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('barker::clive-barkers-hellraiser-volume-2','barker','Clive Barkers Hellraiser Volume 2',NULL,'novel','','{}',0,0,'openlibrary');
@@ -12424,7 +12424,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wehunt::other-voices-other-tombs','wehunt','Other Voices, Other Tombs',2019,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wehunt::inconsolables','wehunt','Inconsolables',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wehunt::october-film-haunt','wehunt','October Film Haunt',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wehunt::greener-pastures','wehunt','Greener Pastures',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wehunt::greener-pastures','wehunt','Greener Pastures',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mrshelley::history-of-a-six-weeks-tour-1817','mrshelley','History of a six weeks'' tour 1817',1817,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mrshelley::frankenstein-or-the-modern-prometheus','mrshelley','Frankenstein; or, The Modern Prometheus',1818,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('mrshelley::mary-shelley-s-frankenstein-or-the-modern-prometheus-1818-text','mrshelley','Mary Shelley''s Frankenstein; or, the Modern Prometheus (1818 text)',1818,'novel','','{}',0,0,'openlibrary');
@@ -12844,7 +12844,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hjames::jolly-corner-annotated','hjames','Jolly Corner Annotated',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hjames::wings-of-the-dove-annotated','hjames','Wings of the Dove Annotated',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hjames::portrait-of-a-lady-illustrated','hjames','Portrait of a Lady Illustrated',2021,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hjames::the-turn-of-the-screw','hjames','The Turn of the Screw',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('hjames::the-turn-of-the-screw','hjames','The Turn of the Screw',NULL,'novella','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wharton::the-decoration-of-houses','wharton','The Decoration of Houses',1897,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wharton::the-greater-inclination','wharton','The Greater Inclination',1897,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('wharton::the-custom-of-the-country','wharton','The Custom of the Country',1900,'novel','','{}',0,0,'openlibrary');
@@ -13140,7 +13140,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::king-in-yellow-by-robert-w-chambers-complete-collection','chambers','King in Yellow by Robert W. Chambers : Complete Collection',2020,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::the-necronomicon','chambers','The Necronomicon',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::flaming-jewel-the-talkers','chambers','Flaming Jewel / the Talkers',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::the-king-in-yellow','chambers','The King in Yellow',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::the-king-in-yellow','chambers','The King in Yellow',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('chambers::the-fate-of-forest-denuded-countries','chambers','The fate of forest-denuded countries',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::war-poems','dunsany','War poems',1900,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::the-old-folk-of-the-centuries','dunsany','The old folk of the centuries',1900,'novel','','{}',0,0,'openlibrary');
@@ -13293,7 +13293,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::dreamer-s-tales-original-edition-annotated','dunsany','Dreamer''s Tales-Original Edition(Annotated)',2022,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::short-works-of-lord-dunsany','dunsany','Short Works of Lord Dunsany',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::gods-of-pegana-and-time-and-the-gods','dunsany','GODS of PEGANA and TIME and the GODS',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::the-gods-of-peg-na','dunsany','The Gods of Pegāna',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::the-gods-of-peg-na','dunsany','The Gods of Pegāna',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::faeries','dunsany','Faeries',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('dunsany::building-a-sentence','dunsany','Building a sentence',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lovecraft::the-lurker-at-the-threshold','lovecraft','The Lurker at the Threshold',1945,'novel','','{}',0,0,'openlibrary');
@@ -14025,7 +14025,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::the-dead-of-night-the-ghost-stories-of-oliver-onions','onions','The Dead Of Night The Ghost Stories Of Oliver Onions',2010,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::ghostly','onions','Ghostly',2015,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::inhabited','onions','Inhabited',2019,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::widdershins','onions','Widdershins',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::widdershins','onions','Widdershins',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::an-original-drawing-in-pencil','onions','[An original drawing in pencil.]',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('onions::the-wish-upon-the-waters','onions','The wish upon the waters',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('delamare::come-hither','delamare','Come hither',1602,'novel','','{}',0,0,'openlibrary');
@@ -14807,7 +14807,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::saki-s-plays','saki','Saki''s Plays',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::the-collected-supernatural-and-weird-fiction-of-h-h-munro','saki','The Collected Supernatural and Weird Fiction of H. H. Munro',2022,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::reginald-and-the-westminster-alice','saki','Reginald and the Westminster Alice',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::the-chronicles-of-clovis','saki','The Chronicles of Clovis',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::the-chronicles-of-clovis','saki','The Chronicles of Clovis',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::ipuin-kontalaria','saki','IPUIN KONTALARIA',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::she-wolf-stage-2','saki','She Wolf Stage 2',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('saki::when-william-came-a-story-of-london-unde','saki','When William Came a Story of London Unde',NULL,'novel','','{}',0,0,'openlibrary');
@@ -14903,7 +14903,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('strobl::lemuria-book-1','strobl','Lemuria Book 1',2014,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('strobl::hanns-heinz-ewers-volume-ii','strobl','Hanns Heinz Ewers Volume II',2014,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('strobl::sorcerer-s-apprentice','strobl','Sorcerer''s Apprentice',2014,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('strobl::lemuria','strobl','Lemuria',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('strobl::lemuria','strobl','Lemuria',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gogol::short-stories','gogol','Short stories',1845,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gogol::cossack-tales','gogol','Cossack tales',1860,'collection','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('gogol::revizor','gogol','Revizor.',1892,'novel','','{}',0,0,'openlibrary');
@@ -15068,7 +15068,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sologub::the-petty-demon','sologub','The Petty Demon',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('sologub::tyazhelye-sny','sologub','Tyazhelye sny',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::the-operated-jew','panizza','The Operated Jew',1893,'story','','{}',0,0,'claude');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::the-council-of-love','panizza','The Council of Love',1894,'novel','','{}',0,0,'claude');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::the-council-of-love','panizza','The Council of Love',1894,'other','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::rothe-haus','panizza','Rothe Haus',2003,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::nero','panizza','Nero',2012,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::liebeskonzil','panizza','Liebeskonzil',2012,'novel','','{}',0,0,'openlibrary');
@@ -15079,7 +15079,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::aus-dem-tagebuch-eines-hundes','panizza','Aus Dem Tagebuch Eines Hundes',2012,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::mondgeschichte','panizza','Mondgeschichte',2012,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::operated-jew-and-the-operated-goy','panizza','Operated Jew and the Operated Goy',2023,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::the-pig','panizza','The Pig',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::the-pig','panizza','The Pig',NULL,'other','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('panizza::das-liebeskonzil-by-oskar-panizza-2015-04-20','panizza','Das Liebeskonzil by Oskar Panizza (2015-04-20)',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schwob::the-children-s-crusade','schwob','The children''s crusade',1898,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('schwob::mimes','schwob','Mimes',1901,'novel','','{}',0,0,'openlibrary');
@@ -15932,7 +15932,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tem::everyday-horrors','tem','Everyday Horrors',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tem::nightmare-abbey-9','tem','Nightmare Abbey 9',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tem::ubo','tem','Ubo',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tem::city-fishing','tem','City Fishing',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tem::city-fishing','tem','City Fishing',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('brite::lost-souls','brite','Lost Souls',1992,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('brite::drawing-blood','brite','Drawing Blood',1993,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('brite::swamp-foetus','brite','Swamp foetus',1993,'novel','','{}',0,0,'openlibrary');
@@ -17199,7 +17199,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('llewellyn::the-one-that-comes-before','llewellyn','The One That Comes Before',2017,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('llewellyn::wonder-and-glory-forever','llewellyn','Wonder and Glory Forever',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('llewellyn::body-shocks','llewellyn','Body Shocks',2021,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('llewellyn::furnace','llewellyn','Furnace',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('llewellyn::furnace','llewellyn','Furnace',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('cisco::mortal-coils','cisco','Mortal Coils',1998,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('cisco::the-tyrant','cisco','The Tyrant',2003,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('cisco::the-san-veneficio-canon','cisco','The San Veneficio Canon',2004,'novel','','{}',0,0,'openlibrary');
@@ -17241,7 +17241,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('samuels::sammy-the-steamroller','samuels','Sammy the Steamroller',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('samuels::dumpy-the-dump-truck','samuels','Dumpy the Dump Truck',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('samuels::baja-adventures','samuels','Baja Adventures',2025,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('samuels::the-white-hands','samuels','The White Hands',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('samuels::the-white-hands','samuels','The White Hands',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::vastarien-vol-1-issue-3','padgett','Vastarien, Vol. 1, Issue 3',2018,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::hinnom-magazine-issue-005-volume-5','padgett','Hinnom Magazine Issue 005 (Volume 5)',2018,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::the-half-freaks','padgett','The Half-Freaks',2019,'novel','','{}',0,0,'openlibrary');
@@ -17254,7 +17254,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::in-that-endlessness-our-end','padgett','In That Endlessness, Our End',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::we-are-happy-we-are-doomed','padgett','We Are Happy, We Are Doomed',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::antisocieties-deluxe','padgett','Antisocieties - Deluxe',2022,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::the-secret-of-ventriloquism','padgett','The Secret of Ventriloquism',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('padgett::the-secret-of-ventriloquism','padgett','The Secret of Ventriloquism',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malerman::g-l-n-dibindeki-ev','malerman','Gölün Dibindeki Ev',2000,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malerman::bird-box-lib-e','malerman','Bird Box Lib/E',2014,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('malerman::kafes','malerman','Kafes',2015,'novel','','{}',0,0,'openlibrary');
@@ -17317,7 +17317,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::lone-women','lavalle','Lone Women',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::100-years-of-weird','lavalle','100 Years of Weird',2023,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::sabretooth-and-the-exiles','lavalle','SABRETOOTH and the EXILES',2023,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::the-ballad-of-black-tom','lavalle','The Ballad of Black Tom',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::the-ballad-of-black-tom','lavalle','The Ballad of Black Tom',NULL,'novella','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('lavalle::the-changeling','lavalle','The Changeling',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::the-between','due','The Between',1995,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::naked-came-the-manatee','due','Naked Came the Manatee',1995,'novel','','{}',0,0,'openlibrary');
@@ -17356,7 +17356,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::black-panther','due','Black Panther',2024,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::horizon-experiment','due','Horizon Experiment',2025,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::the-reformatory','due','The Reformatory',NULL,'novel','','{}',0,0,'seed');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::ghost-summer','due','Ghost Summer',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('due::ghost-summer','due','Ghost Summer',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ward::rawblood','ward','Rawblood',2015,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ward::the-girl-from-rawblood','ward','The girl from Rawblood',2017,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('ward::little-eve','ward','Little Eve',2018,'novel','','{}',0,0,'openlibrary');
@@ -17453,7 +17453,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::the-year-s-best-science-fiction-vol-1','tidbeck','The Year''s Best Science Fiction Vol. 1',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::the-memory-theater','tidbeck','The Memory Theater',2021,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::nordic-visions','tidbeck','Nordic Visions',2023,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::jagannath','tidbeck','Jagannath',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::jagannath','tidbeck','Jagannath',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tidbeck::amatka','tidbeck','Amatka',NULL,'novel','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tokarczuk::house-of-day-house-of-night','tokarczuk','House of Day, House of Night',2002,'novel','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tokarczuk::primeval-and-other-times','tokarczuk','Primeval and Other Times',2010,'novel','','{}',0,0,'claude');
@@ -17656,7 +17656,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::naomi','tanizaki','Naomi',1924,'novel','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::a-spring-time-case-otsuya-koroshi','tanizaki','A spring-time case (Otsuya Koroshi)',1927,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::some-prefer-nettles','tanizaki','Some Prefer Nettles',1929,'novel','','{}',0,0,'claude');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::in-praise-of-shadows','tanizaki','In Praise of Shadows',1933,'novel','','{}',0,0,'claude');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::in-praise-of-shadows','tanizaki','In Praise of Shadows',1933,'other','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::the-secret-history-of-the-lord-of-musashi','tanizaki','The Secret History of the Lord of Musashi',1935,'novel','','{}',0,0,'claude');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::ashikari-and-the-story-of-shunkin','tanizaki','Ashikari and the Story of Shunkin',1936,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('tanizaki::the-makioka-sisters','tanizaki','The Makioka Sisters',1948,'novel','','{}',0,0,'claude');
@@ -17975,7 +17975,7 @@ INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMat
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::the-norton-introduction-to-literature-shorter-thirteenth-edition','borges','The Norton Introduction to Literature--Shorter Thirteenth Edition',2019,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::backpack-literature-sixth-edition','borges','Backpack Literature -- Sixth edition',2020,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::dangerous-dimensions-new-pub-date-jan-2021','borges','Dangerous Dimensions New Pub Date Jan 2021',2021,'novel','','{}',0,0,'openlibrary');
-INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::ficciones','borges','Ficciones',NULL,'novel','','{}',0,0,'seed');
+INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::ficciones','borges','Ficciones',NULL,'collection','','{}',0,0,'seed');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('borges::farenheit-451','borges','Farenheit 451',NULL,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('felisberto::kane-s-den-nave-ta-f-ta','felisberto','Kaneís den ánave ta fóta ',2003,'novel','','{}',0,0,'openlibrary');
 INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES('felisberto::la-casa-inundada','felisberto','La casa inundada',2012,'novel','','{}',0,0,'openlibrary');
