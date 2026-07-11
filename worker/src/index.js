@@ -104,6 +104,69 @@ async function scan(env) {
   return batch.length;
 }
 
+/* ---------------- taste scan (Arctic Shift twins) ---------------- */
+async function tasteScan(env) {
+  const ud = await env.DB.prepare("SELECT value FROM kv WHERE key='userdata'").first();
+  if (!ud) return 0;
+  const U = JSON.parse(ud.value);
+  const wrows = (await env.DB.prepare("SELECT id,title,kind FROM works").all()).results;
+  const byId = Object.fromEntries(wrows.map(w => [w.id, w]));
+  const seeds = Object.entries(U.ratings || {}).filter(([, v]) => v.r >= 4)
+    .map(([id]) => byId[id]).filter(Boolean).slice(0, 8);
+  if (!seeds.length) return 0;
+  const candidates = wrows.filter(w => w.title.length > 6 && !(U.read || {})[w.id] && w.kind !== "story" && w.kind !== "anthology");
+
+  const userSeeds = {}, userText = {};
+  for (const seed of seeds) {
+    for (const sub of ["horrorlit", "weirdlit"]) {
+      try {
+        const r = await fetch(`https://arctic-shift.photon-reddit.com/api/comments/search?body=${encodeURIComponent(seed.title)}&subreddit=${sub}&limit=100`, UA);
+        if (!r.ok) continue;
+        for (const c of (await r.json()).data || []) {
+          if (!c.author || c.author === "[deleted]" || !c.body) continue;
+          if (!c.body.toLowerCase().includes(seed.title.toLowerCase())) continue;
+          (userSeeds[c.author] ||= new Set()).add(seed.id);
+          userText[c.author] = (userText[c.author] || "") + " " + c.body.toLowerCase();
+        }
+      } catch (e) { console.log(`taste skip ${seed.title}/${sub}: ${e.message}`); }
+    }
+  }
+  const counts = {}, pairs = {};
+  for (const u in userSeeds) {
+    const sim = userSeeds[u].size;
+    if (sim < 2) continue;
+    const mentioned = candidates.filter(c => userText[u].includes(c.title.toLowerCase()));
+    for (const c of mentioned) {
+      counts[c.id] = (counts[c.id] || 0) + sim;
+      for (const sid of userSeeds[u]) {
+        (pairs[sid] ||= {})[c.id] = (pairs[sid][c.id] || 0) + sim;
+      }
+    }
+  }
+  // normalize + write tasteMatch
+  const max = Math.max(...Object.values(counts), 1);
+  const batch = [];
+  for (const id in counts) {
+    const v = +(Math.log1p(counts[id]) / Math.log1p(max)).toFixed(2);
+    batch.push(env.DB.prepare("UPDATE works SET tasteMatch = MAX(COALESCE(tasteMatch,0), ?) WHERE id=?").bind(v, id));
+  }
+  if (batch.length) await env.DB.batch(batch);
+  // normalize affinity per seed, merge with stored map
+  const stored = await env.DB.prepare("SELECT value FROM kv WHERE key='affinity'").first();
+  const aff = stored ? JSON.parse(stored.value) : {};
+  for (const sid in pairs) {
+    const m = Math.max(...Object.values(pairs[sid]), 1);
+    aff[sid] = aff[sid] || {};
+    for (const cid in pairs[sid])
+      aff[sid][cid] = Math.max(aff[sid][cid] || 0, +(Math.log1p(pairs[sid][cid]) / Math.log1p(m)).toFixed(2));
+  }
+  await env.DB.prepare("INSERT INTO kv(key,value) VALUES('affinity',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .bind(JSON.stringify(aff)).run();
+  await env.DB.prepare("INSERT INTO kv(key,value) VALUES('lastTasteScan',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value")
+    .bind(new Date().toISOString()).run();
+  return Object.keys(counts).length;
+}
+
 /* ---------------- Claude ---------------- */
 async function claudeSuggest(env) {
   const rel = (await env.DB.prepare("SELECT title,source FROM releases WHERE author IS NULL ORDER BY fetched DESC LIMIT 60").all()).results;
@@ -188,6 +251,11 @@ export default {
         return J({ fetched: last ? last.value : null, items });
       }
       if (p === "/scan" && req.method === "POST") return J({ ok: true, found: await scan(env) });
+      if (p === "/taste-scan" && req.method === "POST") return J({ ok: true, updated: await tasteScan(env) });
+      if (p === "/affinity" && req.method === "GET") {
+        const a = await env.DB.prepare("SELECT value FROM kv WHERE key='affinity'").first();
+        return J(a ? JSON.parse(a.value) : {});
+      }
       if (p === "/scan-books" && req.method === "POST") return J({ ok: true, found: await scanBooks(env) });
       if (p === "/works" && req.method === "POST") {
         const b = await req.json();

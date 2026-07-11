@@ -3,7 +3,7 @@ main = "src/index.js"
 compatibility_date = "2025-01-01"
 
 [triggers]
-crons = ["0 12 * * 1", "0 6 * * *"]   # Mon: feed+award scan; daily: rotating new-book check
+crons = ["0 12 * * 1", "0 12 * * 4"]
 
 [[d1_databases]]
 binding = "DB"

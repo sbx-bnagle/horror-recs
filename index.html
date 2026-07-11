@@ -131,18 +131,20 @@ const A = (p,opt={}) => fetch(API.base+p,{...opt,
 let apiState = API.base ? "connecting" : "off";
 const staticLoad = f => fetch(`data/${f}.json${bust}`).then(r=>r.json());
 const SCORING = await staticLoad("scoring");
-let GRAPH=null, WORKS=null, RELEASES=null;
+let GRAPH=null, WORKS=null, RELEASES=null, AFFINITY={};
 if(API.base){
   try{
     const cat = await A("/catalog"); if(!cat.ok) throw new Error(cat.status);
     const c = await cat.json();
     GRAPH = {clusters:c.clusters, nodes:c.nodes, links:c.links}; WORKS = c.works;
     RELEASES = await (await A("/releases")).json();
+    try { AFFINITY = await (await A("/affinity")).json(); } catch {}
     apiState = "connected";
   }catch(e){ apiState = "unavailable ("+e.message+")"; console.warn("worker:",e); }
 }
 if(!GRAPH){ GRAPH = await staticLoad("graph"); WORKS = await staticLoad("works");
   RELEASES = await staticLoad("releases"); }
+if(!Object.keys(AFFINITY).length){ try{ AFFINITY = await staticLoad("affinity"); }catch{} }
 const CLUSTERS = GRAPH.clusters;
 
 /* ---------- user state ---------- */
@@ -206,14 +208,26 @@ const dimW = d => U.weights[d] ?? SCORING.dimensions[d].weight;
 const clAff = c => U.clusterAff[c] ?? SCORING.clusterAffinity[c] ?? 0.5;
 const auAff = n => (SCORING.typeAffinity[n.type] ?? 0.5) + (U.authorDelta[n.id] || 0);
 function workDims(w){ return Object.assign({}, w.dims, U.dims[w.id] || {}); }
+let WBYID = null;
+function liveTaste(w){
+  let best = 0, src = null;
+  for(const rid in U.ratings||{}){
+    if((U.ratings[rid].r||0) < 4) continue;
+    const s = (AFFINITY[rid]||{})[w.id] || 0;
+    if(s > best){ best = s; src = rid; }
+  }
+  return { v: best, src };
+}
+function effTaste(w){ return Math.max(w.tasteMatch||0, liveTaste(w).v); }
 function score(w, node){
   const dims = workDims(w);
   let dsum = 0; for (const d in dims) if (SCORING.dimensions[d]) dsum += dimW(d) * dims[d];
-  const hasEvidence = Object.keys(dims).length > 0 || (w.tasteMatch||0) > 0 || (w.signals||0) > 0;
+  const t = effTaste(w);
+  const hasEvidence = Object.keys(dims).length > 0 || t > 0 || (w.signals||0) > 0;
   const prior = P("clusterWeight")*clAff(node.cluster) + P("authorWeight")*auAff(node);
   const s = P("base") + (hasEvidence ? prior : prior * (P("unclassifiedFactor") ?? 0.4))
           + P("dimScale")*dsum + P("signalWeight")*Math.min(w.signals||0, P("signalCap"))
-          + P("tasteWeight")*(w.tasteMatch||0);
+          + P("tasteWeight")*t;
   return Math.max(0, Math.min(100, Math.round(s)));
 }
 function breakdown(w, node){
@@ -228,7 +242,12 @@ function breakdown(w, node){
   for (const d in dims) if (SCORING.dimensions[d] && dims[d])
     parts.push([`${SCORING.dimensions[d].label}: ${dims[d]} × ${dimW(d)} × ${P("dimScale")}`, +(P("dimScale")*dimW(d)*dims[d]).toFixed(1)]);
   if (w.signals) parts.push([`external signals (${w.signals})`, +(P("signalWeight")*Math.min(w.signals,P("signalCap"))).toFixed(1)]);
-  if (w.tasteMatch) parts.push([`taste match ${w.tasteMatch} × ${P("tasteWeight")}`, +(P("tasteWeight")*w.tasteMatch).toFixed(1)]);
+  {const lt=liveTaste(w); const t=Math.max(w.tasteMatch||0, lt.v);
+   if(t){
+     if(!WBYID){WBYID={};for(const a in WORKS)for(const x of WORKS[a])WBYID[x.id]=x;}
+     const label = lt.v>(w.tasteMatch||0)&&lt.src&&WBYID[lt.src] ? `affinity to your ${U.ratings[lt.src].r}★ "${WBYID[lt.src].title}"` : "taste match";
+     parts.push([`${label} ${t} × ${P("tasteWeight")}`, +(P("tasteWeight")*t).toFixed(1)]);
+   }}
   return parts;
 }
 function learn(w, node, rating){
@@ -688,7 +707,20 @@ function renderTab(){
     const wtok=document.createElement("input");wtok.type="password";wtok.value=localStorage.getItem("rt-token")||"";
     wtok.onchange=()=>{localStorage.setItem("rt-token",wtok.value.trim());location.reload();};
     s.appendChild(wtok);
-    const reset=document.createElement("button");reset.textContent="Reset model to defaults";
+    s.insertAdjacentHTML("beforeend","<h3>Taste matching</h3><p style='font-size:11.5px;color:var(--muted);margin:4px 0'>Refreshes weekly (Thu) via the worker; ratings apply live through the affinity map.</p>");
+    const ts=document.createElement("button");ts.textContent="Refresh taste matching now";
+    ts.onclick=async()=>{
+      if(!API.base){ts.textContent="Set worker URL first";return;}
+      ts.textContent="Running… (1-2 min)";
+      try{const r=await A("/taste-scan",{method:"POST"});
+        if(!r.ok)throw new Error(r.status);
+        const j=await r.json();
+        try{AFFINITY=await (await A("/affinity")).json();}catch{}
+        ts.textContent=`Done - ${j.updated} works updated`;renderTab();
+      }catch(e){ts.textContent="Failed ("+e.message+")";}
+    };
+    s.appendChild(ts);
+    const reset=document.createElement("button");reset.textContent="Reset model to defaults";reset.style.marginLeft="6px";
     reset.onclick=()=>{U.weights={};U.clusterAff={};U.authorDelta={};U.params={};save();renderTab();};
     s.appendChild(reset);
     s.insertAdjacentHTML("beforeend","<h3>Your data</h3>");
