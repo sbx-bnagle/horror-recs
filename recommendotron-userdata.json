@@ -1,0 +1,585 @@
+{
+ "read": {
+  "leiber::smoke-ghost": true,
+  "demaria::the-twenty-days-of-turin": true,
+  "moshfegh::lapvona": true,
+  "moshfegh::eileen": true,
+  "mccarthy::blood-meridian": true,
+  "blackwood::the-willows": true,
+  "jackson::the-summer-people": true,
+  "mcdowell::the-elementals": true,
+  "tuttle::a-nest-of-nightmares": true,
+  "tuttle::my-death": true,
+  "ligotti::songs-of-a-dead-dreamer": true,
+  "ewers::the-spider": true,
+  "hughes::in-a-lonely-place": true,
+  "king::cujo": true,
+  "partridge::dark-harvest": true,
+  "thompson::the-killer-inside-me": true,
+  "aickman::cold-hand-in-mine": true,
+  "jackson::we-have-always-lived-in-the-castle": true,
+  "tryon::harvest-home": true,
+  "machen::the-great-god-pan": true,
+  "evenson::a-collapse-of-horses": true,
+  "evenson::last-days": true,
+  "christie::and-then-there-were-none": true,
+  "bernhard::correction": true,
+  "bolano::2666": true,
+  "sebald::the-rings-of-saturn": true,
+  "sebald::austerlitz": true,
+  "labatut::when-we-cease-to-understand-the-world": true,
+  "ballingrud::north-american-lake-monsters": true,
+  "ketchum::off-season": true,
+  "ketchum::the-girl-next-door": true,
+  "sgj::the-only-good-indians": true,
+  "sgj::the-killer-on-the-road": true,
+  "dumaurier::don-t-look-now": true,
+  "dumaurier::the-birds": true,
+  "oconnor::a-good-man-is-hard-to-find": true,
+  "vandermeer::annihilation": true,
+  "enriquez::our-share-of-night": true,
+  "enriquez::things-we-lost-in-the-fire": true,
+  "bakker::the-second-apocalypse": true,
+  "queneau::pierrot-mon-ami": true,
+  "bass::the-watch": true,
+  "cole::open-city": true
+ },
+ "ratings": {
+  "moshfegh::lapvona": {
+   "r": 5
+  },
+  "moshfegh::eileen": {
+   "r": 5
+  },
+  "mccarthy::blood-meridian": {
+   "r": 5
+  },
+  "blackwood::the-willows": {
+   "r": 5
+  },
+  "mcdowell::the-elementals": {
+   "r": 5
+  },
+  "tuttle::a-nest-of-nightmares": {
+   "r": 5
+  },
+  "tuttle::my-death": {
+   "r": 4
+  },
+  "ligotti::songs-of-a-dead-dreamer": {
+   "r": 5
+  },
+  "ewers::the-spider": {
+   "r": 5
+  },
+  "hughes::in-a-lonely-place": {
+   "r": 5
+  },
+  "king::cujo": {
+   "r": 5
+  },
+  "partridge::dark-harvest": {
+   "r": 5
+  },
+  "aickman::cold-hand-in-mine": {
+   "r": 4
+  },
+  "jackson::we-have-always-lived-in-the-castle": {
+   "r": 4
+  },
+  "tryon::harvest-home": {
+   "r": 4
+  },
+  "machen::the-great-god-pan": {
+   "r": 4
+  },
+  "evenson::a-collapse-of-horses": {
+   "r": 5
+  },
+  "evenson::last-days": {
+   "r": 4
+  },
+  "christie::and-then-there-were-none": {
+   "r": 5
+  },
+  "bernhard::correction": {
+   "r": 5
+  },
+  "bolano::2666": {
+   "r": 5
+  },
+  "sebald::the-rings-of-saturn": {
+   "r": 4
+  },
+  "sebald::austerlitz": {
+   "r": 5
+  },
+  "labatut::when-we-cease-to-understand-the-world": {
+   "r": 4
+  },
+  "ballingrud::north-american-lake-monsters": {
+   "r": 4
+  },
+  "ketchum::off-season": {
+   "r": 5
+  },
+  "ketchum::the-girl-next-door": {
+   "r": 5
+  },
+  "sgj::the-only-good-indians": {
+   "r": 3
+  },
+  "sgj::the-killer-on-the-road": {
+   "r": 5
+  },
+  "dumaurier::don-t-look-now": {
+   "r": 5
+  },
+  "dumaurier::the-birds": {
+   "r": 4
+  },
+  "oconnor::a-good-man-is-hard-to-find": {
+   "r": 5
+  },
+  "vandermeer::annihilation": {
+   "r": 4
+  },
+  "enriquez::our-share-of-night": {
+   "r": 4
+  },
+  "enriquez::things-we-lost-in-the-fire": {
+   "r": 5
+  },
+  "bakker::the-second-apocalypse": {
+   "r": 4
+  },
+  "queneau::pierrot-mon-ami": {
+   "r": 5
+  },
+  "bass::the-watch": {
+   "r": 5
+  },
+  "cole::open-city": {
+   "r": 4
+  }
+ },
+ "dims": {
+  "moshfegh::eileen": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "moshfegh::lapvona": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "mccarthy::blood-meridian": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0.5,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "blackwood::the-willows": {
+   "dread": 1,
+   "threat": 0,
+   "cosmic": 1,
+   "visceral": 0.5,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "jackson::the-summer-people": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "mcdowell::the-elementals": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 0.5,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "tuttle::a-nest-of-nightmares": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 0.5,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "tuttle::my-death": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "ligotti::songs-of-a-dead-dreamer": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "ewers::the-spider": {
+   "dread": 0.5,
+   "threat": 1,
+   "cosmic": 1,
+   "visceral": 0,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "hughes::in-a-lonely-place": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "king::cujo": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 0.5,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "partridge::dark-harvest": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "thompson::the-killer-inside-me": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "aickman::cold-hand-in-mine": {
+   "dread": 0.5,
+   "threat": 0,
+   "cosmic": 0.5,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "jackson::we-have-always-lived-in-the-castle": {
+   "dread": 0.5,
+   "threat": 0,
+   "cosmic": 0.5,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "tryon::harvest-home": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "machen::the-great-god-pan": {
+   "dread": 0.5,
+   "threat": 1,
+   "cosmic": 1,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "evenson::a-collapse-of-horses": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "evenson::last-days": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "christie::and-then-there-were-none": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "bernhard::correction": {
+   "dread": 1,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "bolano::2666": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "sebald::the-rings-of-saturn": {
+   "dread": 0.5,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "sebald::austerlitz": {
+   "dread": 0.5,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "labatut::when-we-cease-to-understand-the-world": {
+   "dread": 1,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "ballingrud::north-american-lake-monsters": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "ketchum::off-season": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "ketchum::the-girl-next-door": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "sgj::the-only-good-indians": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "sgj::the-killer-on-the-road": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 0.5,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "dumaurier::don-t-look-now": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 0.5,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "dumaurier::the-birds": {
+   "dread": 0.5,
+   "threat": 1,
+   "cosmic": 0.5,
+   "visceral": 0.5,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "oconnor::a-good-man-is-hard-to-find": {
+   "dread": 1,
+   "threat": 1,
+   "cosmic": 0,
+   "visceral": 0.5,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "vandermeer::annihilation": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 0.5,
+   "visceral": 1,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  },
+  "enriquez::our-share-of-night": {
+   "dread": 0.5,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 0.5,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "enriquez::things-we-lost-in-the-fire": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 0.5,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "bakker::the-second-apocalypse": {
+   "dread": 1,
+   "threat": 0.5,
+   "cosmic": 1,
+   "visceral": 1,
+   "bleak": 1,
+   "camp": 0,
+   "irony": 0
+  },
+  "queneau::pierrot-mon-ami": {
+   "dread": 0,
+   "threat": 0.5,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 0,
+   "camp": 1,
+   "irony": 1
+  },
+  "bass::the-watch": {
+   "dread": 0.5,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0.5,
+   "bleak": 0,
+   "camp": 0.5,
+   "irony": 0.5
+  },
+  "cole::open-city": {
+   "dread": 0,
+   "threat": 0,
+   "cosmic": 0,
+   "visceral": 0,
+   "bleak": 0.5,
+   "camp": 0,
+   "irony": 0
+  }
+ },
+ "hidden": {},
+ "weights": {
+  "dread": 1.738,
+  "threat": 1.034,
+  "visceral": 0.162,
+  "bleak": 0.526,
+  "camp": -0.866,
+  "irony": -0.767,
+  "cosmic": 0.144
+ },
+ "clusterAff": {
+  "fantasy": 0.75
+ },
+ "authorDelta": {
+  "moshfegh": 0.16,
+  "mccarthy": 0.56,
+  "blackwood": 0.56,
+  "mcdowell": 0.56,
+  "tuttle": 0.72,
+  "ligotti": 0.56,
+  "ewers": 0.56,
+  "hughes": 0.64,
+  "king": 0.64,
+  "partridge": 0.56,
+  "aickman": 0.28,
+  "jackson": 0.28,
+  "tryon": 0.28,
+  "machen": 0.28,
+  "evenson": 0.84,
+  "christie": 0.64,
+  "bernhard": 0.56,
+  "bolano": 0.64,
+  "sebald": 0.88,
+  "labatut": 0.28,
+  "ballingrud": 0.36,
+  "ketchum": 1.12,
+  "sgj": 0.64,
+  "dumaurier": 0.84,
+  "oconnor": 0.56,
+  "vandermeer": 0.28,
+  "enriquez": 0.84,
+  "bakker": 0.28,
+  "queneau": 0.72,
+  "bass": 0.56,
+  "cole": 0.4
+ },
+ "params": {},
+ "repo": ""
+}

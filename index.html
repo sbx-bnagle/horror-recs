@@ -101,7 +101,7 @@ button,input,select{font:inherit;color:inherit}
 <div id="app">
 <aside id="side">
   <header>
-    <h1>Recommendotron <span>horror &amp; adjacent</span></h1>
+    <h1><img src="rec-logo.png" alt="Recommendotron" style="mix-blend-mode:lighten;width:100%;max-width:240px;display:block;margin:-6px 0 -4px"></h1>
     <input type="file" id="impfile" accept=".json" hidden>
   </header>
   <nav id="tabs">
@@ -209,17 +209,21 @@ function workDims(w){ return Object.assign({}, w.dims, U.dims[w.id] || {}); }
 function score(w, node){
   const dims = workDims(w);
   let dsum = 0; for (const d in dims) if (SCORING.dimensions[d]) dsum += dimW(d) * dims[d];
-  const s = P("base") + P("clusterWeight")*clAff(node.cluster) + P("authorWeight")*auAff(node)
+  const hasEvidence = Object.keys(dims).length > 0 || (w.tasteMatch||0) > 0 || (w.signals||0) > 0;
+  const prior = P("clusterWeight")*clAff(node.cluster) + P("authorWeight")*auAff(node);
+  const s = P("base") + (hasEvidence ? prior : prior * (P("unclassifiedFactor") ?? 0.4))
           + P("dimScale")*dsum + P("signalWeight")*Math.min(w.signals||0, P("signalCap"))
           + P("tasteWeight")*(w.tasteMatch||0);
   return Math.max(0, Math.min(100, Math.round(s)));
 }
 function breakdown(w, node){
   const dims = workDims(w);
+  const hasEvidence = Object.keys(dims).length > 0 || (w.tasteMatch||0) > 0 || (w.signals||0) > 0;
+  const gate = hasEvidence ? 1 : (P("unclassifiedFactor") ?? 0.4);
   const parts = [
     ["base", P("base")],
-    [`cluster ${CLUSTERS[node.cluster].label} × ${P("clusterWeight")}`, +(P("clusterWeight")*clAff(node.cluster)).toFixed(1)],
-    [`author affinity × ${P("authorWeight")}`, +(P("authorWeight")*auAff(node)).toFixed(1)]
+    [`cluster ${CLUSTERS[node.cluster].label} × ${P("clusterWeight")}${hasEvidence?"":" × "+gate+" (no work-level evidence)"}`, +(gate*P("clusterWeight")*clAff(node.cluster)).toFixed(1)],
+    [`author affinity × ${P("authorWeight")}${hasEvidence?"":" × "+gate}`, +(gate*P("authorWeight")*auAff(node)).toFixed(1)]
   ];
   for (const d in dims) if (SCORING.dimensions[d] && dims[d])
     parts.push([`${SCORING.dimensions[d].label}: ${dims[d]} × ${dimW(d)} × ${P("dimScale")}`, +(P("dimScale")*dimW(d)*dims[d]).toFixed(1)]);
