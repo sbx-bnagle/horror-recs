@@ -18,7 +18,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.8
   },
   {
    "id": "blackwood::the-listener-and-other-stories",
@@ -38,7 +39,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::john-silence",
@@ -78,7 +80,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::the-centaur",
@@ -88,7 +91,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::pan-s-garden",
@@ -98,7 +102,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.6
   },
   {
    "id": "blackwood::a-prisoner-in-fairyland",
@@ -108,7 +113,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::incredible-adventures-lovecraft-s-library",
@@ -168,7 +174,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::julius-levallon-an-episode",
@@ -228,7 +235,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::famous-modern-ghost-stories",
@@ -548,7 +556,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::tales-of-terror-and-darkness",
@@ -568,7 +577,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::wolf-s-complete-book-of-terror",
@@ -578,7 +588,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.29
   },
   {
    "id": "blackwood::dead-of-night",
@@ -588,7 +599,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.4
   },
   {
    "id": "blackwood::great-short-tales-of-mystery-and-terror",
@@ -598,7 +610,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.6
   },
   {
    "id": "blackwood::murder-most-foul",
@@ -628,7 +641,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::great-cat-tales",
@@ -648,7 +662,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.81
   },
   {
    "id": "blackwood::the-complete-john-silence-stories",
@@ -688,7 +703,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::the-man-whom-the-trees-loved",
@@ -718,7 +734,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "blackwood::sand",
@@ -838,7 +855,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::about-time",
@@ -858,7 +876,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::the-vampire-archives",
@@ -888,7 +907,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::willows-and-the-wendigo",
@@ -988,7 +1008,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "blackwood::los-sauces",
@@ -1128,7 +1149,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.6
   },
   {
    "id": "blackwood::insanity-of-jones",
@@ -1278,7 +1300,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "blackwood::unknown",
@@ -1288,7 +1311,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.8
   },
   {
    "id": "blackwood::dover-anthology-of-classic-christmas-stories",
@@ -1318,7 +1342,8 @@
    "desc": "Novella; in The Lost Valley and Other Stories (1910).",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   }
  ],
  "machen": [
@@ -1350,7 +1375,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "machen::the-great-god-pan-and-the-inmost-light",
@@ -1420,7 +1446,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::the-ghost-ship-and-other-stories",
@@ -1460,7 +1487,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::war-and-the-christian-faith",
@@ -1490,7 +1518,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::far-off-things",
@@ -1510,7 +1539,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::strange-roads-sketches-by-joseph-simpson",
@@ -1580,7 +1610,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::the-glorious-mystery",
@@ -1610,7 +1641,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::the-canning-wonder",
@@ -1760,7 +1792,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.81
   },
   {
    "id": "machen::tales-of-horror-and-the-supernatural",
@@ -1790,7 +1823,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::bridles-spurs",
@@ -1810,7 +1844,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "machen::a-note-on-poetry",
@@ -1850,7 +1885,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.33
   },
   {
    "id": "machen::black-seal-and-other-stories",
@@ -1920,7 +1956,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "machen::the-collected-arthur-machen",
@@ -1960,7 +1997,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.16
   },
   {
    "id": "machen::the-secret-glory-chapters-five-and-six",
@@ -1980,7 +2018,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.74
   },
   {
    "id": "machen::rus-in-urbe-and-others",
@@ -2040,7 +2079,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.74
   },
   {
    "id": "machen::the-novel-of-the-black-seal",
@@ -2430,7 +2470,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "machen::a-machen-omnibus",
@@ -2450,7 +2491,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "machen::memoires-of-casanova",
@@ -3616,7 +3658,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "ligotti::best-new-horror-4-mammoth-book-of-best-new-horror",
@@ -3726,7 +3769,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "ligotti::a-lovecraft-retrospective",
@@ -3766,7 +3810,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "ligotti::darkness",
@@ -3776,7 +3821,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "ligotti::halloween",
@@ -3896,7 +3942,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "ligotti::a-mountain-walked-great-tales-of-the-cthulhu-mythos",
@@ -4832,7 +4879,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "jackson::the-situation-of-the-story",
@@ -7995,7 +8043,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "leiber::amazing-stories-volume-8",
@@ -17419,7 +17468,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lansdale::best-of-the-borderlands",
@@ -17679,7 +17729,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "lansdale::darkness",
@@ -17689,7 +17740,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lansdale::warriors",
@@ -19553,7 +19605,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::rage",
@@ -19833,7 +19886,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::christine",
@@ -19843,7 +19897,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::cycle-of-the-werewolf",
@@ -21433,7 +21488,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::blockade-billy",
@@ -21703,7 +21759,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::sleeping-beauties",
@@ -21853,7 +21910,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "king::flight-or-fright",
@@ -22707,7 +22765,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "duras::the-malady-of-death",
@@ -22997,7 +23056,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "claude"
+   "source": "claude",
+   "tasteMatch": 0.68
   },
   {
    "id": "duras::two-by-duras",
@@ -31217,7 +31277,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "mrjames::descriptive-catalogue-of-the-western-manuscripts-in-the-library-of-christ-s-college-cambridge",
@@ -32730,7 +32791,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "barron::dark-discoveries-issue-29",
@@ -33204,7 +33266,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   },
   {
    "id": "klein::nighttown",
@@ -34008,7 +34071,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "straub::darkness",
@@ -34018,7 +34082,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "straub::a-dark-matter",
@@ -36436,7 +36501,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "rcampbell::the-year-s-best-dark-fantasy-horror-2010",
@@ -37266,7 +37332,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "rcampbell::best-new-horror-29-trade-paperback",
@@ -38830,7 +38897,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "simmons::black-hills",
@@ -40156,7 +40224,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "tremblay::a-head-full-of-ghosts",
@@ -54308,7 +54377,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "kafka::briefe-an-ottla-und-die-familie",
@@ -58542,7 +58612,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "macfarlane::the-old-ways",
@@ -59886,7 +59957,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "morrell::john-barth",
@@ -64382,7 +64454,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "saul::la-criatura",
@@ -65304,7 +65377,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   },
   {
    "id": "herbert::the-fog",
@@ -66406,7 +66480,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "hutson::the-tainted-souls",
@@ -66828,7 +66903,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "guysmith::manitou-doll",
@@ -74070,7 +74146,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "link::zombies",
@@ -82173,7 +82250,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lotz::the-three",
@@ -84103,7 +84181,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "oconnor::the-situation-of-the-story",
@@ -88379,7 +88458,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "wolfe::darkness",
@@ -88389,7 +88469,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "wolfe::the-sorcerer-s-house",
@@ -89805,7 +89886,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "vandermeer::the-steampunk-bible",
@@ -89895,7 +89977,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "vandermeer::acceptance",
@@ -89905,7 +89988,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "vandermeer::area-x",
@@ -94105,7 +94189,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "stoker::personal-reminiscences-of-henry-irving-v1",
@@ -96697,7 +96782,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "poe::the-situation-of-the-story",
@@ -99409,7 +99495,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "hawthorne::the-situation-of-the-story",
@@ -102095,7 +102182,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "maupassant::wolf-s-complete-book-of-terror",
@@ -102275,7 +102363,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "maupassant::tales-of-horror-and-mystery",
@@ -104585,7 +104674,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "barker::legacies",
@@ -105899,7 +105989,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   },
   {
    "id": "saramago::blindness",
@@ -107515,7 +107606,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "andreyev::when-the-king-loses-his-head-and-other-stories",
@@ -109201,7 +109293,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "masterton::the-5th-witch",
@@ -110989,7 +111082,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "johnstone::blood-in-the-ashes",
@@ -115907,7 +116001,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "fossum::yo-veo-en-la-oscuridad",
@@ -118493,7 +118588,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "wehunt::nox-pareidolia",
@@ -119475,7 +119571,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "mrshelley::maria-or-the-wrongs-of-woman",
@@ -123621,7 +123718,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "wharton::the-situation-of-the-story",
@@ -125713,7 +125811,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   },
   {
    "id": "chambers::the-fate-of-forest-denuded-countries",
@@ -125825,7 +125924,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "dunsany::the-lonely-idol",
@@ -127327,7 +127427,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::the-haunter-of-the-dark-and-other-tales-of-terror",
@@ -128157,7 +128258,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::the-fiction",
@@ -128357,7 +128459,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::complete-cthulhu-mythos-tales-barnes-noble-omnibus-leatherbound-classics-barnes-noble-leatherbound-classic-collection",
@@ -128517,7 +128620,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::curse-of-yig",
@@ -128537,7 +128641,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "lovecraft::rats-in-the-walls",
@@ -128547,7 +128652,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::cthulhu-nun-a-r-s",
@@ -128567,7 +128673,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::shunned-house",
@@ -128597,7 +128704,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::haunter-of-the-dark",
@@ -128697,7 +128805,8 @@
    "desc": "Novella; widely collected.",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   },
   {
    "id": "lovecraft::at-the-mountains-of-madness",
@@ -128707,7 +128816,8 @@
    "desc": "Novella; widely collected.",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   }
  ],
  "cas": [
@@ -130741,7 +130851,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "rehoward::isaac-asimov-s-magical-worlds-of-fantasy-volume-9",
@@ -132141,7 +132252,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "rehoward::chronicles-of-conan-the-barbarian",
@@ -134867,7 +134979,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "delamare::the-veil",
@@ -140655,7 +140768,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   }
  ],
  "saki": [
@@ -141217,7 +141331,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "saki::death",
@@ -142741,7 +142856,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "gautier::the-mummys-romance",
@@ -144115,7 +144231,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "gogol::government-inspector-by-nikolai-gogol",
@@ -144983,7 +145100,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "sologub::k-c-k-seytan",
@@ -150955,7 +151073,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "bradbury::pillar-of-fire",
@@ -152807,7 +152926,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "etchison::the-year-s-best-dark-fantasy-and-horror-2012",
@@ -153079,7 +153199,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "tem::the-year-s-best-dark-fantasy-horror-2010",
@@ -153619,7 +153740,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "tem::night-doctor-and-other-tales",
@@ -154001,7 +154123,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "brite::mussolini-and-the-axeman-s-jazz-and-are-you-loathsome-tonight",
@@ -156767,7 +156890,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "oates::the-situation-of-the-story",
@@ -157487,7 +157611,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 1
   },
   {
    "id": "oates::darkness",
@@ -157497,7 +157622,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "oates::ave-del-para-so",
@@ -158399,7 +158525,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "morrison::maitea",
@@ -158719,7 +158846,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "seed"
+   "source": "seed",
+   "tasteMatch": 0.68
   }
  ],
  "topor": [
@@ -166599,7 +166727,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "cisco::impersonal-adventure",
@@ -166883,7 +167012,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "padgett::vastarien-vol-2-issue-2",
@@ -173901,7 +174031,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "borges::introduction-to-literature",
@@ -176249,7 +176380,8 @@
    "desc": "",
    "dims": {},
    "signals": 0,
-   "source": "openlibrary"
+   "source": "openlibrary",
+   "tasteMatch": 0.68
   },
   {
    "id": "dick::fantastic-stories-present-the-philip-k-dick-super-pack",
