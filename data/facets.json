@@ -1,0 +1,5742 @@
+{
+ "authors": {
+  "blackwood": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "ghost"
+   ],
+   "threat": [
+    "cosmicT",
+    "nature"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "machen": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "decadent"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "aickman": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "associative"
+   ]
+  },
+  "ligotti": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "grabinski": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "decadent"
+   ],
+   "threat": [
+    "cosmicT",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "ewers": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "decadent",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "jackson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "leiber": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "cosmic",
+    "ghost"
+   ],
+   "threat": [
+    "cosmicT",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "mcdowell": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH",
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "nature"
+   ],
+   "approach": [
+    "slowburn",
+    "propulsive"
+   ]
+  },
+  "tuttle": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "wagner": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "cosmic",
+    "survival"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "scerbanenco": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "hughes": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "spare"
+   ]
+  },
+  "thompson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "mccarthy": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "cosmicT"
+   ],
+   "approach": [
+    "spare",
+    "baroque"
+   ]
+  },
+  "christie": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "thriller",
+    "survival"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "demaria": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "sebald": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "bolano": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "knausgard": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "bernhard": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "labatut": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "cole": {
+   "region": [
+    "na",
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "ketchum": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "lansdale": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "survival",
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "sgj": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "survival",
+    "literary"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "king": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "survival",
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "partridge": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "survival",
+    "folk"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "duras": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "spare"
+   ]
+  },
+  "rulfo": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "dumaurier": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "gothicH",
+    "thriller"
+   ],
+   "threat": [
+    "haunting",
+    "human"
+   ],
+   "approach": [
+    "slowburn",
+    "tonalshift"
+   ]
+  },
+  "queneau": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "evenson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "hamsun": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "nature"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "bass": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "nature"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "enriquez": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH",
+    "folk",
+    "literary"
+   ],
+   "threat": [
+    "monstrous",
+    "systemic"
+   ],
+   "approach": [
+    "propulsive",
+    "slowburn"
+   ]
+  },
+  "moshfegh": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "jeanray": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "cosmic",
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous",
+    "haunting"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "meyrink": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "decadent",
+    "cosmic"
+   ],
+   "threat": [
+    "haunting",
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "kubin": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "decadent",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "perutz": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "hodgson": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "mrjames": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "hoffmann": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "gothicH",
+    "decadent"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "hedayat": {
+   "region": [
+    "mena"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary",
+    "decadent"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "schulz": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary",
+    "decadent"
+   ],
+   "threat": [
+    "internal",
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "davila": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "kavan": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "associative",
+    "spare"
+   ]
+  },
+  "barron": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "survival"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "klein": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "cosmic",
+    "folk"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "lamsley": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "ghost",
+    "folk"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "straub": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "ghost",
+    "gothicH",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "tryon": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "folk",
+    "gothicH"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "grant": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "spare"
+   ]
+  },
+  "rcampbell": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "kiernan": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "internal"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "simmons": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "cosmic",
+    "thriller"
+   ],
+   "threat": [
+    "monstrous",
+    "cosmicT"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "farris": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "ballingrud": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "grotesque",
+    "cosmic"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "tremblay": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "tonalshift"
+   ]
+  },
+  "draymond": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "goodis": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "woolrich": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir",
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "haunting"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "highsmith": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "gresham": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "manchette": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "malet": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "lucarelli": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "ellroy": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "noir",
+    "conspiracy"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "harris": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller",
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "slowburn"
+   ]
+  },
+  "mcgrath": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "gothicH"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "vachss": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "noir",
+    "thriller"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "lecarre": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "thriller",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "furst": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "fitzek": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "grange": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "theorin": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH",
+    "thriller"
+   ],
+   "threat": [
+    "haunting",
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "urban": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "noir"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "schirach": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "sciascia": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "noir"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "lem": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "delillo": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "literary"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "kis": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "marias": {
+   "region": [
+    "iberia"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "thriller",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "krasznahorkai": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "spark": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "kristof": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "auster": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "gombrowicz": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "kadare": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "kafka": {
+   "region": [
+    "cee",
+    "de"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "durrenmatt": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "thriller",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "tabucchi": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "buzzati": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "slowburn",
+    "spare"
+   ]
+  },
+  "carrere": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "modiano": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "spare"
+   ]
+  },
+  "houellebecq": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "macfarlane": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "nature",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "laymon": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "morrell": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival",
+    "thriller"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "koontz": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "survival",
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "rexmiller": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival",
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "saul": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH",
+    "survival"
+   ],
+   "threat": [
+    "haunting",
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "herbert": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "nature"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "hutson": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival",
+    "grotesque"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "guysmith": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "nature"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "bloch": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "thriller",
+    "survival"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "connell": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "jonquet": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller",
+    "grotesque"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "boileau": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "tonalshift"
+   ]
+  },
+  "leroux": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "gothicH",
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "donoso": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "hawkes": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "ballard": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "djohnson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "fuentes": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "bioy": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "obrien": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "darkfantasy"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "kosinski": {
+   "region": [
+    "cee",
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "vian": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "perec": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "link": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "darkfantasy"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "lockwood": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "kbarry": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "sarraute": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "robbegrillet": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "slowburn"
+   ]
+  },
+  "ernaux": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "vann": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "nature",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "vesaas": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "nature",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "bjorneboe": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "baroque"
+   ]
+  },
+  "larrybrown": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "nature"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "crews": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "grotesque",
+    "literary"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "quiroga": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary",
+    "survival"
+   ],
+   "threat": [
+    "nature"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "woodrell": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "nature"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "pollock": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "noir",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "rash": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "nature",
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "matthiessen": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "nature",
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "schweblin": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "ojeda": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "bazterrica": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "grotesque",
+    "survival"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "morenogarcia": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "quintana": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "nature",
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "lispector": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "villalobos": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "otsuichi": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "kirino": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn",
+    "spare"
+   ]
+  },
+  "yokomizo": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "thriller",
+    "folk"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "borachung": {
+   "region": [
+    "kr"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "folk",
+    "grotesque"
+   ],
+   "threat": [
+    "monstrous",
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "tonalshift"
+   ]
+  },
+  "jungyujin": {
+   "region": [
+    "kr"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "propulsive",
+    "slowburn"
+   ]
+  },
+  "ryumurakami": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "nakamura": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "abe": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "ranpo": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "decadent",
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "ito": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "grotesque"
+   ],
+   "threat": [
+    "monstrous",
+    "cosmicT"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "tutuola": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "folk",
+    "darkfantasy"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "okri": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "beukes": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "survival"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "lotz": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "onoh": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "folk",
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "meyer": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "lagerkvist": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "darkfantasy",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "golding": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "baroque"
+   ]
+  },
+  "oconnor": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "comyns": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "gothicH"
+   ],
+   "threat": [
+    "human",
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "tonalshift"
+   ]
+  },
+  "eco": {
+   "region": [
+    "it"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "mantel": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn",
+    "tonalshift"
+   ]
+  },
+  "peake": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "gothicH"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "garner": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "folk",
+    "darkfantasy"
+   ],
+   "threat": [
+    "systemic",
+    "haunting"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "mirrlees": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "folk"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "lindsay": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "darkfantasy"
+   ],
+   "threat": [
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "wolfe": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "mjharrison": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "baroque"
+   ]
+  },
+  "erikson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy"
+   ],
+   "threat": [
+    "cosmicT",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "propulsive"
+   ]
+  },
+  "vandermeer": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "nature"
+   ],
+   "approach": [
+    "slowburn",
+    "associative"
+   ]
+  },
+  "bakker": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT",
+    "systemic"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "sapkowski": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "folk"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "despentes": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "bierce": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "human",
+    "haunting"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "stoker": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "poe": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "gothicH",
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "hawthorne": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "gothicH",
+    "folk"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "akinari": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "folk",
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "hearn": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "folk",
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "maupassant": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "aktolstoy": {
+   "region": [
+    "ru"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "folk",
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "gotthelf": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "folk"
+   ],
+   "threat": [
+    "monstrous",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "buehlman": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "survival",
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "koike": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "gothicH",
+    "thriller"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "barker": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "grotesque",
+    "darkfantasy"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "baroque",
+    "propulsive"
+   ]
+  },
+  "iglesias": {
+   "region": [
+    "na",
+    "latam"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "noir",
+    "survival"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "saramago": {
+   "region": [
+    "iberia"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "ogawa": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "bulgakov": {
+   "region": [
+    "ru"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "monstrous",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "tonalshift"
+   ]
+  },
+  "andreyev": {
+   "region": [
+    "ru"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "villiers": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "decadent",
+    "literary"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "spare"
+   ]
+  },
+  "lorrain": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "decadent"
+   ],
+   "threat": [
+    "internal",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "masterton": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "slade": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller",
+    "grotesque"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "coyne": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH",
+    "survival"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "jensen": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH",
+    "survival"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "johnstone": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "survival"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "simenon": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "vargas": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "folk"
+   ],
+   "threat": [
+    "human",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "sjowall": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "fossum": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "shimada": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "japrisot": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "thriller"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "tonalshift"
+   ]
+  },
+  "suzuki": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller",
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "propulsive",
+    "slowburn"
+   ]
+  },
+  "leguin": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "blicher": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "human",
+    "nature"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "hankang": {
+   "region": [
+    "kr"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "chaze": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "wehunt": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "folk",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "spare"
+   ]
+  },
+  "mrshelley": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous",
+    "internal"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "lefanu": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "gothic",
+    "victorian"
+   ],
+   "subgenre": [
+    "ghost",
+    "gothicH"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "hjames": {
+   "region": [
+    "na",
+    "brit"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "wharton": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "chambers": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "cosmic",
+    "decadent"
+   ],
+   "threat": [
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "dunsany": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "lovecraft": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "cas": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "decadent",
+    "darkfantasy"
+   ],
+   "threat": [
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "rehoward": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "survival",
+    "darkfantasy"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "gilman": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "onions": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "delamare": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "associative"
+   ]
+  },
+  "benson": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "wakefield": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "oliphant": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "riddell": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "ghost",
+    "gothicH"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "saki": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "wfharvey": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "gautier": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "decadent",
+    "gothicH"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "strobl": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "decadent"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "gogol": {
+   "region": [
+    "ru"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "folk",
+    "grotesque"
+   ],
+   "threat": [
+    "monstrous",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "tonalshift"
+   ]
+  },
+  "potocki": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "gothicH",
+    "darkfantasy"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "pusongling": {
+   "region": [
+    "cn"
+   ],
+   "era": [
+    "gothic"
+   ],
+   "subgenre": [
+    "folk",
+    "ghost"
+   ],
+   "threat": [
+    "monstrous",
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "kyoka": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "victorian",
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "folk",
+    "gothicH",
+    "decadent"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "sologub": {
+   "region": [
+    "ru"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "literary",
+    "decadent"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "panizza": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "decadent",
+    "grotesque"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "schwob": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "victorian"
+   ],
+   "subgenre": [
+    "decadent",
+    "literary"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "spare"
+   ]
+  },
+  "dinesen": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "gothicH",
+    "literary"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "matheson": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "survival",
+    "cosmic"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "beaumont": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "tonalshift"
+   ]
+  },
+  "bradbury": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "folk",
+    "darkfantasy"
+   ],
+   "threat": [
+    "monstrous",
+    "haunting"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "jfinney": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "survival",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "levin": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "thriller",
+    "gothicH"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "spare"
+   ]
+  },
+  "blatty": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive",
+    "slowburn"
+   ]
+  },
+  "siddons": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "marasco": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "gothicH"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "etchison": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "slowburn"
+   ]
+  },
+  "tem": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "ghost",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "brite": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "grotesque",
+    "decadent"
+   ],
+   "threat": [
+    "human",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "mccammon": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "survival",
+    "gothicH"
+   ],
+   "threat": [
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "ellison": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "human"
+   ],
+   "approach": [
+    "propulsive",
+    "baroque"
+   ]
+  },
+  "oates": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "gothicH"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "morrison": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "literary",
+    "ghost"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "topor": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "cain": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "willeford": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "himes": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "millar": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir",
+    "thriller"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "rendell": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom",
+    "nineties"
+   ],
+   "subgenre": [
+    "thriller",
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "izzo": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "nineties"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human",
+    "systemic"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "dard": {
+   "region": [
+    "fr"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "noir"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "spare",
+    "propulsive"
+   ]
+  },
+  "suskind": {
+   "region": [
+    "de"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "decadent"
+   ],
+   "threat": [
+    "human"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "machado": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "grotesque"
+   ],
+   "threat": [
+    "internal",
+    "systemic"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "nevill": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "folk",
+    "cosmic",
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "propulsive"
+   ]
+  },
+  "langan": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "baroque"
+   ]
+  },
+  "files": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "cosmicT"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "llewellyn": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "grotesque",
+    "cosmic"
+   ],
+   "threat": [
+    "monstrous",
+    "internal"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "cisco": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "internal"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "samuels": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "ghost"
+   ],
+   "threat": [
+    "cosmicT",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "padgett": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "cosmicT",
+    "internal"
+   ],
+   "approach": [
+    "slowburn",
+    "associative"
+   ]
+  },
+  "malerman": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "survival",
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "lavalle": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "cosmic",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "monstrous"
+   ],
+   "approach": [
+    "propulsive"
+   ]
+  },
+  "due": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "ward": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "thriller",
+    "literary"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "tonalshift",
+    "slowburn"
+   ]
+  },
+  "kiste": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH",
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "katsu": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "gothicH",
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "haunting"
+   ],
+   "approach": [
+    "slowburn",
+    "propulsive"
+   ]
+  },
+  "lindqvist": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "survival"
+   ],
+   "threat": [
+    "monstrous",
+    "human"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "tidbeck": {
+   "region": [
+    "nordic"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "systemic",
+    "haunting"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "tokarczuk": {
+   "region": [
+    "cee"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "folk",
+    "conspiracy"
+   ],
+   "threat": [
+    "systemic",
+    "nature"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "couto": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "haunting",
+    "systemic"
+   ],
+   "approach": [
+    "associative"
+   ]
+  },
+  "emezi": {
+   "region": [
+    "af"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "literary",
+    "folk"
+   ],
+   "threat": [
+    "internal",
+    "haunting"
+   ],
+   "approach": [
+    "associative",
+    "baroque"
+   ]
+  },
+  "mieville": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "contemp"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "monstrous"
+   ],
+   "approach": [
+    "baroque"
+   ]
+  },
+  "crowley": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "darkfantasy",
+    "literary"
+   ],
+   "threat": [
+    "haunting"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "holdstock": {
+   "region": [
+    "brit"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "folk",
+    "darkfantasy"
+   ],
+   "threat": [
+    "monstrous",
+    "nature"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "akutagawa": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "weirdpulp"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "human",
+    "internal"
+   ],
+   "approach": [
+    "spare"
+   ]
+  },
+  "tanizaki": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "decadent"
+   ],
+   "threat": [
+    "internal",
+    "human"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "ono": {
+   "region": [
+    "jp"
+   ],
+   "era": [
+    "nineties",
+    "contemp"
+   ],
+   "subgenre": [
+    "ghost",
+    "folk"
+   ],
+   "threat": [
+    "haunting",
+    "monstrous"
+   ],
+   "approach": [
+    "slowburn"
+   ]
+  },
+  "cortazar": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "tonalshift"
+   ]
+  },
+  "borges": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary",
+    "cosmic"
+   ],
+   "threat": [
+    "cosmicT",
+    "systemic"
+   ],
+   "approach": [
+    "spare",
+    "associative"
+   ]
+  },
+  "felisberto": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "weirdpulp",
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "haunting",
+    "internal"
+   ],
+   "approach": [
+    "associative",
+    "spare"
+   ]
+  },
+  "sabato": {
+   "region": [
+    "latam"
+   ],
+   "era": [
+    "midcentury"
+   ],
+   "subgenre": [
+    "literary"
+   ],
+   "threat": [
+    "internal"
+   ],
+   "approach": [
+    "baroque",
+    "slowburn"
+   ]
+  },
+  "pynchon": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "boom"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "literary"
+   ],
+   "threat": [
+    "systemic"
+   ],
+   "approach": [
+    "baroque",
+    "associative"
+   ]
+  },
+  "dick": {
+   "region": [
+    "na"
+   ],
+   "era": [
+    "midcentury",
+    "boom"
+   ],
+   "subgenre": [
+    "conspiracy",
+    "cosmic"
+   ],
+   "threat": [
+    "systemic",
+    "internal"
+   ],
+   "approach": [
+    "propulsive",
+    "associative"
+   ]
+  }
+ },
+ "works": {}
+}

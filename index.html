@@ -95,6 +95,13 @@ button,input,select{font:inherit;color:inherit}
 .q select{width:100%;padding:2px 4px;border:1px solid var(--hair);border-radius:5px;background:none;font-size:12px}
 .brk{font-size:11.5px;color:var(--muted);margin-top:8px;cursor:pointer;text-decoration:underline dotted}
 .brkbox{font-size:11.5px;font-family:var(--mono);color:var(--muted);background:var(--paper);border-radius:6px;padding:6px 8px;margin-top:4px;display:none}
+.fmenu{position:relative;display:inline-block;margin:0 2px}
+.fmenu summary{list-style:none;cursor:pointer;font-size:11.5px;border:1px solid var(--hair);border-radius:12px;padding:3px 10px;color:var(--muted);user-select:none;white-space:nowrap}
+.fmenu summary::-webkit-details-marker{display:none}
+.fmenu[open] summary,.fmenu summary b{color:var(--ink)}
+.fbox{position:absolute;z-index:40;top:26px;left:0;background:var(--panel);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;min-width:230px;max-height:280px;overflow:auto;box-shadow:0 8px 22px rgba(0,0,0,.55)}
+.fbox label{display:flex;gap:7px;align-items:center;font-size:12px;padding:2.5px 0;cursor:pointer;color:var(--ink)}
+.fbox input{accent-color:var(--good)}
 </style>
 </head>
 <body>
@@ -145,11 +152,37 @@ if(API.base){
 if(!GRAPH){ GRAPH = await staticLoad("graph"); WORKS = await staticLoad("works");
   RELEASES = await staticLoad("releases"); }
 if(!Object.keys(AFFINITY).length){ try{ AFFINITY = await staticLoad("affinity"); }catch{} }
+let FACETS = {authors:{}, works:{}};
+try{ FACETS = await staticLoad("facets"); }catch{}
 const CLUSTERS = GRAPH.clusters;
+
+/* ---------- facet taxonomy ---------- */
+const FACET_DEFS = {
+ region:{label:"Region",vals:{na:"North American",latam:"Latin American",brit:"British & Irish",fr:"French",de:"German-language",it:"Italian",cee:"Central & Eastern European",nordic:"Nordic",ru:"Russian",jp:"Japanese",kr:"Korean",cn:"Chinese",mena:"Middle Eastern",af:"African",iberia:"Iberian"}},
+ era:{label:"Era",vals:{gothic:"Gothic & Romantic (pre-1880)",victorian:"Victorian & Edwardian (1880\u20131914)",weirdpulp:"Weird & Pulp (1895\u20131945)",midcentury:"Midcentury (1945\u20131969)",boom:"Horror Boom (1970\u20131991)",nineties:"Nineties & Aughts (1992\u20132009)",contemp:"Contemporary (2010\u2013 )"}},
+ subgenre:{label:"Subgenre",vals:{cosmic:"Cosmic & weird",ghost:"Ghost story",gothicH:"Gothic & haunted",folk:"Folk horror",decadent:"Decadent & occult",noir:"Noir & giallo",thriller:"Thriller & espionage",survival:"Survival & slasher",literary:"Literary & psychological",conspiracy:"Conspiracy & paranoia",darkfantasy:"Dark fantasy & medieval",grotesque:"Grotesque & body horror"}},
+ type:{label:"Type",vals:{novel:"Novel",novella:"Novella",collection:"Story collection",anthology:"Anthology appearance",other:"Other"}},
+ threat:{label:"Threat",vals:{human:"Human",monstrous:"Monstrous",haunting:"Haunting & presence",cosmicT:"Cosmic & impersonal",systemic:"Systemic & societal",internal:"Internal & psychological",nature:"Nature & environment"}},
+ approach:{label:"Approach",vals:{slowburn:"Slow burn & atmospheric",propulsive:"Propulsive",associative:"Associative & fragmented",tonalshift:"Tonal shift",spare:"Spare & elemental",baroque:"Dense & baroque"}}
+};
+const SUB_COLORS = {cosmic:"#8B7BD8",ghost:"#7FA6C9",gothicH:"#B4713F",folk:"#7C9A54",decadent:"#C36288",noir:"#9A9484",thriller:"#57A3AD",survival:"#D06A52",literary:"#CBB05E",conspiracy:"#48876F",darkfantasy:"#4C6FB8",grotesque:"#A84C4C"};
+const EMPTY_F = {region:[],era:[],subgenre:[],threat:[],approach:[]};
+const authorFacets = id => FACETS.authors[id] || EMPTY_F;
+const KIND_TYPE = k => ({novel:"novel",novella:"novella",collection:"collection",anthology:"anthology"}[k] || "other");
+function workFacets(w, node){
+  const af = authorFacets(node.id), o = FACETS.works[w.id] || {}, u = (U.facets||{})[w.id] || {};
+  return {
+    region: o.region || af.region, era: o.era || af.era, subgenre: o.subgenre || af.subgenre,
+    type: [KIND_TYPE(w.kind)],
+    threat: u.threat ? [u.threat] : (o.threat || af.threat),
+    approach: u.approach ? [u.approach] : (o.approach || af.approach)
+  };
+}
 
 /* ---------- user state ---------- */
 const DEFAULTS = () => ({
   read:{}, ratings:{}, dims:{}, hidden:{},   // per-work
+  facets:{}, facetAff:{},                    // per-work facet answers; learned facet affinities
   weights:{}, clusterAff:{}, authorDelta:{}, params:{}   // model overrides
 });
 let U = Object.assign(DEFAULTS(), JSON.parse(localStorage.getItem("imap-user")||"{}"));
@@ -219,6 +252,14 @@ function liveTaste(w){
   return { v: best, src };
 }
 function effTaste(w){ return Math.max(w.tasteMatch||0, liveTaste(w).v); }
+function facetAffScore(w, node){
+  const f = workFacets(w, node); let s = 0;
+  for (const g of ["threat","approach","subgenre"]){
+    let best = 0; for (const v of f[g]||[]) best = Math.max(best, U.facetAff[v]||0);
+    s += best;
+  }
+  return s / 3;
+}
 function score(w, node){
   const dims = workDims(w);
   let dsum = 0; for (const d in dims) if (SCORING.dimensions[d]) dsum += dimW(d) * dims[d];
@@ -227,7 +268,7 @@ function score(w, node){
   const prior = P("clusterWeight")*clAff(node.cluster) + P("authorWeight")*auAff(node);
   const s = P("base") + (hasEvidence ? prior : prior * (P("unclassifiedFactor") ?? 0.4))
           + P("dimScale")*dsum + P("signalWeight")*Math.min(w.signals||0, P("signalCap"))
-          + P("tasteWeight")*t;
+          + P("tasteWeight")*t + (P("facetWeight")??4)*facetAffScore(w, node);
   return Math.max(0, Math.min(100, Math.round(s)));
 }
 function breakdown(w, node){
@@ -256,6 +297,9 @@ function learn(w, node, rating){
   for (const d in dims) if (SCORING.dimensions[d] && dims[d] > 0)
     U.weights[d] = +(dimW(d) + lr * err * dims[d]).toFixed(3);
   U.authorDelta[node.id] = +(((U.authorDelta[node.id]||0) + SCORING.learningRates.authorAffinity * (rating - 3) / 2)).toFixed(3);
+  const ff = workFacets(w, node);
+  for (const g of ["threat","approach","subgenre"]) for (const v of ff[g]||[])
+    U.facetAff[v] = +Math.max(-1, Math.min(1, (U.facetAff[v]||0) + 0.08*(rating-3)/2)).toFixed(3);
   save();
 }
 
@@ -265,23 +309,25 @@ const links = GRAPH.links.map(([source,target]) => ({source, target}));
 const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
 const degree = {}; links.forEach(l => { degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
 nodes.forEach(n => n.deg = degree[n.id] || 1);
-let activeClusters = new Set(), selected = null, readFilter = null;
-const nodeThreads = {};
+let selected = null, readFilter = null, showMeta = true;
+const activeFacets = {region:new Set(),era:new Set(),subgenre:new Set(),type:new Set(),threat:new Set(),approach:new Set()};
+const anyFacet = () => Object.values(activeFacets).some(s => s.size);
+const passGroup = (set, vals) => set.size===0 || (vals||[]).some(v => set.has(v));
+function workGroupsPass(w, n){
+  const f = workFacets(w, n);
+  return passGroup(activeFacets.type, f.type) && passGroup(activeFacets.threat, f.threat) && passGroup(activeFacets.approach, f.approach);
+}
+function nodeFacetPass(d){
+  if(d.type==="director"||d.type==="publisher") return showMeta && !anyFacet();
+  const af = authorFacets(d.id);
+  if(!passGroup(activeFacets.region,af.region) || !passGroup(activeFacets.era,af.era) || !passGroup(activeFacets.subgenre,af.subgenre)) return false;
+  if(!(activeFacets.type.size||activeFacets.threat.size||activeFacets.approach.size)) return true;
+  return (WORKS[d.id]||[]).some(w => w.kind!=="story" && workGroupsPass(w, d));
+}
 const neighbors = {}; links.forEach(l => {
   (neighbors[l.source] ||= []).push(l.target);
   (neighbors[l.target] ||= []).push(l.source);
 });
-nodes.forEach(n => {
-  const t = new Set([n.cluster]);
-  (neighbors[n.id]||[]).forEach(id => t.add(byId[id].cluster));
-  t.delete("meta");
-  nodeThreads[n.id] = t;
-});
-const threadMatch = n => {
-  if(activeClusters.size===0) return true;
-  if(activeClusters.size===1) return n.cluster===[...activeClusters][0];
-  return [...activeClusters].every(c => nodeThreads[n.id].has(c));
-};
 
 const graphEl = document.getElementById("graph");
 const W = () => graphEl.clientWidth, H = () => graphEl.clientHeight;
@@ -311,7 +357,9 @@ const nodeSel = nodeG.selectAll("g").data(nodes).join("g").attr("class","node")
     .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
 
 nodeSel.each(function(d){
-  const g = d3.select(this), c = CLUSTERS[d.cluster].color;
+  const g = d3.select(this),
+    c = (d.type==="director"||d.type==="publisher") ? "#8A8578"
+        : (SUB_COLORS[(authorFacets(d.id).subgenre||[])[0]] || "#9A9484");
   if (d.type==="director"||d.type==="publisher")
     g.append("rect").attr("x",-r(d)).attr("y",-r(d)).attr("width",r(d)*2).attr("height",r(d)*2).attr("rx",2).attr("fill",c);
   else if (d.type==="influence"){
@@ -343,24 +391,33 @@ sim.on("tick",()=>{
 /* chips */
 const controls = document.getElementById("controls");
 const nodeHasRead = n => (WORKS[n.id]||[]).some(w => U.read[w.id] || U.ratings[w.id]?.r);
-function chip(label,key,on,color){
-  const b=document.createElement("button"); b.className="chip"+(on?" on":"")+(key?" cl":"");
-  b.innerHTML=(color?`<span class="dot" style="background:${color}"></span>`:"")+label;
-  b.onclick=()=>{
-    if(!key){activeClusters.clear();}
-    else{activeClusters.has(key)?activeClusters.delete(key):activeClusters.add(key);}
-    controls.querySelectorAll(".chip.cl").forEach(c=>{});
-    [...controls.querySelectorAll(".chip")].forEach(c=>{
-      if(c.classList.contains("rf"))return;
-      const k=c.dataset.key||"";
-      c.classList.toggle("on", k? activeClusters.has(k) : activeClusters.size===0);
-    });
-    selected=null;renderPanel(null);apply();
-  };
-  b.dataset.key=key||"";
-  controls.appendChild(b);
+function facetMenu(group){
+  const def=FACET_DEFS[group];
+  const det=document.createElement("details");det.className="fmenu";
+  const sum=document.createElement("summary");det.appendChild(sum);
+  const box=document.createElement("div");box.className="fbox";det.appendChild(box);
+  const upd=()=>{sum.innerHTML=def.label+(activeFacets[group].size?` <b>(${activeFacets[group].size})</b>`:"");};
+  for(const [k,label] of Object.entries(def.vals)){
+    const l=document.createElement("label");
+    const cb=document.createElement("input");cb.type="checkbox";cb.dataset.group=group;
+    cb.onchange=()=>{cb.checked?activeFacets[group].add(k):activeFacets[group].delete(k);
+      upd();selected=null;renderPanel(null);apply();};
+    l.appendChild(cb);
+    if(group==="subgenre")l.insertAdjacentHTML("beforeend",`<span class="dot" style="background:${SUB_COLORS[k]}"></span>`);
+    l.insertAdjacentHTML("beforeend",`<span>${label}</span>`);
+    box.appendChild(l);
+  }
+  upd();controls.appendChild(det);
+  document.addEventListener("click",e=>{if(!det.contains(e.target))det.open=false;});
 }
-chip("All",null,true); keys.forEach(k=>chip(CLUSTERS[k].label,k,false,CLUSTERS[k].color));
+Object.keys(FACET_DEFS).forEach(facetMenu);
+{const clr=document.createElement("button");clr.className="chip";clr.textContent="Clear";
+ clr.onclick=()=>{
+   for(const g in activeFacets)activeFacets[g].clear();
+   controls.querySelectorAll(".fmenu input").forEach(i=>i.checked=false);
+   [...controls.querySelectorAll(".fmenu summary")].forEach((el,i)=>{el.innerHTML=FACET_DEFS[Object.keys(FACET_DEFS)[i]].label;});
+   selected=null;renderPanel(null);apply();};
+ controls.appendChild(clr);}
 ["read","unread"].forEach(f=>{
   const b=document.createElement("button");b.className="chip";b.textContent=f[0].toUpperCase()+f.slice(1);
   b.onclick=()=>{readFilter=readFilter===f?null:f;
@@ -368,10 +425,13 @@ chip("All",null,true); keys.forEach(k=>chip(CLUSTERS[k].label,k,false,CLUSTERS[k
     apply();};
   b.classList.add("rf");controls.appendChild(b);
 });
+{const mp=document.createElement("button");mp.className="chip on";mp.textContent="Directors & presses";
+ mp.onclick=()=>{showMeta=!showMeta;mp.classList.toggle("on",showMeta);apply();};
+ controls.appendChild(mp);}
 
 function visible(d,q){
   if(selected) return d.id===selected||(neighbors[selected]||[]).includes(d.id);
-  if(!threadMatch(d)) return false;
+  if(!nodeFacetPass(d)) return false;
   if(readFilter==="read"&&!nodeHasRead(d)) return false;
   if(readFilter==="unread"&&nodeHasRead(d)) return false;
   if(q){const hay=(d.label+" "+(WORKS[d.id]||[]).map(w=>w.title).join(" ")).toLowerCase(); if(!hay.includes(q))return false;}
@@ -382,7 +442,7 @@ function apply(){
   nodeSel.classed("faded",d=>!visible(d,q));
   nodeSel.select("text").style("display",d=>{
     if(!visible(d,q))return"none";
-    if(selected||q||activeClusters.size)return null;
+    if(selected||q||anyFacet())return null;
     return d.deg>=4?null:"none";
   });
   linkSel.classed("faded",l=>!(visible(l.source,q)&&visible(l.target,q)))
@@ -437,7 +497,7 @@ function renderPanel(node){
   pi.innerHTML=`
     <button class="close">✕</button>
     <h2>${node.label}</h2>
-    <p class="kicker"><span style="color:${CLUSTERS[node.cluster].color}">●</span> ${TYPE_LABEL[node.type]} · ${CLUSTERS[node.cluster].label}</p>
+    <p class="kicker"><span style="color:${SUB_COLORS[(authorFacets(node.id).subgenre||[])[0]]||"#9A9484"}">●</span> ${TYPE_LABEL[node.type]}${(authorFacets(node.id).subgenre||[]).length?" · "+authorFacets(node.id).subgenre.map(k=>FACET_DEFS.subgenre.vals[k]).join(", "):""}</p>
     <p>${node.note||""}</p>
     ${ws.length?`<h3 style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Works (${ws.length})</h3>`:""}
     <div id="works"></div>
@@ -496,6 +556,20 @@ function renderPanel(node){
         };
         q.appendChild(sel);qwrap.appendChild(q);
       });
+      [["threat","What is the threat?"],["approach","How does it read?"]].forEach(([g,label])=>{
+        const q=document.createElement("div");q.className="q";
+        q.innerHTML=`<label>${label}</label>`;
+        const cur=((U.facets||{})[w.id]||{})[g]||"";
+        const sel=document.createElement("select");
+        sel.innerHTML=`<option value="">—</option>`+Object.entries(FACET_DEFS[g].vals).map(([k,lab])=>`<option value="${k}" ${cur===k?"selected":""}>${lab}</option>`).join("");
+        sel.onchange=()=>{
+          U.facets[w.id]=U.facets[w.id]||{};
+          if(sel.value)U.facets[w.id][g]=sel.value;else delete U.facets[w.id][g];
+          if(U.ratings[w.id]?.r)learn(w,node,U.ratings[w.id].r);
+          save();renderTab();
+        };
+        q.appendChild(sel);qwrap.appendChild(q);
+      });
       body.appendChild(qwrap);
     }
     const brk=document.createElement("div");brk.className="brk";brk.textContent="score breakdown";
@@ -519,7 +593,9 @@ document.getElementById("tabs").addEventListener("click",e=>{
 });
 
 function sideFilter(w,n){
-  if(!threadMatch(n))return false;
+  const af=authorFacets(n.id);
+  if(!passGroup(activeFacets.region,af.region)||!passGroup(activeFacets.era,af.era)||!passGroup(activeFacets.subgenre,af.subgenre))return false;
+  if(!workGroupsPass(w,n))return false;
   const done=U.read[w.id]||U.ratings[w.id]?.r;
   if(readFilter==="read"&&!done)return false;
   if(readFilter==="unread"&&done)return false;

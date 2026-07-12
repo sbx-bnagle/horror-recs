@@ -1,5 +1,5 @@
 {
- "comment": "Transparent scoring model. Edit here or in the app's Settings tab (app overrides are stored in your user data JSON). score = base + clusterWeight*clusterAffinity + authorWeight*authorAffinity + sum(dimWeights[d] * workDims[d]) * dimScale + signalWeight * min(signals, signalCap). Author/cluster prior is multiplied by unclassifiedFactor when a work has no dims, tasteMatch, or signals - per-work evidence outweighs author reputation. Plus tasteWeight * tasteMatch (0-1, from taste research / co-occurrence / CF baseline). Clamped 0-100.",
+ "comment": "Transparent scoring model. Edit here or in the app's Settings tab (app overrides are stored in your user data JSON). score = base + clusterWeight*clusterAffinity + authorWeight*authorAffinity + sum(dimWeights[d] * workDims[d]) * dimScale + signalWeight * min(signals, signalCap). Author/cluster prior is multiplied by unclassifiedFactor when a work has no dims, tasteMatch, or signals - per-work evidence outweighs author reputation. Plus tasteWeight * tasteMatch (0-1, from taste research / co-occurrence / CF baseline). Clamped 0-100. Plus facetWeight * mean(best learned affinity across threat/approach/subgenre values); affinities start at 0 and learn from ratings.",
  "base": 25,
  "clusterWeight": 10,
  "authorWeight": 8,
@@ -81,5 +81,6 @@
   "publisher": 0.3
  },
  "tasteWeight": 25,
- "unclassifiedFactor": 0.4
+ "unclassifiedFactor": 0.4,
+ "facetWeight": 4
 }
