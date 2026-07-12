@@ -220,6 +220,14 @@ const DEFAULTS = () => ({
   weights:{}, clusterAff:{}, authorDelta:{}, params:{}   // model overrides
 });
 let U = Object.assign(DEFAULTS(), JSON.parse(localStorage.getItem("imap-user")||"{}"));
+let unlocked = sessionStorage.getItem("rt-unlock")==="1";
+function requireUnlock(){
+  if(unlocked) return true;
+  const p = prompt("Enter PIN to make changes:");
+  if(p==="2906"){ unlocked=true; sessionStorage.setItem("rt-unlock","1"); return true; }
+  if(p!==null) alert("Wrong PIN - viewing only.");
+  return false;
+}
 let dataFile = null, writeTimer = null;
 const idb = {
   open: () => new Promise(res => { const r = indexedDB.open("recommendotron",1);
@@ -574,6 +582,7 @@ function starRow(w,node,cur){
   for(let i=1;i<=5;i++){
     const s=document.createElement("span");s.textContent="★";if(cur>=i)s.classList.add("on");
     s.onclick=e=>{e.stopPropagation();
+      if(!requireUnlock())return;
       U.ratings[w.id]=Object.assign(U.ratings[w.id]||{},{r:i});
       learn(w,node,i);save();renderPanel(node);renderTab();};
     div.appendChild(s);
@@ -605,7 +614,9 @@ function renderPanel(node){
     const el=document.createElement("div");el.className="work"+(openWorks.has(w.id)?" open":"");
     const head=document.createElement("div");head.className="head";
     const cb=document.createElement("input");cb.type="checkbox";cb.checked=isRead;cb.title="Read";
-    cb.onchange=()=>{U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
+    cb.onchange=()=>{
+      if(!requireUnlock()){cb.checked=!cb.checked;return;}
+      U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
     const t=document.createElement("div");t.className="t";
     const kindTag=w.kind&&w.kind!=="novel"?(w.kind==="story"&&/anthologized/i.test(w.desc||"")?"story · anthologized":w.kind):"";
     t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}${kindTag?` <span class="yr">· ${kindTag}</span>`:""}`;
@@ -627,7 +638,8 @@ function renderPanel(node){
     body.innerHTML=`<p class="desc">${w.desc||(API.base?"<i>Expand to fetch a description.</i>":"<i>No description yet - connect the worker or ask Claude to enrich this entry.</i>")}</p>`;
     const hide=document.createElement("div");hide.className="brk";
     hide.textContent=U.hidden[w.id]?"unhide (returns to recommendations)":"hide from recommendations";
-    hide.onclick=()=>{if(U.hidden[w.id])delete U.hidden[w.id];else U.hidden[w.id]=true;save();renderPanel(node);renderTab();};
+    hide.onclick=()=>{if(!requireUnlock())return;
+      if(U.hidden[w.id])delete U.hidden[w.id];else U.hidden[w.id]=true;save();renderPanel(node);renderTab();};
     body.appendChild(hide);
     if(isRead){
       body.appendChild(starRow(w,node,rated||0));
@@ -639,6 +651,7 @@ function renderPanel(node){
         const sel=document.createElement("select");
         sel.innerHTML=`<option value="">—</option>`+opts.split("|").map((o,i)=>`<option value="${i/2}" ${cur==i/2?"selected":""}>${o}</option>`).join("");
         sel.onchange=()=>{
+          if(!requireUnlock()){sel.value=(U.dims[w.id]||{})[key]??"";return;}
           U.dims[w.id]=U.dims[w.id]||{};
           if(sel.value==="")delete U.dims[w.id][key];else{
             U.dims[w.id][key]=+sel.value;
@@ -656,6 +669,7 @@ function renderPanel(node){
         const sel=document.createElement("select");
         sel.innerHTML=`<option value="">—</option>`+Object.entries(FACET_DEFS[g].vals).map(([k,lab])=>`<option value="${k}" ${cur===k?"selected":""}>${lab}</option>`).join("");
         sel.onchange=()=>{
+          if(!requireUnlock()){sel.value=((U.facets||{})[w.id]||{})[g]||"";return;}
           U.facets[w.id]=U.facets[w.id]||{};
           if(sel.value)U.facets[w.id][g]=sel.value;else delete U.facets[w.id][g];
           if(U.ratings[w.id]?.r)learn(w,node,U.ratings[w.id].r);
@@ -833,6 +847,14 @@ function renderTab(){
     });
   }
   else if(tab==="set"){
+    if(!unlocked){
+      const p=document.createElement("p");p.style.cssText="font-size:12.5px;color:var(--muted)";
+      p.textContent="Settings are locked.";
+      const b=document.createElement("button");b.textContent="Enter PIN";
+      b.onclick=()=>{if(requireUnlock())renderTab();};
+      tabbody.append(p,b);
+      return;
+    }
     const s=document.createElement("div");s.className="set";
     s.innerHTML=`<h3>Dimension weights</h3>`;
     for(const d in SCORING.dimensions){
@@ -923,6 +945,7 @@ function renderTab(){
 }
 
 async function addRelease(it,btn){
+  if(!requireUnlock())return;
   if(!API.base){btn.textContent="Set worker URL in Settings first";return;}
   const guess=it.kind==="book"?it.title:it.title.replace(new RegExp(byId[it.author].label,"i"),"").replace(/\bby\b|announcing|pre-?order|now available|:|-/gi," ").replace(/\s+/g," ").trim();
   const title=prompt("Title to add under "+byId[it.author].label+":",guess||it.title);
@@ -938,6 +961,7 @@ async function addRelease(it,btn){
   }catch(e){btn.textContent="Failed ("+e.message+")";}
 }
 async function triggerScan(){
+  if(!requireUnlock())return;
   const btn=document.getElementById("relbtn");
   if(!API.base){btn.textContent="Set worker URL + token in Settings first";
     setTimeout(()=>btn.textContent="Check for new releases",5000);return;}
@@ -952,6 +976,7 @@ async function triggerScan(){
 }
 let suggestions=null;
 async function askClaude(btn){
+  if(!requireUnlock())return;
   if(!API.base){btn.textContent="Set worker URL in Settings first";return;}
   btn.textContent="Asking Claude… (can take ~30s)";
   try{
@@ -962,6 +987,7 @@ async function askClaude(btn){
   }catch(e){btn.textContent="Failed: "+e.message;}
 }
 async function addAuthor(node,links,btn){
+  if(!requireUnlock())return;
   btn.textContent="Adding…";
   try{
     const r=await A("/authors",{method:"POST",body:JSON.stringify({node,links})});
