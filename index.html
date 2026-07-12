@@ -96,7 +96,12 @@ button,input,select{font:inherit;color:inherit}
 .brk{font-size:11.5px;color:var(--muted);margin-top:8px;cursor:pointer;text-decoration:underline dotted}
 .brkbox{font-size:11.5px;font-family:var(--mono);color:var(--muted);background:var(--paper);border-radius:6px;padding:6px 8px;margin-top:4px;display:none}
 .fmenu{position:relative;display:inline-block;margin:0 2px}
-.fmenu summary{list-style:none;cursor:pointer;font-size:11.5px;border:1px solid var(--hair);border-radius:12px;padding:3px 10px;color:var(--muted);user-select:none;white-space:nowrap}
+.fmenu summary{list-style:none;cursor:pointer;font-size:11.5px;border:1px solid var(--hair);border-radius:6px;padding:3px 9px;color:var(--muted);user-select:none;white-space:nowrap;background:var(--panel)}
+.fmenu summary .car{font-size:9px;opacity:.75;margin-left:4px}
+.clrbtn{border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:2px 5px;line-height:1}
+.clrbtn:hover{color:var(--ink)}
+.gby select{background:var(--panel);border:1px solid var(--hair);border-radius:6px;color:var(--ink);font-size:11.5px;padding:2px 6px;margin:0 6px 0 5px}
+.glabel{fill:var(--muted);opacity:.5;font:600 11px "Work Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
 .fmenu summary::-webkit-details-marker{display:none}
 .fmenu[open] summary,.fmenu summary b{color:var(--ink)}
 .fbox{position:absolute;z-index:40;top:26px;left:0;background:var(--panel);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;min-width:230px;max-height:280px;overflow:auto;box-shadow:0 8px 22px rgba(0,0,0,.55)}
@@ -339,16 +344,38 @@ svg.call(zoom);
 
 const keys = Object.keys(CLUSTERS), center = {};
 keys.forEach((k,i)=>{const a=(i/keys.length)*2*Math.PI-Math.PI/2; center[k]={x:Math.cos(a),y:Math.sin(a)};});
+let groupBy = "cluster", GC = {};
+const nodeGroup = d => (d.type==="director"||d.type==="publisher") ? "meta"
+  : (groupBy==="cluster" ? d.cluster : ((authorFacets(d.id)[groupBy]||[])[0] || "other"));
+function computeCenters(){
+  if(groupBy==="cluster"){ GC = center; return; }
+  const gs = [...new Set(nodes.map(nodeGroup))].filter(g => g!=="meta");
+  GC = { meta:{x:0,y:0}, other:{x:0,y:0} };
+  gs.filter(g=>g!=="other").forEach((g,i,arr)=>{ const a=(i/arr.length)*2*Math.PI-Math.PI/2; GC[g]={x:Math.cos(a),y:Math.sin(a)}; });
+}
+computeCenters();
 const r = d => 4 + Math.min(d.deg,12)*0.9;
 
 const sim = d3.forceSimulation(nodes)
   .force("link", d3.forceLink(links).id(d=>d.id).distance(46).strength(.35))
   .force("charge", d3.forceManyBody().strength(-120))
   .force("collide", d3.forceCollide().radius(d=>r(d)+3))
-  .force("x", d3.forceX(d=>W()/2+center[d.cluster].x*W()*.28).strength(.06))
-  .force("y", d3.forceY(d=>H()/2+center[d.cluster].y*H()*.30).strength(.06))
+  .force("x", d3.forceX(d=>W()/2+(GC[nodeGroup(d)]||{x:0}).x*W()*.28).strength(.06))
+  .force("y", d3.forceY(d=>H()/2+(GC[nodeGroup(d)]||{y:0}).y*H()*.30).strength(.06))
   .force("center", d3.forceCenter(W()/2,H()/2));
 
+const glabelG = root.insert("g", ":first-child");
+function drawGroupLabels(){
+  glabelG.selectAll("*").remove();
+  if(groupBy==="cluster") return;
+  const defs = FACET_DEFS[groupBy].vals;
+  for(const g in GC){
+    if(g==="meta"||g==="other") continue;
+    glabelG.append("text").attr("class","glabel")
+      .attr("x", W()/2+GC[g].x*W()*.34).attr("y", H()/2+GC[g].y*H()*.36)
+      .attr("text-anchor","middle").text(defs[g]||g);
+  }
+}
 const linkSel = linkG.selectAll("line").data(links).join("line").attr("class","link");
 const nodeSel = nodeG.selectAll("g").data(nodes).join("g").attr("class","node")
   .call(d3.drag()
@@ -396,7 +423,7 @@ function facetMenu(group){
   const det=document.createElement("details");det.className="fmenu";
   const sum=document.createElement("summary");det.appendChild(sum);
   const box=document.createElement("div");box.className="fbox";det.appendChild(box);
-  const upd=()=>{sum.innerHTML=def.label+(activeFacets[group].size?` <b>(${activeFacets[group].size})</b>`:"");};
+  const upd=()=>{sum.innerHTML=def.label+(activeFacets[group].size?` <b>(${activeFacets[group].size})</b>`:"")+' <span class="car">\u25BE</span>';};
   for(const [k,label] of Object.entries(def.vals)){
     const l=document.createElement("label");
     const cb=document.createElement("input");cb.type="checkbox";cb.dataset.group=group;
@@ -410,12 +437,19 @@ function facetMenu(group){
   upd();controls.appendChild(det);
   document.addEventListener("click",e=>{if(!det.contains(e.target))det.open=false;});
 }
+{const wrap=document.createElement("span");wrap.className="gby";
+ wrap.insertAdjacentHTML("beforeend","<span style='font-size:11px;color:var(--muted)'>Group by</span>");
+ const sel=document.createElement("select");
+ [["cluster","Influence clusters"],["region","Region"],["era","Era"],["subgenre","Subgenre"],["threat","Threat"],["approach","Approach"]]
+   .forEach(([v,l])=>sel.insertAdjacentHTML("beforeend",`<option value="${v}">${l}</option>`));
+ sel.onchange=()=>{groupBy=sel.value;computeCenters();drawGroupLabels();sim.alpha(.7).restart();};
+ wrap.appendChild(sel);controls.appendChild(wrap);}
 Object.keys(FACET_DEFS).forEach(facetMenu);
-{const clr=document.createElement("button");clr.className="chip";clr.textContent="Clear";
+{const clr=document.createElement("button");clr.className="clrbtn";clr.innerHTML="\u21BA";clr.title="Clear all filters";
  clr.onclick=()=>{
    for(const g in activeFacets)activeFacets[g].clear();
    controls.querySelectorAll(".fmenu input").forEach(i=>i.checked=false);
-   [...controls.querySelectorAll(".fmenu summary")].forEach((el,i)=>{el.innerHTML=FACET_DEFS[Object.keys(FACET_DEFS)[i]].label;});
+   [...controls.querySelectorAll(".fmenu summary")].forEach((el,i)=>{el.innerHTML=FACET_DEFS[Object.keys(FACET_DEFS)[i]].label+' <span class="car">\u25BE</span>';});
    selected=null;renderPanel(null);apply();};
  controls.appendChild(clr);}
 ["read","unread"].forEach(f=>{
