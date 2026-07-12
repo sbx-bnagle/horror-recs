@@ -597,13 +597,23 @@ function starRow(w,node,cur){
   }
   return div;
 }
+const panelOrder={nodeId:null,ids:[]};
 function renderPanel(node){
-  if(!node){panel.classList.remove("open");pi.innerHTML="";halo(null);return;}
-  const ws=(WORKS[node.id]||[]).slice().sort((a,b)=>{
-    const ra=U.ratings[a.id]?.r||0, rb=U.ratings[b.id]?.r||0;
-    if(ra!==rb)return rb-ra;
-    return score(b,node)-score(a,node);
-  });
+  if(!node){panel.classList.remove("open");pi.innerHTML="";halo(null);panelOrder.nodeId=null;panelOrder.ids=[];return;}
+  const ws0=WORKS[node.id]||[];
+  // freeze ordering while the panel stays open on this author, so a work
+  // being rated does not jump position mid-review; re-sorts on next open
+  if(panelOrder.nodeId!==node.id){
+    panelOrder.nodeId=node.id;
+    panelOrder.ids=ws0.slice().sort((a,b)=>{
+      const ra=U.ratings[a.id]?.r||0, rb=U.ratings[b.id]?.r||0;
+      if(ra!==rb)return rb-ra;
+      return score(b,node)-score(a,node);
+    }).map(w=>w.id);
+  }
+  const byW=Object.fromEntries(ws0.map(w=>[w.id,w]));
+  const ws=panelOrder.ids.map(id=>byW[id]).filter(Boolean)
+    .concat(ws0.filter(w=>!panelOrder.ids.includes(w.id)));
   pi.innerHTML=`
     <button class="close">✕</button>
     <h2>${node.label}</h2>
