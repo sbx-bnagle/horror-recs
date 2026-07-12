@@ -57,9 +57,14 @@ button,input,select{font:inherit;color:inherit}
 #graph{flex:1;position:relative;overflow:hidden}
 #graph svg{display:block;width:100%;height:100%;cursor:grab}
 #graph svg:active{cursor:grabbing}
-#controls{position:absolute;top:10px;left:14px;right:14px;z-index:2;display:flex;flex-wrap:wrap;gap:5px;align-items:center;pointer-events:none}
+#controls{position:absolute;top:0;left:0;right:0;z-index:6;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--panel);border-bottom:1px solid var(--hair);padding:6px 10px}
 #controls>*{pointer-events:auto}
-#search{font-size:12.5px;padding:4px 10px;border:1px solid var(--hair);border-radius:16px;background:var(--panel);width:170px}
+#searchbtn{width:24px;height:24px;border:1px solid var(--hair);border-radius:0;background:var(--paper);color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:0}
+#searchbtn:hover{color:var(--ink)}
+#search{font-size:12px;padding:3px 0;border:1px solid var(--hair);border-radius:0;background:var(--paper);color:var(--ink);width:0;opacity:0;padding-left:0;padding-right:0;transition:width .16s ease,opacity .12s ease;font-family:inherit}
+#search.open{width:168px;opacity:1;padding-left:7px;padding-right:7px}
+.rf{display:flex;gap:4px;align-items:center;font-size:11.5px;color:var(--muted);cursor:pointer;user-select:none}
+.rf input{accent-color:var(--good);margin:0}
 #search:focus{outline:none;border-color:var(--muted)}
 .chip{font-size:11.5px;padding:3px 9px;border:1px solid var(--hair);border-radius:14px;background:var(--panel);color:var(--muted);cursor:pointer}
 .chip.on{color:var(--ink);border-color:var(--ink)}
@@ -97,15 +102,16 @@ button,input,select{font:inherit;color:inherit}
 .brk{font-size:11.5px;color:var(--muted);margin-top:8px;cursor:pointer;text-decoration:underline dotted}
 .brkbox{font-size:11.5px;font-family:var(--mono);color:var(--muted);background:var(--paper);border-radius:6px;padding:6px 8px;margin-top:4px;display:none}
 .fmenu{position:relative;display:inline-block;margin:0 2px}
-.fmenu summary{list-style:none;cursor:pointer;font-size:11.5px;border:1px solid var(--hair);border-radius:6px;padding:3px 9px;color:var(--muted);user-select:none;white-space:nowrap;background:var(--panel)}
+.fmenu summary{list-style:none;cursor:pointer;font-size:11.5px;border:1px solid var(--hair);border-radius:0;padding:3px 9px;color:var(--muted);user-select:none;white-space:nowrap;background:var(--paper)}
 .fmenu summary .car{font-size:9px;opacity:.75;margin-left:4px}
 .clrbtn{border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:2px 5px;line-height:1}
 .clrbtn:hover{color:var(--ink)}
-.gby select{background:var(--panel);border:1px solid var(--hair);border-radius:6px;color:var(--ink);font-size:11.5px;padding:2px 6px;margin:0 6px 0 5px}
+.gby select{background:var(--paper);border:1px solid var(--hair);border-radius:0;color:var(--ink);font-size:11.5px;padding:2px 6px;margin:0 6px 0 5px;font-family:inherit}
 .glabel{fill:var(--muted);opacity:.5;font:700 11px "iA Writer Duo S",monospace;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
 .fmenu summary::-webkit-details-marker{display:none}
 .fmenu[open] summary,.fmenu summary b{color:var(--ink)}
-.fbox{position:absolute;z-index:40;top:26px;left:0;background:var(--panel);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;min-width:230px;max-height:280px;overflow:auto;box-shadow:0 8px 22px rgba(0,0,0,.55)}
+.fbox{position:absolute;z-index:40;top:26px;left:0;background:var(--panel);border:1px solid var(--hair);border-radius:0;padding:8px 10px;min-width:230px;max-height:300px;overflow:auto;box-shadow:3px 3px 0 rgba(0,0,0,.55)}
+.fbox .fdiv{border-top:1px solid var(--hair);margin:6px 0 4px}
 .fbox label{display:flex;gap:7px;align-items:center;font-size:12px;padding:2.5px 0;cursor:pointer;color:var(--ink)}
 .fbox input{accent-color:var(--good)}
 #graph{position:relative}
@@ -146,7 +152,9 @@ h1 img{animation:crt 1.05s cubic-bezier(.25,.6,.3,1) .15s both;transform-origin:
   <div id="tabbody"></div>
 </aside>
 <div id="graph">
-  <div id="controls"><input id="search" type="search" placeholder="Search…" aria-label="Search"></div>
+  <div id="controls">
+    <button id="searchbtn" title="Search" aria-label="Search">&#x2315;</button><input id="search" type="search" placeholder="Search&#8230;" aria-label="Search">
+  </div>
   <div id="legend">◉ influence &nbsp; ○ recommendation &nbsp; ■ director/publisher &nbsp; <span style="color:#C79A34">●</span> read · drag/zoom · click for detail</div>
 </div>
 <aside id="panel"><div id="pi"></div></aside>
@@ -455,6 +463,14 @@ function facetMenu(group){
     l.insertAdjacentHTML("beforeend",`<span>${label}</span>`);
     box.appendChild(l);
   }
+  if(group==="type"){
+    box.insertAdjacentHTML("beforeend","<div class='fdiv'></div>");
+    const l=document.createElement("label");
+    const cb=document.createElement("input");cb.type="checkbox";cb.checked=true;
+    cb.onchange=()=>{showMeta=cb.checked;apply();};
+    l.appendChild(cb);l.insertAdjacentHTML("beforeend","<span>Directors & presses</span>");
+    box.appendChild(l);
+  }
   upd();controls.appendChild(det);
   document.addEventListener("click",e=>{if(!det.contains(e.target))det.open=false;});
 }
@@ -486,20 +502,23 @@ Object.keys(FACET_DEFS).forEach(facetMenu);
 {const clr=document.createElement("button");clr.className="clrbtn";clr.innerHTML="\u21BA";clr.title="Clear all filters";
  clr.onclick=()=>{
    for(const g in activeFacets)activeFacets[g].clear();
-   controls.querySelectorAll(".fmenu input").forEach(i=>i.checked=false);
+   controls.querySelectorAll(".fmenu input[data-group]").forEach(i=>i.checked=false);
    [...controls.querySelectorAll(".fmenu summary")].forEach((el,i)=>{el.innerHTML=FACET_DEFS[Object.keys(FACET_DEFS)[i]].label+' <span class="car">\u25BE</span>';});
+   readFilter=null;Object.values(rfBoxes).forEach(c=>c.checked=false);
+   const si=document.getElementById("search");si.value="";si.classList.remove("open");
    selected=null;renderPanel(null);apply();};
  controls.appendChild(clr);}
+const rfBoxes={};
 ["read","unread"].forEach(f=>{
-  const b=document.createElement("button");b.className="chip";b.textContent=f[0].toUpperCase()+f.slice(1);
-  b.onclick=()=>{readFilter=readFilter===f?null:f;
-    controls.querySelectorAll(".chip.rf").forEach(c=>c.classList.toggle("on",c===b&&readFilter===f));
+  const l=document.createElement("label");l.className="rf";
+  const cb=document.createElement("input");cb.type="checkbox";rfBoxes[f]=cb;
+  cb.onchange=()=>{
+    if(cb.checked){readFilter=f;rfBoxes[f==="read"?"unread":"read"].checked=false;}
+    else if(readFilter===f)readFilter=null;
     apply();};
-  b.classList.add("rf");controls.appendChild(b);
+  l.appendChild(cb);l.insertAdjacentHTML("beforeend",`<span>${f[0].toUpperCase()+f.slice(1)}</span>`);
+  controls.appendChild(l);
 });
-{const mp=document.createElement("button");mp.className="chip on";mp.textContent="Directors & presses";
- mp.onclick=()=>{showMeta=!showMeta;mp.classList.toggle("on",showMeta);apply();};
- controls.appendChild(mp);}
 
 function visible(d,q){
   if(selected) return d.id===selected||(neighbors[selected]||[]).includes(d.id);
@@ -524,6 +543,8 @@ function apply(){
 nodeSel.on("click",(e,d)=>{e.stopPropagation();selected=d.id;renderPanel(d);apply();});
 svg.on("click",()=>{selected=null;renderPanel(null);apply();});
 document.getElementById("search").addEventListener("input",()=>{selected=null;renderPanel(null);apply();});
+{const sb=document.getElementById("searchbtn"), si=document.getElementById("search");
+ sb.onclick=()=>{si.classList.toggle("open");if(si.classList.contains("open"))si.focus();else{si.value="";apply();}};}
 
 function halo(id){
   haloG.selectAll("*").remove();
