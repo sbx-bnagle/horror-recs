@@ -107,6 +107,22 @@ button,input,select{font:inherit;color:inherit}
 .fbox{position:absolute;z-index:40;top:26px;left:0;background:var(--panel);border:1px solid var(--hair);border-radius:8px;padding:8px 10px;min-width:230px;max-height:280px;overflow:auto;box-shadow:0 8px 22px rgba(0,0,0,.55)}
 .fbox label{display:flex;gap:7px;align-items:center;font-size:12px;padding:2.5px 0;cursor:pointer;color:var(--ink)}
 .fbox input{accent-color:var(--good)}
+#graph{position:relative}
+#graph::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.055;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+ background-size:180px 180px}
+@keyframes crt{
+ 0%{transform:scale(1.15,.004);filter:brightness(9) blur(1.5px);opacity:0}
+ 6%{opacity:1;transform:scale(1.18,.006);filter:brightness(11) blur(1px)}
+ 30%{transform:scale(1.06,.02);filter:brightness(6)}
+ 52%{transform:scale(1,1.1);filter:brightness(2.4) blur(.4px)}
+ 66%{transform:scale(1,.97);filter:brightness(1.25)}
+ 76%{filter:brightness(2.1)}
+ 82%{filter:brightness(1.05)}
+ 90%{filter:brightness(1.55)}
+ 100%{transform:scale(1,1);filter:brightness(1);opacity:1}
+}
+h1 img{animation:crt 1.05s cubic-bezier(.25,.6,.3,1) .15s both;transform-origin:50% 50%}
 </style>
 </head>
 <body>
@@ -170,7 +186,7 @@ const FACET_DEFS = {
  threat:{label:"Threat",vals:{human:"Human",monstrous:"Monstrous",haunting:"Haunting & presence",cosmicT:"Cosmic & impersonal",systemic:"Systemic & societal",internal:"Internal & psychological",nature:"Nature & environment"}},
  approach:{label:"Approach",vals:{slowburn:"Slow burn & atmospheric",propulsive:"Propulsive",associative:"Associative & fragmented",tonalshift:"Tonal shift",spare:"Spare & elemental",baroque:"Dense & baroque"}}
 };
-const SUB_COLORS = {cosmic:"#8B7BD8",ghost:"#7FA6C9",gothicH:"#B4713F",folk:"#7C9A54",decadent:"#C36288",noir:"#9A9484",thriller:"#57A3AD",survival:"#D06A52",literary:"#CBB05E",conspiracy:"#48876F",darkfantasy:"#4C6FB8",grotesque:"#A84C4C"};
+const SUB_COLORS = {cosmic:"#B7ABEC",ghost:"#AECBE6",gothicH:"#DCA97E",folk:"#B2C892",decadent:"#E6ABC2",noir:"#C6C1B2",thriller:"#9DD1D8",survival:"#EFA894",literary:"#E6D596",conspiracy:"#98C9B6",darkfantasy:"#9BB0E9",grotesque:"#E19898"};
 const EMPTY_F = {region:[],era:[],subgenre:[],threat:[],approach:[]};
 const authorFacets = id => FACETS.authors[id] || EMPTY_F;
 const KIND_TYPE = k => ({novel:"novel",novella:"novella",collection:"collection",anthology:"anthology"}[k] || "other");
@@ -385,8 +401,8 @@ const nodeSel = nodeG.selectAll("g").data(nodes).join("g").attr("class","node")
 
 nodeSel.each(function(d){
   const g = d3.select(this),
-    c = (d.type==="director"||d.type==="publisher") ? "#8A8578"
-        : (SUB_COLORS[(authorFacets(d.id).subgenre||[])[0]] || "#9A9484");
+    c = (d.type==="director"||d.type==="publisher") ? "#B0AC9F"
+        : (SUB_COLORS[(authorFacets(d.id).subgenre||[])[0]] || "#C6C1B2");
   if (d.type==="director"||d.type==="publisher")
     g.append("rect").attr("x",-r(d)).attr("y",-r(d)).attr("width",r(d)*2).attr("height",r(d)*2).attr("rx",2).attr("fill",c);
   else if (d.type==="influence"){
@@ -442,7 +458,15 @@ function facetMenu(group){
  const sel=document.createElement("select");
  [["cluster","Influence clusters"],["region","Region"],["era","Era"],["subgenre","Subgenre"],["threat","Threat"],["approach","Approach"]]
    .forEach(([v,l])=>sel.insertAdjacentHTML("beforeend",`<option value="${v}">${l}</option>`));
- sel.onchange=()=>{groupBy=sel.value;computeCenters();drawGroupLabels();sim.alpha(.7).restart();};
+ sel.onchange=()=>{
+   groupBy=sel.value;computeCenters();drawGroupLabels();
+   const fx=d=>W()/2+(GC[nodeGroup(d)]||{x:0}).x*W()*.28, fy=d=>H()/2+(GC[nodeGroup(d)]||{y:0}).y*H()*.30;
+   const facetMode=groupBy!=="cluster";
+   sim.force("x").x(fx).strength(facetMode?0.22:0.06);
+   sim.force("y").y(fy).strength(facetMode?0.22:0.06);
+   sim.force("link").strength(facetMode?0.06:0.35).distance(facetMode?60:46);
+   sim.alpha(.9).restart();
+ };
  wrap.appendChild(sel);controls.appendChild(wrap);}
 Object.keys(FACET_DEFS).forEach(facetMenu);
 {const clr=document.createElement("button");clr.className="clrbtn";clr.innerHTML="\u21BA";clr.title="Clear all filters";
@@ -531,7 +555,7 @@ function renderPanel(node){
   pi.innerHTML=`
     <button class="close">✕</button>
     <h2>${node.label}</h2>
-    <p class="kicker"><span style="color:${SUB_COLORS[(authorFacets(node.id).subgenre||[])[0]]||"#9A9484"}">●</span> ${TYPE_LABEL[node.type]}${(authorFacets(node.id).subgenre||[]).length?" · "+authorFacets(node.id).subgenre.map(k=>FACET_DEFS.subgenre.vals[k]).join(", "):""}</p>
+    <p class="kicker"><span style="color:${SUB_COLORS[(authorFacets(node.id).subgenre||[])[0]]||"#C6C1B2"}">●</span> ${TYPE_LABEL[node.type]}${(authorFacets(node.id).subgenre||[]).length?" · "+authorFacets(node.id).subgenre.map(k=>FACET_DEFS.subgenre.vals[k]).join(", "):""}</p>
     <p>${node.note||""}</p>
     ${ws.length?`<h3 style="font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">Works (${ws.length})</h3>`:""}
     <div id="works"></div>
