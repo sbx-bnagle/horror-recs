@@ -334,14 +334,22 @@ function breakdown(w, node){
   return parts;
 }
 function learn(w, node, rating){
+  // Low ratings are ambiguous: wrong kind of book, or right kind done badly?
+  // Default = execution ("badly done"): only the author is penalized, the
+  // category/facet model is untouched. The review's "why" question can
+  // redirect the penalty to the categories instead.
+  const why = (U.ratings[w.id]||{}).why;
+  const execOnly = rating <= 3 && why !== "kind";
   const target = (rating - 1) / 4, pred = score(w, node) / 100, err = target - pred;
-  const lr = SCORING.learningRates.weights, dims = workDims(w);
-  for (const d in dims) if (SCORING.dimensions[d] && dims[d] > 0)
-    U.weights[d] = +(dimW(d) + lr * err * dims[d]).toFixed(3);
+  if (!execOnly){
+    const lr = SCORING.learningRates.weights, dims = workDims(w);
+    for (const d in dims) if (SCORING.dimensions[d] && dims[d] > 0)
+      U.weights[d] = +(dimW(d) + lr * err * dims[d]).toFixed(3);
+    const ff = workFacets(w, node);
+    for (const g of ["threat","approach","subgenre"]) for (const v of ff[g]||[])
+      U.facetAff[v] = +Math.max(-1, Math.min(1, (U.facetAff[v]||0) + 0.08*(rating-3)/2)).toFixed(3);
+  }
   U.authorDelta[node.id] = +(((U.authorDelta[node.id]||0) + SCORING.learningRates.authorAffinity * (rating - 3) / 2)).toFixed(3);
-  const ff = workFacets(w, node);
-  for (const g of ["threat","approach","subgenre"]) for (const v of ff[g]||[])
-    U.facetAff[v] = +Math.max(-1, Math.min(1, (U.facetAff[v]||0) + 0.08*(rating-3)/2)).toFixed(3);
   save();
 }
 
@@ -662,6 +670,20 @@ function renderPanel(node){
         };
         q.appendChild(sel);qwrap.appendChild(q);
       });
+      if((U.ratings[w.id]?.r||0)>0 && U.ratings[w.id].r<=3){
+        const q=document.createElement("div");q.className="q";
+        q.innerHTML=`<label>Why the low rating?</label>`;
+        const sel=document.createElement("select");
+        const cur=U.ratings[w.id].why||"exec";
+        sel.innerHTML=`<option value="exec" ${cur==="exec"?"selected":""}>Right kind of book, badly done (penalize author only)</option>
+          <option value="kind" ${cur==="kind"?"selected":""}>Not my kind of thing (adjust my taste model)</option>`;
+        sel.onchange=()=>{
+          if(!requireUnlock()){sel.value=U.ratings[w.id].why||"exec";return;}
+          U.ratings[w.id].why=sel.value;
+          learn(w,node,U.ratings[w.id].r);save();renderTab();
+        };
+        q.appendChild(sel);qwrap.appendChild(q);
+      }
       [["threat","What is the threat?"],["approach","How does it read?"]].forEach(([g,label])=>{
         const q=document.createElement("div");q.className="q";
         q.innerHTML=`<label>${label}</label>`;
