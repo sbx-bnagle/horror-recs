@@ -15,6 +15,6 @@ for (const n of g.nodes)
 for (const [a,b] of g.links)
   out.push(`INSERT OR IGNORE INTO links(a,b) VALUES(${q(a)},${q(b)});`);
 for (const author in works) for (const w of works[author])
-  out.push(`INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source) VALUES(${q(w.id)},${q(author)},${q(w.title)},${w.year||"NULL"},${q(w.kind)},${q(w.desc||"")},${q(JSON.stringify(w.dims||{}))},${w.signals||0},${w.tasteMatch||0},${q(w.source||"seed")});`);
+  out.push(`INSERT OR IGNORE INTO works(id,author,title,year,kind,desc,dims,signals,tasteMatch,source,cover) VALUES(${q(w.id)},${q(author)},${q(w.title)},${w.year||"NULL"},${q(w.kind)},${q(w.desc||"")},${q(JSON.stringify(w.dims||{}))},${w.signals||0},${w.tasteMatch||0},${q(w.source||"seed")},${q(w.cover||null)});`);
 writeFileSync(new URL("../worker/seed.sql", import.meta.url), out.join("\n"));
 console.log(`wrote ${out.length} statements to worker/seed.sql`);

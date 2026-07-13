@@ -232,7 +232,7 @@ export default {
         for (const w of wrows) (works[w.author] ||= []).push({
           id: w.id, title: w.title, year: w.year, kind: w.kind, desc: w.desc || "",
           dims: JSON.parse(w.dims || "{}"), signals: w.signals || 0,
-          tasteMatch: w.tasteMatch || 0, source: w.source });
+          tasteMatch: w.tasteMatch || 0, source: w.source, cover: w.cover || null });
         const cl = await env.DB.prepare("SELECT value FROM kv WHERE key='clusters'").first();
         return J({ clusters: JSON.parse(cl.value), nodes, links, works });
       }
@@ -270,12 +270,14 @@ export default {
         if (!w) return J({ error: "unknown work" }, 404);
         const n = await env.DB.prepare("SELECT label FROM nodes WHERE id=?").bind(w.author).first();
         const items = await gbooks(`intitle:"${w.title}" inauthor:"${n ? n.label : ""}"`);
-        const hit = items.map(i => i.volumeInfo || {}).find(v => v.description);
-        if (!hit) return J({ desc: "" });
-        const desc = hit.description.slice(0, 500);
-        await env.DB.prepare("UPDATE works SET desc=?, year=COALESCE(year,?) WHERE id=?")
-          .bind(desc, hit.publishedDate ? parseInt(hit.publishedDate) : null, id).run();
-        return J({ desc, year: hit.publishedDate ? parseInt(hit.publishedDate) : null });
+        const vols = items.map(i => i.volumeInfo || {});
+        const hit = vols.find(v => v.description) || vols[0] || null;
+        if (!hit) return J({ desc: "", cover: null });
+        const desc = (hit.description || "").slice(0, 500);
+        const cover = (vols.find(v => v.imageLinks)?.imageLinks?.smallThumbnail || "").replace(/^http:/, "https:") || null;
+        await env.DB.prepare("UPDATE works SET desc=COALESCE(NULLIF(?,''),desc), cover=COALESCE(?,cover), year=COALESCE(year,?) WHERE id=?")
+          .bind(desc, cover, hit.publishedDate ? parseInt(hit.publishedDate) : null, id).run();
+        return J({ desc, cover, year: hit.publishedDate ? parseInt(hit.publishedDate) : null });
       }
       if (p === "/authors" && req.method === "POST") {
         const b = await req.json();

@@ -134,6 +134,7 @@ button,input,select{font:inherit;color:inherit}
  100%{transform:scale(1,1);filter:brightness(1);opacity:1}
 }
 h1 img{animation:crt 1.05s cubic-bezier(.25,.6,.3,1) .15s both;transform-origin:50% 50%}
+.cov{width:26px;height:38px;object-fit:cover;border:1px solid var(--hair);flex-shrink:0;background:var(--paper)}
 </style>
 </head>
 <body>
@@ -635,6 +636,9 @@ function renderPanel(node){
     cb.onchange=()=>{
       if(!requireUnlock()){cb.checked=!cb.checked;return;}
       U.read[w.id]=cb.checked;if(!cb.checked)delete U.read[w.id];openWorks.add(w.id);save();renderTab();renderPanel(node);};
+    const th=document.createElement("img");th.className="cov";
+    if(w.cover){th.src=w.cover;}else{th.style.display="none";}
+    th.onerror=()=>{th.style.display="none";};
     const t=document.createElement("div");t.className="t";
     const kindTag=w.kind&&w.kind!=="novel"?(w.kind==="story"&&/anthologized/i.test(w.desc||"")?"story · anthologized":w.kind):"";
     t.innerHTML=`${w.title} ${w.year?`<span class="yr">${w.year}</span>`:""}${kindTag?` <span class="yr">· ${kindTag}</span>`:""}`;
@@ -645,13 +649,14 @@ function renderPanel(node){
         A("/works/describe",{method:"POST",body:JSON.stringify({id:w.id})})
           .then(r=>r.json()).then(j=>{
             w.desc=j.desc||"";if(j.year&&!w.year)w.year=j.year;
+            if(j.cover&&!w.cover){w.cover=j.cover;th.src=j.cover;th.style.display="";}
             if(de)de.innerHTML=w.desc||"<i>No description found.</i>";})
           .catch(()=>{if(de)de.innerHTML="<i>Description fetch failed.</i>";});
       }};
     const pill=document.createElement("span");
     if(rated){pill.className="pill";pill.textContent="you: "+rated+"★";}
     else{const s=score(w,node);pill.className="pill"+(s>=70?" hi":"");pill.textContent=s;pill.title="Recommendation score";}
-    head.append(cb,t,pill); el.appendChild(head);
+    head.append(cb,th,t,pill); el.appendChild(head);
     const body=document.createElement("div");body.className="body";
     body.innerHTML=`<p class="desc">${w.desc||(API.base?"<i>Expand to fetch a description.</i>":"<i>No description yet - connect the worker or ask Claude to enrich this entry.</i>")}</p>`;
     const hide=document.createElement("div");hide.className="brk";
